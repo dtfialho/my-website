@@ -10,4 +10,4 @@ My personal website made with [Gatsby](https://www.gatsbyjs.org)
 
 **License:** [MIT](LICENSE)
 
-**Contributing:** anyone can contribute, take a look [here](CONTRIBUTING)
+**Contributing:** anyone can contribute, take a look [here](CONTRIBUTING.md)
