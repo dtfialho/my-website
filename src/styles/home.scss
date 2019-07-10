@@ -1,0 +1,39 @@
+#home {
+  background: #DC143C;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+
+  header {
+    > svg {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  header {
+    text-align: center;
+    h1, p {
+      cursor: default;
+      color: #fff;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-weight: 400;
+    }
+  }
+  
+  .contact {
+    margin-top: 30px;
+    text-align: center;
+  }  
+}

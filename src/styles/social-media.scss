@@ -1,0 +1,29 @@
+.social-media {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  &__items {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  &__links {
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    backface-visibility: hidden;
+
+    &:hover {
+      background: rgba(255, 255, 255, .3);
+    }
+  }
+}

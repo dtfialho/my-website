@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Github",
+    "icon": "fab fa-github",
+    "link": "https://github.com/dtfialho"
+  },
+  {
+    "label": "Linkedin",
+    "icon": "fab fa-linkedin",
+    "link": "https://www.linkedin.com/in/diego-teixeira-fialho-35b58ab0/"
+  },
+  {
+    "label": "Twitter",
+    "icon": "fab fa-twitter",
+    "link": "https://twitter.com/dtfialho"
+  },
+  {
+    "label": "Gmail",
+    "icon": "fas fa-envelope",
+    "link": "mailto:diego.tfialho@gmail.com"
+  }
+]
