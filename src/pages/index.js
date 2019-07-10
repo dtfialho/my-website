@@ -8,8 +8,10 @@ import "../styles/home.scss"
 
 const IndexPage = () => {
   useEffect(() => {
-    const main = document.querySelector('main')
-    TweenMax.to(main, 2, { autoAlpha: 1, delay: 1 })
+    const header = document.querySelector('header')
+    const contact = document.querySelector('.contact')
+    TweenMax
+      .to([header, contact], 2, { autoAlpha: 1, delay: 1 })
   })
   
   return (
