@@ -1,7 +1,14 @@
 import React from 'react'
+import Navbar from '../components/navbar'
+import SEO from '../components/seo'
 
 const AboutMe = () => (
-  <h1>Hello!</h1>
+  <main id="about-me">
+    <SEO title="Sobre mim" />
+    <header>
+      <Navbar />
+    </header>
+  </main>
 )
 
 export default AboutMe

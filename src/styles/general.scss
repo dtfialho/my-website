@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
 @import url('https://use.fontawesome.com/releases/v5.4.2/css/all.css');
+@import './variables';
 
 * {
   padding: 0;
@@ -19,4 +20,9 @@ body,
 
 body {
   font-size: 16px;
+}
+
+header {
+  background-color: $backgroundColorDark;
+  box-shadow: 0px 0px 5px #333;
 }
