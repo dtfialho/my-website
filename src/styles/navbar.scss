@@ -23,7 +23,7 @@
 
     a {
       text-decoration: none;
-      color: $textColor;
+      color: $textColorLight;
       font-weight: 700;
       font-size: 20px;
       position: relative;
@@ -39,7 +39,7 @@
       width: 0;
       height: 2px;
       transition: width .3s ease-in-out;
-      background-color: $textColor;
+      background-color: $textColorLight;
       content: '';
     }
   }

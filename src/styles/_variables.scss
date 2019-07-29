@@ -1,4 +1,10 @@
 $backgroundColor: #d04925;
 $backgroundColorDark: #992e24;
-$textColor: #fff;
-$textColorDark: #696464;
+$textColorLight: #fff;
+$textColor: #646464;
+$textColorDark: #333;
+
+%container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
