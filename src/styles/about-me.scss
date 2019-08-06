@@ -1,14 +1,39 @@
-@import './variables';
+@import './utils';
 
-#about-me {
-  h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: $textColorDark;
+.about-me {
+  &__content {
+    @extend %container;
+    padding-top: 100px;
+
+    h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      color: $textColorDark;
+
+      @include tablet-portrait {
+        margin-bottom: 3.5rem;
+      }
+    }
   }
 
-  .about-me__content {
-    @extend %container;
-    padding-top: 50px;
+  &__container {
+    display: flex;
+    align-items: center;
+
+    .me {
+      height: 200px;
+      width: 200px;
+      min-width: 200px;
+      margin: 0 auto 30px;
+
+      @include tablet-portrait {
+        float: left;
+        margin: 0 50px 0 0;
+      }
+      
+      img {
+        border-radius: 50%;
+      }
+    }
   }
 }
