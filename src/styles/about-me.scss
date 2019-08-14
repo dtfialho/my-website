@@ -17,9 +17,6 @@
   }
 
   &__container {
-    display: flex;
-    align-items: center;
-
     .me {
       height: 200px;
       width: 200px;
@@ -33,6 +30,19 @@
       
       img {
         border-radius: 50%;
+      }
+    }
+  }
+
+  &__contact {
+    text-align: center;
+
+    .social-media__links {
+      color: $textColorDark;
+      border-color: $textColorDark;
+      &:hover {
+        background: rgba($textColorDark, .3);
+        opacity: .8;
       }
     }
   }

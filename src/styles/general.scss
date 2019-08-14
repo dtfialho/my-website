@@ -31,11 +31,15 @@ h1, h2, h3, h4, h5, p {
   margin-bottom: 1.4rem;
 }
 
-p {
+p, li {
   font-size: 1.25rem;
   line-height: 1.7;
 }
 
 a {
   text-decoration: dashed;
+}
+
+main:not(#home) {
+  padding-bottom: 100px;
 }

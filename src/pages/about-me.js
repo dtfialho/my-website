@@ -1,24 +1,29 @@
 import React from 'react'
-import SEO from '../components/seo'
-import Navbar from '../components/navbar'
+import Layout from '../components/layout'
 import AboutMeText from '../components/about-me-text'
+import MySkills from '../components/my-skills'
+import SocialMedia from '../components/social-media'
 import '../styles/about-me.scss'
 
 const AboutMe = () => (
-  <main id="about-me">
-    <SEO title="Sobre mim" />
-    <header>
-      <Navbar />
-    </header>
-
+  <Layout
+    id="about-me"
+    title="Sobre mim"
+  >
     <section className="about-me__content">
       <h1>Sobre Mim</h1>
       
       <article className="about-me__container">
         <AboutMeText />
+        <MySkills />
+
+        <div className="about-me__contact">
+          <h2>Contato</h2>
+          <SocialMedia />
+        </div>
       </article>
     </section>
-  </main>
+  </Layout>
 )
 
 export default AboutMe
