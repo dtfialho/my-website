@@ -1,32 +1,37 @@
-#home {
-  background: #DC143C;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+@import './utils';
 
-  header,
-  .contact {
+#home {
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  height: 100vh;
+  color: $textColorLight;
+  
+  &::before {
+    display: block;
+    width: 100vw;
+    height: calc(100vh - 90px);
+    top: 90px;
+    position: fixed;
+    background: rgba(#000, 0.3);
+    content: '';
+  }
+
+  .home__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     visibility: hidden;
     opacity: 0;
-  }
-  
-  header {
     text-align: center;
-
-    > svg {
-      width: 100px;
-      margin-bottom: 20px;
-    }
+    height: calc(100vh - 90px);
 
     h1, p {
       cursor: default;
-      color: #fff;
     }
-    
+
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 10px;
     }
     
@@ -35,7 +40,7 @@
     }
   }
   
-  .contact {
+  .social-media {
     margin-top: 30px;
     text-align: center;
   }  

@@ -1,0 +1,49 @@
+@import './utils';
+
+.about-me {
+  &__content {
+    @extend %container;
+    padding-top: 100px;
+
+    h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      color: $textColorDark;
+
+      @include tablet-portrait {
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+
+  &__container {
+    .me {
+      height: 200px;
+      width: 200px;
+      min-width: 200px;
+      margin: 0 auto 30px;
+
+      @include tablet-portrait {
+        float: left;
+        margin: 0 50px 0 0;
+      }
+      
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__contact {
+    text-align: center;
+
+    .social-media__links {
+      color: $textColorDark;
+      border-color: $textColorDark;
+      &:hover {
+        background: rgba($textColorDark, .3);
+        opacity: .8;
+      }
+    }
+  }
+}
