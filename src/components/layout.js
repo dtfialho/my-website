@@ -1,5 +1,5 @@
 import React from 'react'
-import t from 'prop-types'
+import PropTypes from 'prop-types'
 import SEO from './seo'
 import Navbar from './navbar'
 
@@ -15,9 +15,9 @@ const Layout = ({ id, title, children }) => (
 )
 
 Layout.propTypes = {
-  id: t.string.isRequired,
-  title: t.string.isRequired,
-  children: t.node.isRequired
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
