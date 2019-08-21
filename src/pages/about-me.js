@@ -3,30 +3,25 @@ import Layout from '../components/layout'
 import AboutMeText from '../components/about-me-text'
 import MySkills from '../components/my-skills'
 import SocialMedia from '../components/social-media'
-import {
-  AboutMeContent,
-  AboutMeTitle,
-  AboutMeContainer,
-  AboutMeContact
-} from '../styles/about-me'
+import * as S from '../styles/about-me'
 
 const AboutMe = () => (
   <Layout
     title="Sobre mim"
   >
-    <AboutMeContent>
-      <AboutMeTitle>Sobre Mim</AboutMeTitle>
+    <S.AboutMeContent>
+      <S.AboutMeTitle>Sobre Mim</S.AboutMeTitle>
       
-      <AboutMeContainer>
+      <S.AboutMeContainer>
         <AboutMeText />
         <MySkills />
 
-        <AboutMeContact>
+        <S.AboutMeContact>
           <h2>Contato</h2>
           <SocialMedia />
-        </AboutMeContact>
-      </AboutMeContainer>
-    </AboutMeContent>
+        </S.AboutMeContact>
+      </S.AboutMeContainer>
+    </S.AboutMeContent>
   </Layout>
 )
 

@@ -1,17 +1,12 @@
 import React from 'react'
-import {
-  MySkillsContainer,
-  MySkillsTitle,
-  MySkillsItems,
-  MySkillsItem
-} from '../styles/my-skills'
+import * as S from '../styles/my-skills'
 
 const MySkills = () => (
-  <MySkillsContainer>
-    <MySkillsTitle>Um pouco do que eu faço</MySkillsTitle>
+  <S.MySkillsContainer>
+    <S.MySkillsTitle>Um pouco do que eu faço</S.MySkillsTitle>
 
-    <MySkillsItems>
-      <MySkillsItem>
+    <S.MySkillsItems>
+      <S.MySkillsItem>
         <h3>Frontend</h3>
         <ul>
           <li>Angular</li>
@@ -24,9 +19,9 @@ const MySkills = () => (
           <li>React</li>
           <li>React Hooks</li>
         </ul>
-      </MySkillsItem>
+      </S.MySkillsItem>
 
-      <MySkillsItem>
+      <S.MySkillsItem>
         <h3>Backend</h3>
         <ul>
           <li>Node</li>
@@ -35,9 +30,9 @@ const MySkills = () => (
           <li>Python</li>
           <li>Wordpress</li>
         </ul>
-      </MySkillsItem>
+      </S.MySkillsItem>
 
-      <MySkillsItem>
+      <S.MySkillsItem>
         <h3>Outros</h3>
         <ul>
           <li>Automatização de tarefas (grunt, gulp)</li>
@@ -50,9 +45,9 @@ const MySkills = () => (
           <li>TDD</li>
           <li>Webpack</li>
         </ul>
-      </MySkillsItem>
-    </MySkillsItems>
-  </MySkillsContainer>
+      </S.MySkillsItem>
+    </S.MySkillsItems>
+  </S.MySkillsContainer>
 )
 
 export default MySkills

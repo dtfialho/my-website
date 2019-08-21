@@ -4,10 +4,7 @@ import { TweenMax } from 'gsap'
 import SEO from "../components/seo"
 import Navbar from "../components/navbar"
 import SocialMedia from "../components/social-media"
-import {
-  Home,
-  HomeContent
-} from "../styles/home"
+import * as S from "../styles/home"
 import GlobalStyles from '../styles/global'
 
 const IndexPage = () => {
@@ -19,19 +16,19 @@ const IndexPage = () => {
   }, [])
   
   return (
-    <Home>
+    <S.Home>
       <GlobalStyles />
       <SEO title="Home" />
       <header>
         <Navbar />
       </header>
   
-      <HomeContent ref={content}>
+      <S.HomeContent ref={content}>
         <h1>Diego T. Fialho</h1>
         <p>&mdash; Front End Web Developer &mdash;</p>
         <SocialMedia />
-      </HomeContent>
-    </Home>
+      </S.HomeContent>
+    </S.Home>
   )
 }
 

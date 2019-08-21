@@ -1,36 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
 import Logo from "../components/logo"
-import {
-  NavbarWrapper,
-  NavbarContainer,
-  NavbarItem
-} from "../styles/navbar";
+import * as S from "../styles/navbar";
 
 const NavbarComponent = () => (
-  <NavbarWrapper>
+  <S.NavbarWrapper>
     <Link to="/">
       <Logo />
     </Link>
     
-    <NavbarContainer>
-      <NavbarItem>
+    <S.NavbarContainer>
+      <S.NavbarItem>
         <Link
           to="/"
           activeClassName="active">
           Home
         </Link>
-      </NavbarItem>
+      </S.NavbarItem>
       
-      <NavbarItem>
+      <S.NavbarItem>
         <Link
           to="/about-me"
           activeClassName="active">
           Sobre Mim
         </Link>
-      </NavbarItem>
-    </NavbarContainer>
-  </NavbarWrapper>
+      </S.NavbarItem>
+    </S.NavbarContainer>
+  </S.NavbarWrapper>
 )
 
 export default NavbarComponent
