@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import "../styles/social-media.scss"
+import * as S from "../styles/social-media"
 
 const SocialMedia = () => (
   <StaticQuery
@@ -17,17 +17,17 @@ const SocialMedia = () => (
       }
     `}
     render={({ allSocialMediaJson: { nodes } }) => (
-      <ul className="social-media">
+      <S.SocialMediaContainer>
         {
           nodes.map(({ link, icon, id, label }) => (
-            <li className="social-media__items" key={id}>
-              <a href={link} target="_blank" rel="noopener noreferrer" className="social-media__links" title={label}>
+            <S.SocialMediaItem key={id}>
+              <S.SocialMediaLink href={link} target="_blank" rel="noopener noreferrer" title={label}>
                 <i className={icon} />
-              </a>
-            </li>
+              </S.SocialMediaLink>
+            </S.SocialMediaItem>
           ))
         }
-      </ul>
+      </S.SocialMediaContainer>
       )
     }
   />

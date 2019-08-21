@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import GlobalStyles from '../styles/global'
 import SEO from './seo'
 import Navbar from './navbar'
 
-const Layout = ({ id, title, children }) => (
-  <main id={id}>
+const Layout = ({ title, children }) => (
+  <main>
+    <GlobalStyles />
     <SEO title={title} />
     <header>
       <Navbar />
@@ -15,7 +17,6 @@ const Layout = ({ id, title, children }) => (
 )
 
 Layout.propTypes = {
-  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 }

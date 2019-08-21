@@ -1,31 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
 import Logo from "../components/logo"
-import "../styles/navbar.scss";
+import * as S from "../styles/navbar";
 
-const Navbar = () => (
-  <nav className="navbar">
+const NavbarComponent = () => (
+  <S.NavbarWrapper>
     <Link to="/">
       <Logo />
     </Link>
     
-    <ul className="navbar__container">
-      <li className="navbar__item">
+    <S.NavbarContainer>
+      <S.NavbarItem>
         <Link
           to="/"
           activeClassName="active">
           Home
         </Link>
-      </li>
-      <li className="navbar__item">
+      </S.NavbarItem>
+      
+      <S.NavbarItem>
         <Link
           to="/about-me"
           activeClassName="active">
           Sobre Mim
         </Link>
-      </li>
-    </ul>
-  </nav>
+      </S.NavbarItem>
+    </S.NavbarContainer>
+  </S.NavbarWrapper>
 )
 
-export default Navbar
+export default NavbarComponent

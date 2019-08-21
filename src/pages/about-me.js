@@ -3,26 +3,25 @@ import Layout from '../components/layout'
 import AboutMeText from '../components/about-me-text'
 import MySkills from '../components/my-skills'
 import SocialMedia from '../components/social-media'
-import '../styles/about-me.scss'
+import * as S from '../styles/about-me'
 
 const AboutMe = () => (
   <Layout
-    id="about-me"
     title="Sobre mim"
   >
-    <section className="about-me__content">
-      <h1>Sobre Mim</h1>
+    <S.AboutMeContent>
+      <S.AboutMeTitle>Sobre Mim</S.AboutMeTitle>
       
-      <article className="about-me__container">
+      <S.AboutMeContainer>
         <AboutMeText />
         <MySkills />
 
-        <div className="about-me__contact">
+        <S.AboutMeContact>
           <h2>Contato</h2>
           <SocialMedia />
-        </div>
-      </article>
-    </section>
+        </S.AboutMeContact>
+      </S.AboutMeContainer>
+    </S.AboutMeContent>
   </Layout>
 )
 
