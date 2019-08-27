@@ -7,12 +7,9 @@ export const MySkillsContainer = styled.div`
 `
 
 export const MySkillsTitle = styled.h2`
-  text-align: center;
 `
 
 export const MySkillsItems = styled.div`
-  padding-top: 20px;
-  
   ${tabletPortrait(`
     display: flex;
     width: 100%;
@@ -22,7 +19,6 @@ export const MySkillsItems = styled.div`
 `
 
 export const MySkillsItem = styled.div`
-  text-align: center;
   margin-bottom: 40px;
 
   ${tabletPortrait(`flex-basis: 30%;`)}

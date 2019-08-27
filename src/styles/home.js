@@ -46,5 +46,6 @@ export const HomeContent = styled.section`
 
   p {
     font-weight: 400;
+    margin-bottom: 0;
   }
 `

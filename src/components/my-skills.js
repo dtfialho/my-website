@@ -3,7 +3,7 @@ import * as S from '../styles/my-skills'
 
 const MySkills = () => (
   <S.MySkillsContainer>
-    <S.MySkillsTitle>Um pouco do que eu faço</S.MySkillsTitle>
+    <S.MySkillsTitle>Um pouco do que eu faço:</S.MySkillsTitle>
 
     <S.MySkillsItems>
       <S.MySkillsItem>

@@ -17,7 +17,7 @@ export const AboutMeTitle = styled.h1`
   color: ${textColorDark};
 
   ${tabletPortrait(`
-    margin-bottom: 3.5rem;
+    margin-bottom: 20px;
   `)}
 `
 
@@ -27,11 +27,6 @@ export const AboutMeContainer = styled.article`
     width: 200px;
     min-width: 200px;
     margin: 0 auto 30px;
-
-    ${tabletPortrait(`
-      float: left;
-      margin: 0 50px 0 0;
-    `)}
     
     img {
       border-radius: 50%;
