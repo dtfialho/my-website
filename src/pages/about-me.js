@@ -8,6 +8,7 @@ import * as S from '../styles/about-me'
 const AboutMe = () => (
   <Layout
     title="Sobre mim"
+    hasPaddingBottom
   >
     <S.AboutMeContent>
       <S.AboutMeTitle>Sobre Mim</S.AboutMeTitle>

@@ -5,8 +5,8 @@ import Header from '../Header'
 import GlobalStyles from '../../styles/global'
 import * as S from './styled'
 
-const Layout = ({ title, children }) => (
-  <S.LayoutMain>
+const Layout = ({ title, children, hasPaddingBottom }) => (
+  <S.LayoutMain hasPaddingBottom={hasPaddingBottom}>
     <GlobalStyles />
     <SEO title={title} />
     <Header />
@@ -17,6 +17,7 @@ const Layout = ({ title, children }) => (
 
 Layout.propTypes = {
   title: PropTypes.string.isRequired,
+  hasPaddingBottom: PropTypes.bool,
   children: PropTypes.node.isRequired
 }
 
