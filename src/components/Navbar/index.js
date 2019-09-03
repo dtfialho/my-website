@@ -1,14 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import Logo from "../Logo"
-import * as S from "./styled";
+import React from 'react'
+import * as S from './styled';
 
 const NavbarComponent = () => (
   <S.NavbarWrapper>
-    <Link to="/">
-      <Logo />
-    </Link>
-    
     <S.NavbarContainer>
       <S.NavbarItem>
         <S.NavbarLink

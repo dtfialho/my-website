@@ -1,13 +1,14 @@
-import React from "react"
+import React from 'react'
 
 const Logo = () => (
-  <svg className="logo" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+  <svg viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
       <path d="M2317 2573 c-219 -1050 -397 -1914 -397 -1920 0 -10 55 -13 243 -13 l243 0 397 1908 c219 1049 397 1913 397 1920 0 9 -55 12 -243 12 l-243 0 -397 -1907z" />
       <path d="M635 3200 l-640 -640 640 -640 640 -640 325 0 325 0 -640 640 -640 640 640 640 640 640 -325 0 -325 0 -640 -640z" />
       <path d="M3835 3200 l640 -640 -640 -640 -640 -640 325 0 325 0 640 640 640 640 -640 640 -640 640 -325 0 -325 0 640 -640z" />
     </g>
   </svg>
+
 )
 
 export default Logo

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SEO from '../SEO'
-import Navbar from '../Navbar'
+import Header from '../Header'
 import GlobalStyles from '../../styles/global'
 import * as S from './styled'
 
@@ -9,9 +9,7 @@ const Layout = ({ title, children }) => (
   <S.LayoutMain>
     <GlobalStyles />
     <SEO title={title} />
-    <S.LayoutHeader>
-      <Navbar />
-    </S.LayoutHeader>
+    <Header />
 
     {children}
   </S.LayoutMain>

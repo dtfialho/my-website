@@ -25,8 +25,6 @@ export const HomeMain = styled.main`
   }
 `
 
-export const HomeHeader = styled.header``
-
 export const HomeContent = styled.section`
   display: flex;
   align-items: center;

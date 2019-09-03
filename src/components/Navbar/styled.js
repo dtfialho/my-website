@@ -2,17 +2,7 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 import { textColorLight } from '../../styles/utils'
 
-export const NavbarWrapper = styled.nav`
-  width: 100vw;
-  padding: 20px 40px;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-
-  .logo {
-    width: 50px;
-  }
-`
+export const NavbarWrapper = styled.nav``
 
 export const NavbarContainer = styled.ul`
   list-style: none;

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 import { TweenMax } from 'gsap'
 
 import SEO from "../components/SEO"
-import Navbar from "../components/Navbar"
+import Header from "../components/Header"
 import SocialMedia from "../components/SocialMedia"
 import * as S from "../styles/home"
 import GlobalStyles from '../styles/global'
@@ -19,9 +19,7 @@ const Home = () => {
     <S.HomeMain>
       <GlobalStyles />
       <SEO title="Home" />
-      <S.HomeHeader>
-        <Navbar />
-      </S.HomeHeader>
+      <Header />
   
       <S.HomeContent ref={content}>
         <S.HomeTitle>Diego T. Fialho</S.HomeTitle>
