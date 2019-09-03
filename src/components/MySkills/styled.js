@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { backgroundColorDark, tabletPortrait } from './utils'
+import { backgroundColorDark, tabletPortrait } from '../../styles/utils'
 
 export const MySkillsContainer = styled.div`
   margin: 50px 0 40px;

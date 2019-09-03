@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '../components/layout'
-import AboutMeText from '../components/about-me-text'
-import MySkills from '../components/my-skills'
-import SocialMedia from '../components/social-media'
+import Layout from '../components/Layout'
+import AboutMeText from '../components/AboutMeText'
+import MySkills from '../components/MySkills'
+import SocialMedia from '../components/SocialMedia'
 import * as S from '../styles/about-me'
 
 const AboutMe = () => (
@@ -17,7 +17,7 @@ const AboutMe = () => (
         <MySkills />
 
         <S.AboutMeContact>
-          <h2>Contato</h2>
+          <S.AboutMeContactTitle>Contato</S.AboutMeContactTitle>
           <SocialMedia />
         </S.AboutMeContact>
       </S.AboutMeContainer>

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { textColorLight } from './utils'
+import { Link } from "gatsby"
+import { textColorLight } from '../../styles/utils'
 
 export const NavbarWrapper = styled.nav`
   width: 100vw;
@@ -22,20 +23,20 @@ export const NavbarContainer = styled.ul`
 export const NavbarItem = styled.li`
   display: inline-block;
   padding: 0 20px;
+`
 
-  a {
-    text-decoration: none;
-    color: rgb(${textColorLight});
-    font-weight: 700;
-    font-size: 20px;
-    position: relative;
-    &:hover::after,
-    &.active::after {
-      width: 100%;
-    }
+export const NavbarLink = styled(Link)`
+  text-decoration: none;
+  color: rgb(${textColorLight});
+  font-weight: 700;
+  font-size: 20px;
+  position: relative;
+  &:hover::after,
+  &.active::after {
+    width: 100%;
   }
 
-  a::after {
+  &::after {
     position: absolute;
     display: block;
     width: 0;

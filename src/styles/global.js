@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { backgroundColorDark, textColorDark } from './utils';
+import { backgroundColorDark, textColorDark } from './utils'
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
@@ -21,13 +21,13 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
-  body {
-    font-size: 16px;
-  }
-
   header {
     background-color: rgb(${backgroundColorDark});
     box-shadow: 0px 0px 5px rgb(${textColorDark});
+  }
+
+  body {
+    font-size: 16px;
   }
 
   h1, h2, h3, h4, h5, p {
@@ -41,10 +41,6 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: dashed;
-  }
-
-  main:not(#home) {
-    padding-bottom: 100px;
   }
 `
 

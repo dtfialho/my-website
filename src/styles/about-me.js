@@ -4,7 +4,7 @@ import {
   textColorDark,
   tabletPortrait
 } from './utils'
-import { SocialMediaLink } from './social-media'
+import { SocialMediaLink } from '../components/SocialMedia/styled'
 
 export const AboutMeContent = styled.section`
   ${container}
@@ -21,18 +21,7 @@ export const AboutMeTitle = styled.h1`
   `)}
 `
 
-export const AboutMeContainer = styled.article`
-  .me {
-    height: 200px;
-    width: 200px;
-    min-width: 200px;
-    margin: 0 auto 30px;
-    
-    img {
-      border-radius: 50%;
-    }
-  }
-`
+export const AboutMeContainer = styled.article``
 
 export const AboutMeContact = styled.div`
   text-align: center;
@@ -46,3 +35,4 @@ export const AboutMeContact = styled.div`
     }
   }
 `
+export const AboutMeContactTitle = styled.h2``

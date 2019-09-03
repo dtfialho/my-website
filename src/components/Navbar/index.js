@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import Logo from "../components/logo"
-import * as S from "../styles/navbar";
+import Logo from "../Logo"
+import * as S from "./styled";
 
 const NavbarComponent = () => (
   <S.NavbarWrapper>
@@ -11,19 +11,19 @@ const NavbarComponent = () => (
     
     <S.NavbarContainer>
       <S.NavbarItem>
-        <Link
+        <S.NavbarLink
           to="/"
           activeClassName="active">
           Home
-        </Link>
+        </S.NavbarLink>
       </S.NavbarItem>
       
       <S.NavbarItem>
-        <Link
+        <S.NavbarLink
           to="/about-me"
           activeClassName="active">
           Sobre Mim
-        </Link>
+        </S.NavbarLink>
       </S.NavbarItem>
     </S.NavbarContainer>
   </S.NavbarWrapper>

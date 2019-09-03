@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import HomeBgImage from '../images/bg.jpg'
 import { textColorLight } from './utils'
-import { SocialMediaContainer } from './social-media'
+import { SocialMediaContainer } from '../components/SocialMedia/styled'
 
-export const Home = styled.main`
+export const HomeMain = styled.main`
   background-image: url(${HomeBgImage});
   background-size: cover;
   height: 100vh;
@@ -25,6 +25,8 @@ export const Home = styled.main`
   }
 `
 
+export const HomeHeader = styled.header``
+
 export const HomeContent = styled.section`
   display: flex;
   align-items: center;
@@ -38,14 +40,14 @@ export const HomeContent = styled.section`
   h1, p {
     cursor: default;
   }
+`
 
-  h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-  }
+export const HomeTitle = styled.h1`
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+`
 
-  p {
-    font-weight: 400;
-    margin-bottom: 0;
-  }
+export const HomeParagraph = styled.p`
+  font-weight: 400;
+  margin-bottom: 0;
 `

@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react"
 import { TweenMax } from 'gsap'
 
-import SEO from "../components/seo"
-import Navbar from "../components/navbar"
-import SocialMedia from "../components/social-media"
+import SEO from "../components/SEO"
+import Navbar from "../components/Navbar"
+import SocialMedia from "../components/SocialMedia"
 import * as S from "../styles/home"
 import GlobalStyles from '../styles/global'
 
-const IndexPage = () => {
+const Home = () => {
   const content = useRef(null)
   
   useEffect(() => {
@@ -16,20 +16,20 @@ const IndexPage = () => {
   }, [])
   
   return (
-    <S.Home>
+    <S.HomeMain>
       <GlobalStyles />
       <SEO title="Home" />
-      <header>
+      <S.HomeHeader>
         <Navbar />
-      </header>
+      </S.HomeHeader>
   
       <S.HomeContent ref={content}>
-        <h1>Diego T. Fialho</h1>
-        <p>&mdash; Front End Web Developer &mdash;</p>
+        <S.HomeTitle>Diego T. Fialho</S.HomeTitle>
+        <S.HomeParagraph>&mdash; Front End Web Developer &mdash;</S.HomeParagraph>
         <SocialMedia />
       </S.HomeContent>
-    </S.Home>
+    </S.HomeMain>
   )
 }
 
-export default IndexPage
+export default Home

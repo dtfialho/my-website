@@ -1,19 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import GlobalStyles from '../styles/global'
-import SEO from './seo'
-import Navbar from './navbar'
+import SEO from '../SEO'
+import Navbar from '../Navbar'
+import GlobalStyles from '../../styles/global'
+import * as S from './styled'
 
 const Layout = ({ title, children }) => (
-  <main>
+  <S.LayoutMain>
     <GlobalStyles />
     <SEO title={title} />
-    <header>
+    <S.LayoutHeader>
       <Navbar />
-    </header>
+    </S.LayoutHeader>
 
     {children}
-  </main>
+  </S.LayoutMain>
 )
 
 Layout.propTypes = {
