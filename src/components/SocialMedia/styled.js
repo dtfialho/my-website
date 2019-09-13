@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { textColorLight } from './utils';
+import { textColorLight } from '../../styles/utils';
 
 export const SocialMediaContainer = styled.ul`
   padding: 0;
@@ -30,3 +30,5 @@ export const SocialMediaLink = styled.a`
     background: rgba(${textColorLight}, .3);
   }
 `
+
+export const SocialMediaIcon = styled.i``
