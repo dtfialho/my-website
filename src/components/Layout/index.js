@@ -9,7 +9,7 @@ const Layout = ({ title, children, hasPaddingBottom }) => (
   <S.LayoutMain hasPaddingBottom={hasPaddingBottom}>
     <GlobalStyles />
     <SEO title={title} />
-    <Header />
+    <Header isFixed />
 
     {children}
   </S.LayoutMain>
