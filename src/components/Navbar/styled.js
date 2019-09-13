@@ -108,6 +108,10 @@ export const NavbarItem = styled.li`
     display: inline-block;
     padding: 0 20px;
   `)}
+
+  ${phoneOnly(`
+    margin-bottom: 5px;
+  `)}
 `
 
 export const NavbarLink = styled(Link)`
@@ -128,5 +132,8 @@ export const NavbarLink = styled(Link)`
     transition: width .3s ease-in-out;
     background-color: rgb(${textColorLight});
     content: '';
+    ${phoneOnly(`
+      margin-top: 5px;
+    `)}
   }
 `
