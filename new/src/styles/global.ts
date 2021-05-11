@@ -11,8 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
   html,
   body,
-  #___gatsby,
-  #gatsby-focus-wrapper {
+  #__next {
     height: 100%;
   }
 
@@ -26,11 +25,17 @@ const GlobalStyles = createGlobalStyle`
     font-size: 16px;
   }
 
-  h1, h2, h3, h4, h5, p {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
     margin-bottom: 20px;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 1.25rem;
     line-height: 1.7;
   }
