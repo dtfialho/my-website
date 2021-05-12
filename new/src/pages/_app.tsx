@@ -6,12 +6,10 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Diego T. Fialho</title>
-        <link rel="shortcut icon" href="/img/icon-512x512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512x512.png" />
-        <meta
-          name="description"
-          content="My personal website made with Next.js"
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap"
+          type="text/css"
         />
       </Head>
       <GlobalStyles />
