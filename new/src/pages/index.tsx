@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Template from 'templates/home'
 
 export default function Home() {
   return (
@@ -13,13 +14,7 @@ export default function Home() {
         <link rel="apple-touch-icon" href="/img/icon-512x512.png" />
       </Head>
 
-      <main>
-        <h1>Diego T. Fialho - Home Page</h1>
-      </main>
-
-      <footer>
-        <p>My Footer</p>
-      </footer>
+      <Template />
     </div>
   )
 }
