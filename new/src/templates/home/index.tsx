@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { TweenMax } from 'gsap'
-
-// import SEO from '../components/SEO'
-// import Header from '../components/Header'
-// import SocialMedia from "../components/SocialMedia"
+import Header from 'components/header'
 import * as S from './styles'
+// import SEO from '../components/SEO'
+// import SocialMedia from "../components/SocialMedia"
 
 const Home = () => {
   const content = useRef(null)
@@ -15,6 +14,7 @@ const Home = () => {
 
   return (
     <S.Wrapper>
+      <Header />
       <S.Content ref={content}>
         <p>Home page</p>
       </S.Content>
