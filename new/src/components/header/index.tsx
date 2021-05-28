@@ -1,4 +1,4 @@
-// import Navbar from 'components/main-navigation'
+import Navbar from 'components/main-navigation'
 import * as S from './styles'
 
 const Header = ({ fixed = false }) => (
@@ -20,7 +20,7 @@ const Header = ({ fixed = false }) => (
         </g>
       </svg>
     </S.LogoLink>
-    {/* <Navbar /> */}
+    <Navbar />
   </S.Wrapper>
 )
 

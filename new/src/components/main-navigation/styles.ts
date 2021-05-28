@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.nav<{ open: boolean }>`
   ${({ open }) => css`
     ${open && css`
-      ${media.greaterThan('medium')`
+      ${media.lessThan('medium')`
         position: fixed;
         background-color: rgba(0, 0, 0, 0.8);
         top: 0;
@@ -19,7 +19,9 @@ export const Wrapper = styled.nav<{ open: boolean }>`
   `}
 `
 
-export const Hamburger = styled.div`
+export const Hamburger = styled.button`
+  appearance: none;
+  border: none;
   width: 50px;
   height: 50px;
   padding: 5px;
@@ -37,54 +39,80 @@ export const Hamburger = styled.div`
   `}
 `
 
-export const HamburgerIcon = styled.span`
-  position: relative;
-  display: block;
-  background: #fff;
-  width: 40px;
-  height: 3px;
-  transition: .5s ease-in-out;
+const iconModifiers = {
+  open: () => css`
+    transform: rotate(45deg);
 
-  &::before, &::after {
-    background: #fff;
-    content: '';
+    &::before {
+      transform: rotate(90deg);
+      top: 0;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+      bottom: 0;
+    }
+  `
+}
+
+export const Icon = styled.span<{ open: boolean }>`
+  ${({ open }) => css`
+    position: relative;
     display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    background: #fff;
+    width: 40px;
+    height: 3px;
     transition: .5s ease-in-out;
-  }
 
-  &::before {
-    top: -12px;
-  }
+    &::before, &::after {
+      background: #fff;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: .5s ease-in-out;
+    }
 
-  &::after {
-    bottom: -12px;
-  }
+    &::before {
+      top: -12px;
+    }
+
+    &::after {
+      bottom: -12px;
+    }
+
+    ${open && iconModifiers.open()}
+  `}
 `
 
 const containerModifiers = {
   open: () => css`
     visibility: visible;
     opacity: 1;
+    height: auto;
   `
 }
 
 export const Container = styled.ul<{ open: boolean }>`
-  visibility: hidden;
-  opacity: 0;
-  list-style: none;
-  align-self: center;
-  margin: 0 auto;
+  ${({ open }) => css`
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+    align-self: center;
+    margin: 0 auto;
+    height: 0;
 
-  ${media.greaterThan('medium')`
-    max-width: 1200px;
-    width: auto;
-    height: auto;
-    display: block;
-    visibility: visible;
-    opacity: 1;
+    ${media.greaterThan('medium')`
+      max-width: 1200px;
+      width: auto;
+      height: auto;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    `}
+
+    ${open && containerModifiers.open()}
   `}
 `
 
@@ -102,27 +130,29 @@ export const Item = styled.li`
   `}
 `
 
-export const Link = styled.a`
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  position: relative;
-  &:hover::after,
-  &.active::after {
-    width: 100%;
-  }
+export const Link = styled.a<{ active: boolean }>`
+  ${({ active }) => css`
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
 
-  &::after {
-    display: block;
-    width: 0;
-    height: 2px;
-    transition: width 0.3s ease-in-out;
-    background-color: #fff;
-    content: '';
+    &:hover::after {
+      width: 100%;
+    }
 
-    ${media.lessThan('medium')`
-      margin-top: 5px;
-    `}
-  }
+    &::after {
+      display: block;
+      width: ${active ? '100%' : '0' };
+      height: 2px;
+      transition: width 0.3s ease-in-out;
+      background-color: #fff;
+      content: '';
+
+      ${media.lessThan('medium')`
+        margin-top: 5px;
+      `}
+    }
+  `}
 `
