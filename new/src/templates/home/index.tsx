@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { TweenMax } from 'gsap'
 import Header from 'components/header'
+import SocialMedia from 'components/social-media'
 import * as S from './styles'
-// import SocialMedia from "../components/SocialMedia"
 
 const Home = () => {
   const content = useRef(null)
@@ -17,21 +17,9 @@ const Home = () => {
       <S.Content ref={content}>
         <S.Title>Diego T. Fialho</S.Title>
         <S.Paragraph>&mdash; Front End Web Developer &mdash;</S.Paragraph>
+        <SocialMedia />
       </S.Content>
     </S.Wrapper>
-    // <S.HomeMain>
-    //   <GlobalStyles />
-    //   <SEO title="Home" />
-    //   <Header />
-
-    //   <S.HomeContent ref={content}>
-    //     <S.HomeTitle>Diego T. Fialho</S.HomeTitle>
-    //     <S.HomeParagraph>
-    //       &mdash; Front End Web Developer &mdash;
-    //     </S.HomeParagraph>
-    //     <SocialMedia />
-    //   </S.HomeContent>
-    // </S.HomeMain>
   )
 }
 

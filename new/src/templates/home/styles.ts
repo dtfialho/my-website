@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// import { SocialMediaContainer } from '../components/SocialMedia/styled'
 
 export const Wrapper = styled.main`
   background-image: url('/img/bg.jpg');
@@ -16,11 +15,6 @@ export const Wrapper = styled.main`
     background: rgba(0, 0, 0, 0.3);
     content: '';
   }
-
-  /* ${SocialMediaContainer} {
-    margin-top: 30px;
-    text-align: center;
-  } */
 `
 
 export const Content = styled.section`
@@ -32,19 +26,16 @@ export const Content = styled.section`
   opacity: 0;
   text-align: center;
   height: calc(100vh - 93px);
-
-  h1,
-  p {
-    cursor: default;
-  }
 `
 
 export const Title = styled.h1`
   font-size: 3.5rem;
   margin-bottom: 10px;
+  cursor: default;
 `
 
 export const Paragraph = styled.p`
   font-weight: 400;
   margin-bottom: 0;
+  cursor: default;
 `
