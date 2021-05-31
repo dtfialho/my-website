@@ -1,31 +1,21 @@
 import { render, screen } from '@testing-library/react'
 import { TweenMax } from 'gsap'
+import * as Header from 'components/header'
 import Template from './'
 
-jest.mock("next/router", () => ({
-  useRouter() {
-    return {
-      route: "",
-      pathname: "",
-      query: "",
-      asPath: ""
-    }
-  }
-}))
+jest.mock('components/header')
+const mockedNavigation = Header.default as jest.Mock
 
-const useRouter = jest.spyOn(require("next/router"), "useRouter")
 jest.spyOn(TweenMax, 'to')
 
 describe('Templates/Home', () => {
-  useRouter.mockImplementation(() => ({
-    asPath: '/'
-  }))
-
   beforeEach(() => {
     jest.useFakeTimers()
   })
 
   it('Should render correctly', async () => {
+    mockedNavigation.mockImplementation(() => <header>Header!</header>)
+
     render(<Template />)
     jest.runAllTimers()
 
