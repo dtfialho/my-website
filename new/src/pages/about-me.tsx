@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Template from 'templates/home'
 
-const Home =  () => {
+const AboutMe = () => {
   return (
     <div>
       <Head>
-        <title>Diego T. Fialho - Home Page</title>
+        <title>Diego T. Fialho - About Me Page</title>
         <meta
           name="description"
           content="My personal website made with Next.js"
@@ -19,4 +19,4 @@ const Home =  () => {
   )
 }
 
-export default Home
+export default AboutMe

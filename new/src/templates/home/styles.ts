@@ -39,12 +39,12 @@ export const Content = styled.section`
   }
 `
 
-// export const HomeTitle = styled.h1`
-//   font-size: 3.5rem;
-//   margin-bottom: 10px;
-// `
+export const Title = styled.h1`
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+`
 
-// export const HomeParagraph = styled.p`
-//   font-weight: 400;
-//   margin-bottom: 0;
-// `
+export const Paragraph = styled.p`
+  font-weight: 400;
+  margin-bottom: 0;
+`
