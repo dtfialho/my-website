@@ -20,6 +20,7 @@ export const Wrapper = styled.nav<{ open: boolean }>`
 `
 
 export const Hamburger = styled.button`
+  background: none;
   appearance: none;
   border: none;
   width: 50px;

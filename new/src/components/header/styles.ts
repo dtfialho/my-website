@@ -3,12 +3,10 @@ import media from 'styled-media-query'
 
 const wrapperModifiers = {
   fixed: () => css`
-    ${media.greaterThan('medium')`
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 2;
-    `}
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
   `
 }
 

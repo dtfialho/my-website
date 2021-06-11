@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Template from 'templates/home'
+import Template from 'templates/about-me'
 
 const AboutMe = () => {
   return (

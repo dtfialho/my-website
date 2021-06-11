@@ -2,6 +2,7 @@
 
 exports[`MainNavigation Should render correctly 1`] = `
 .c0 {
+  background: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

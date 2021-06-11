@@ -4,7 +4,6 @@ import { Twitter } from '@styled-icons/fa-brands/Twitter'
 import { Envelope } from '@styled-icons/fa-solid/Envelope'
 import * as S from './styles'
 
-
 const SocialMedia = () => (
   <S.Container>
     <S.Item>
