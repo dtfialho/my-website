@@ -4,7 +4,6 @@ export const Container = styled.ul`
   padding: 0;
   margin: 30px 0 0;
   list-style-type: none;
-  color: #fff;
 `
 
 export const Item = styled.li`

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from 'components/header'
+import SocialMedia from 'components/social-media'
 import * as S from './styles'
 
 const AboutMe = () => (
@@ -66,7 +67,10 @@ const AboutMe = () => (
         </S.Items>
       </S.SkillsContainer>
 
-
+      <S.Contact>Contato</S.Contact>
+      <S.SocialMediaWrapper>
+        <SocialMedia />
+      </S.SocialMediaWrapper>
     </S.Wrapper>
   </>
 )

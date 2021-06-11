@@ -72,3 +72,12 @@ export const SkillItemTitle = styled.h3`
 export const SkillsList = styled.ul`
   list-style-type: none;
 `
+
+export const Contact = styled.h2`
+  text-align: center;
+`
+
+export const SocialMediaWrapper = styled.div`
+  color: #333;
+  text-align: center;
+`
