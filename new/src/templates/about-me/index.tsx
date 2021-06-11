@@ -24,6 +24,49 @@ const AboutMe = () => (
       <p>
         Amo desenvolver e estudar novas tecnologias que surgem a cada dia para facilitar a nossa vida como desenvolvedores. Com o sangue metade café e metade código, amo criar e idealizar componentes utilizando frameworks Javascript e conceitos para um código limpo e bem estruturado.
       </p>
+
+      <S.SkillsContainer>
+        <h2>Um pouco do que eu faço:</h2>
+
+        <S.Items>
+          <S.Skills>
+            <S.SkillItemTitle>Frontend</S.SkillItemTitle>
+            <S.SkillsList>
+              <li>Angular</li>
+              <li>AngularJS</li>
+              <li>CSS3</li>
+              <li>HTML5</li>
+              <li>Javascript</li>
+              <li>Pré-processadores (sass, less, stylus)</li>
+              <li>React</li>
+            </S.SkillsList>
+          </S.Skills>
+
+          <S.Skills>
+            <S.SkillItemTitle>Backend</S.SkillItemTitle>
+            <S.SkillsList>
+              <li>Node</li>
+              <li>PHP</li>
+              <li>Programação Orientada a Objetos</li>
+              <li>Python</li>
+              <li>MySql</li>
+              <li>PostgreeSQL</li>
+            </S.SkillsList>
+          </S.Skills>
+
+          <S.Skills>
+            <S.SkillItemTitle>Outros</S.SkillItemTitle>
+            <S.SkillsList>
+              <li>Scrum</li>
+              <li>Sistemas de controle de versão (git)</li>
+              <li>TDD</li>
+              <li>Wordpress</li>
+            </S.SkillsList>
+          </S.Skills>
+        </S.Items>
+      </S.SkillsContainer>
+
+
     </S.Wrapper>
   </>
 )

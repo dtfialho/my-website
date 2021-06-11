@@ -37,8 +37,38 @@ export const TitleContainer = styled.section`
 `
 
 export const Title = styled.h1`
-  font-size: 4rem;
   text-align: center;
-  color: rgb(51, 51, 51);
   margin: 0;
+`
+
+export const SkillsContainer = styled.div`
+  margin: 50px 0 40px;
+  border-bottom: 1px solid rgb(153, 46, 36);
+`
+
+export const Items = styled.div`
+  ${media.greaterThan('medium')`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  `}
+`
+
+export const Skills = styled.div`
+  margin-bottom: 40px;
+
+  ${media.greaterThan('medium')`
+    flex-basis: 30%;
+  `}
+`
+
+export const SkillItemTitle = styled.h3`
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(153, 46, 36);
+`
+
+export const SkillsList = styled.ul`
+  list-style-type: none;
 `

@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    color: #000;
   }
 
   h1,
@@ -32,6 +33,18 @@ const GlobalStyles = createGlobalStyle`
   h5,
   p {
     margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
   }
 
   p,

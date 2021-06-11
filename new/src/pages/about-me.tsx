@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <div>
       <Head>
-        <title>Diego T. Fialho - About Me Page</title>
+        <title>Sobre mim | Diego T. Fialho</title>
         <meta
           name="description"
           content="My personal website made with Next.js"

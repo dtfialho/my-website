@@ -5,7 +5,7 @@ const Home =  () => {
   return (
     <div>
       <Head>
-        <title>Diego T. Fialho - Home Page</title>
+        <title>Home | Diego T. Fialho</title>
         <meta
           name="description"
           content="My personal website made with Next.js"
