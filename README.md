@@ -1,11 +1,11 @@
 # Diego T. Fialho
-My personal website made with [Gatsby](https://www.gatsbyjs.org)
+My personal website made with [Next.js](https://nextjs.org/)
 
 **How to run:**
 ```
 > cd my-website
 > yarn install
-> yarn start
+> yarn dev
 ```
 
 **License:** [MIT](LICENSE)
