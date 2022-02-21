@@ -14,7 +14,9 @@ describe('Templates/AboutMe', () => {
     mockedContact.mockImplementation(() => <section>Social media</section>)
 
     const { container } = render(<Template />)
-    expect(screen.getByRole('img', { name: /Minha foto de perfil/ })).toBeInTheDocument()
+    expect(
+      screen.getByRole('img', { name: /Minha foto de perfil/ })
+    ).toBeInTheDocument()
     expect(container).toMatchSnapshot()
   })
 })

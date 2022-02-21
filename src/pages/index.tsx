@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Template from 'templates/home'
 
-const Home =  () => {
+const Home = () => {
   return (
     <div>
       <Head>

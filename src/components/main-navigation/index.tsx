@@ -8,7 +8,7 @@ const MainNavigation = () => {
 
   return (
     <S.Wrapper open={open}>
-      <S.Hamburger title='Menu' onClick={() => setOpen(!open)}>
+      <S.Hamburger title="Menu" onClick={() => setOpen(!open)}>
         <S.Icon open={open}></S.Icon>
       </S.Hamburger>
 

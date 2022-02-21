@@ -3,7 +3,8 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.nav<{ open: boolean }>`
   ${({ open }) => css`
-    ${open && css`
+    ${open &&
+    css`
       ${media.lessThan('medium')`
         position: fixed;
         background-color: rgba(0, 0, 0, 0.8);
@@ -63,16 +64,17 @@ export const Icon = styled.span<{ open: boolean }>`
     background: #fff;
     width: 40px;
     height: 3px;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       background: #fff;
       content: '';
       display: block;
       width: 100%;
       height: 100%;
       position: absolute;
-      transition: .5s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
 
     &::before {
@@ -145,7 +147,7 @@ export const Link = styled.a<{ active: boolean }>`
 
     &::after {
       display: block;
-      width: ${active ? '100%' : '0' };
+      width: ${active ? '100%' : '0'};
       height: 2px;
       transition: width 0.3s ease-in-out;
       background-color: #fff;

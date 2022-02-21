@@ -16,8 +16,12 @@ describe('Components/SocialMedia', () => {
     render(<SocialMedia />)
     fireEvent.focus(screen.getByRole('link', { name: /Github/ }))
 
-    expect(await screen.findByRole('link', { name: /Github/ })).toHaveStyleRule('opacity', '0.5', {
-      modifier: ':focus'
-    })
+    expect(await screen.findByRole('link', { name: /Github/ })).toHaveStyleRule(
+      'opacity',
+      '0.5',
+      {
+        modifier: ':focus'
+      }
+    )
   })
 })

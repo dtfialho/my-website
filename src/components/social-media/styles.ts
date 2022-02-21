@@ -22,7 +22,7 @@ export const Link = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 
   &:hover,
   &:focus {

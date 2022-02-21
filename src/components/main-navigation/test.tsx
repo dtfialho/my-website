@@ -2,18 +2,18 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Nav from './'
 
-jest.mock("next/router", () => ({
+jest.mock('next/router', () => ({
   useRouter() {
     return {
-      route: "",
-      pathname: "",
-      query: "",
-      asPath: ""
+      route: '',
+      pathname: '',
+      query: '',
+      asPath: ''
     }
   }
 }))
 
-const useRouter = jest.spyOn(require("next/router"), "useRouter")
+const useRouter = jest.spyOn(require('next/router'), 'useRouter')
 
 describe('MainNavigation', () => {
   it('Should render correctly', () => {
@@ -35,8 +35,12 @@ describe('MainNavigation', () => {
 
     userEvent.click(screen.getByRole('button', { name: /Menu/ }))
 
-    expect(screen.getByRole('link', { name: /Sobre Mim/ })).toHaveStyleRule('width', '100%', {
-      modifier: '::after'
-    })
+    expect(screen.getByRole('link', { name: /Sobre Mim/ })).toHaveStyleRule(
+      'width',
+      '100%',
+      {
+        modifier: '::after'
+      }
+    )
   })
 })
