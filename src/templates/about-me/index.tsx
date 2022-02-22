@@ -75,6 +75,8 @@ const AboutMe = () => (
               <li>Javascript</li>
               <li>Pré-processadores (sass, less, stylus)</li>
               <li>React</li>
+              <li>Styled Components</li>
+              <li>Next JS</li>
             </S.SkillsList>
           </S.Skills>
 

@@ -218,6 +218,12 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
             <li>
               React
             </li>
+            <li>
+              Styled Components
+            </li>
+            <li>
+              Next JS
+            </li>
           </ul>
         </div>
         <div
