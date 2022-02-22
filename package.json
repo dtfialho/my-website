@@ -24,6 +24,8 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.13.0",
     "@next/eslint-plugin-next": "^12.1.0",
+    "@swc/core": "^1.2.143",
+    "@swc/jest": "^0.2.17",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^13.1.9",
@@ -38,7 +40,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "jest": "^26.6.3",
+    "jest": "^27.5.1",
     "jest-styled-components": "^7.0.4",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5"

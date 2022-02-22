@@ -1,4 +1,7 @@
 module.exports = {
+  transform: {
+    '^.+\\.(t|j)sx?$': ['@swc/jest']
+  },
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   collectCoverage: true,

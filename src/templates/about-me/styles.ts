@@ -18,27 +18,26 @@ export const TitleContainer = styled.section`
   flex-direction: column;
   margin-bottom: 20px;
 
-  > div {
+  > span {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-bottom: 20px;
   }
 
   ${media.greaterThan('medium')`
     flex-direction: row;
     margin-bottom: 40px;
-
-    > div {
-      margin-bottom: 0;
-      margin-right: 50px;
-    }
   `}
 `
 
 export const Title = styled.h1`
   text-align: center;
-  margin: 0;
+  margin: 20px 0 0;
+
+  ${media.greaterThan('medium')`
+      margin-top: 0;
+      margin-left: 50px;
+  `}
 `
 
 export const SkillsContainer = styled.div`

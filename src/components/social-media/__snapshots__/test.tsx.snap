@@ -39,8 +39,8 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
   justify-content: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .c2:hover,

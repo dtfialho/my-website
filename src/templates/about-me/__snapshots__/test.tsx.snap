@@ -26,16 +26,15 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
   margin-bottom: 20px;
 }
 
-.c1 > div {
+.c1 > span {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-bottom: 20px;
 }
 
 .c2 {
   text-align: center;
-  margin: 0;
+  margin: 20px 0 0;
 }
 
 .c3 {
@@ -79,10 +78,12 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
     flex-direction: row;
     margin-bottom: 40px;
   }
+}
 
-  .c1 > div {
-    margin-bottom: 0;
-    margin-right: 50px;
+@media (min-width:768px) {
+  .c2 {
+    margin-top: 0;
+    margin-left: 50px;
   }
 }
 
@@ -121,17 +122,18 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
     <section
       class="c1"
     >
-      <div
-        style="overflow: hidden; box-sizing: border-box; display: inline-block; position: relative; width: 200px; height: 200px;"
+      <span
+        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 200px; height: 200px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
       >
-        <noscript />
         <img
           alt="Minha foto de perfil"
+          data-nimg="fixed"
           decoding="async"
           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
         />
-      </div>
+        <noscript />
+      </span>
       <h1
         class="c2"
       >
@@ -139,7 +141,8 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
       </h1>
     </section>
     <p>
-      Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na 
+      Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na
+       
       <a
         href="http://www.personare.com.br"
         rel="noopener noreferrer"
@@ -147,7 +150,8 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
       >
         Personare
       </a>
-      . Já trabalhei como Fullstack Developer na 
+      . Já trabalhei como Fullstack Developer na
+       
       <a
         href="https://www.maxisite.net/"
         rel="noopener noreferrer"
@@ -155,7 +159,9 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
       >
         Maxisite
       </a>
-       e Frontend Developer na 
+       
+      e Frontend Developer na
+       
       <a
         href="https://www.alterdata.com.br/"
         rel="noopener noreferrer"
