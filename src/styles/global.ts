@@ -55,6 +55,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: dashed;
+    color: inherit;
   }
 `
 

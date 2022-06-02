@@ -13,81 +13,74 @@ const Blog = ({ posts }: BlogProps) => (
       <S.Title>Posts recentes</S.Title>
 
       <S.Posts>
-        {posts.map(({ slug, title, hero_image: image }) => (
+        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
           <Post
             key={slug}
             title={title}
             slug=""
-            author=""
-            date=""
+            date={date}
             hero_image={image}
-            excerpt=""
+            excerpt={excerpt}
           />
         ))}
-        {posts.map(({ slug, title, hero_image: image }) => (
+        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
           <Post
             key={slug}
             title={title}
             slug=""
-            author=""
-            date=""
+            date={date}
             hero_image={image}
-            excerpt=""
+            excerpt={excerpt}
           />
         ))}
-        {posts.map(({ slug, title, hero_image: image }) => (
+        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
           <Post
             key={slug}
             title={title}
             slug=""
-            author=""
-            date=""
+            date={date}
             hero_image={image}
-            excerpt=""
+            excerpt={excerpt}
           />
         ))}
-        {posts.map(({ slug, title, hero_image: image }) => (
+        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
           <Post
             key={slug}
             title={title}
             slug=""
-            author=""
-            date=""
+            date={date}
             hero_image={image}
-            excerpt=""
+            excerpt={excerpt}
           />
         ))}
-        {posts.map(({ slug, title, hero_image: image }) => (
+        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
           <Post
             key={slug}
             title={title}
             slug=""
-            author=""
-            date=""
+            date={date}
             hero_image={image}
-            excerpt=""
+            excerpt={excerpt}
           />
         ))}
-        {posts.map(({ slug, title, hero_image: image }) => (
+        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
           <Post
             key={slug}
             title={title}
             slug=""
-            author=""
-            date=""
+            date={date}
             hero_image={image}
-            excerpt=""
+            excerpt={excerpt}
           />
         ))}
-        {posts.map(({ slug, title, hero_image: image }) => (
+        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
           <Post
             key={slug}
             title={title}
             slug=""
-            author=""
-            date=""
+            date={date}
             hero_image={image}
-            excerpt=""
+            excerpt={excerpt}
           />
         ))}
       </S.Posts>

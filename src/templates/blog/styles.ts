@@ -19,7 +19,7 @@ export const Title = styled.h1`
 
   ${mediaQuery.greaterThan('medium')`
     font-size: 3.5rem;
-    margin-bottom: 56px;
+    margin-bottom: 72px;
   `}
 `
 
@@ -34,7 +34,8 @@ export const Posts = styled.div`
   `}
 
   ${mediaQuery.greaterThan('tablet')`
-    grid-row-gap: 40px;
+    grid-row-gap: 48px;
+    grid-column-gap: 32px;
     grid-template-columns: repeat(3, 1fr);
   `}
 `

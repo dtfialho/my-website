@@ -22,13 +22,13 @@ const MainNavigation = () => {
 
         <S.Item>
           <Link href="/blog" passHref>
-            <S.Link active={asPath === '/blog'}>Blog</S.Link>
+            <S.Link active={!!asPath.match(/\/blog/)}>Blog</S.Link>
           </Link>
         </S.Item>
 
         <S.Item>
           <Link href="/about-me" passHref>
-            <S.Link active={asPath === '/about-me'}>Sobre Mim</S.Link>
+            <S.Link active={asPath === '/about-me'}>Sobre mim</S.Link>
           </Link>
         </S.Item>
       </S.Container>

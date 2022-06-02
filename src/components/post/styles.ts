@@ -18,3 +18,12 @@ export const Content = styled.div`
 export const Title = styled.h2`
   margin-bottom: 16px;
 `
+
+export const Description = styled.p`
+  margin-bottom: 0;
+`
+
+export const Date = styled.p`
+  font-size: 0.8rem;
+  font-style: italic;
+`
