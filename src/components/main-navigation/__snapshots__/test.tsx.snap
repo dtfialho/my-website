@@ -193,9 +193,19 @@ exports[`MainNavigation Should render correctly 1`] = `
       >
         <a
           class="c5"
+          href="/blog"
+        >
+          Blog
+        </a>
+      </li>
+      <li
+        class="c3"
+      >
+        <a
+          class="c5"
           href="/about-me"
         >
-          Sobre Mim
+          Sobre mim
         </a>
       </li>
     </ul>
