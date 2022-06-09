@@ -17,7 +17,7 @@ const Blog = ({ posts }: BlogProps) => (
           <Post
             key={slug}
             title={title}
-            slug=""
+            slug={slug}
             date={date}
             hero_image={image}
             excerpt={excerpt}
@@ -27,7 +27,7 @@ const Blog = ({ posts }: BlogProps) => (
           <Post
             key={slug}
             title={title}
-            slug=""
+            slug={slug}
             date={date}
             hero_image={image}
             excerpt={excerpt}
@@ -37,7 +37,7 @@ const Blog = ({ posts }: BlogProps) => (
           <Post
             key={slug}
             title={title}
-            slug=""
+            slug={slug}
             date={date}
             hero_image={image}
             excerpt={excerpt}
@@ -47,7 +47,7 @@ const Blog = ({ posts }: BlogProps) => (
           <Post
             key={slug}
             title={title}
-            slug=""
+            slug={slug}
             date={date}
             hero_image={image}
             excerpt={excerpt}
@@ -57,7 +57,7 @@ const Blog = ({ posts }: BlogProps) => (
           <Post
             key={slug}
             title={title}
-            slug=""
+            slug={slug}
             date={date}
             hero_image={image}
             excerpt={excerpt}
@@ -67,7 +67,7 @@ const Blog = ({ posts }: BlogProps) => (
           <Post
             key={slug}
             title={title}
-            slug=""
+            slug={slug}
             date={date}
             hero_image={image}
             excerpt={excerpt}
@@ -77,7 +77,7 @@ const Blog = ({ posts }: BlogProps) => (
           <Post
             key={slug}
             title={title}
-            slug=""
+            slug={slug}
             date={date}
             hero_image={image}
             excerpt={excerpt}
