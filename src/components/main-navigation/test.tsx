@@ -35,7 +35,7 @@ describe('MainNavigation', () => {
 
     userEvent.click(screen.getByRole('button', { name: /Menu/ }))
 
-    expect(screen.getByRole('link', { name: /Sobre Mim/ })).toHaveStyleRule(
+    expect(screen.getByRole('link', { name: /Sobre mim/ })).toHaveStyleRule(
       'width',
       '100%',
       {

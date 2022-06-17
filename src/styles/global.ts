@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   p {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   h1 {
@@ -54,7 +54,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    text-decoration: dashed;
+    text-decoration: none;
+    color: inherit;
   }
 `
 

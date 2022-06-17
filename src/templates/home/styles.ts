@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   background-image: url('/img/bg.jpg');
@@ -29,9 +30,13 @@ export const Content = styled.section`
 `
 
 export const Title = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
   cursor: default;
+
+  ${media.greaterThan('medium')`
+    font-size: 3.5rem;
+  `}
 `
 
 export const Paragraph = styled.p`

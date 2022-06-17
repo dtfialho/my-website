@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+
 import * as S from './styles'
 
 const MainNavigation = () => {
@@ -20,8 +21,14 @@ const MainNavigation = () => {
         </S.Item>
 
         <S.Item>
+          <S.Link href="/blog" active={!!asPath.match(/\/blog/)}>
+            Blog
+          </S.Link>
+        </S.Item>
+
+        <S.Item>
           <S.Link href="/about-me" active={asPath === '/about-me'}>
-            Sobre Mim
+            Sobre mim
           </S.Link>
         </S.Item>
       </S.Container>

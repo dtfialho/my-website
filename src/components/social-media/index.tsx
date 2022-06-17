@@ -1,7 +1,6 @@
 import { Github } from '@styled-icons/fa-brands/Github'
 import { Linkedin } from '@styled-icons/fa-brands/Linkedin'
 import { Twitter } from '@styled-icons/fa-brands/Twitter'
-import { Envelope } from '@styled-icons/fa-solid/Envelope'
 import * as S from './styles'
 
 const SocialMedia = () => (
@@ -36,17 +35,6 @@ const SocialMedia = () => (
         title="Twitter"
       >
         <Twitter title="Ícone do Twitter" size={30} />
-      </S.Link>
-    </S.Item>
-
-    <S.Item>
-      <S.Link
-        href="mailto:diego.tfialho@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Gmail"
-      >
-        <Envelope title="Gmail" size={30} />
       </S.Link>
     </S.Item>
   </S.Container>

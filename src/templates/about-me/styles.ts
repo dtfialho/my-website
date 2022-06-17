@@ -4,10 +4,10 @@ import media from 'styled-media-query'
 export const Wrapper = styled.main`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 153px 15px 100px;
+  padding: 153px 16px 100px;
 
   ${media.greaterThan('medium')`
-    padding: 193px 15px 100px;
+    padding: 193px 16px 100px;
   `}
 `
 
@@ -35,8 +35,8 @@ export const Title = styled.h1`
   margin: 20px 0 0;
 
   ${media.greaterThan('medium')`
-      margin-top: 0;
-      margin-left: 50px;
+    margin-top: 0;
+    margin-left: 50px;
   `}
 `
 
