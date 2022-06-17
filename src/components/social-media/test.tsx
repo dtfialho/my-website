@@ -5,10 +5,6 @@ describe('Components/SocialMedia', () => {
   it('Should render correctly', () => {
     const { container } = render(<SocialMedia />)
 
-    expect(screen.getByRole('link', { name: /Github/ })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Linkedin/ })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Twitter/ })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Gmail/ })).toBeInTheDocument()
     expect(container).toMatchSnapshot()
   })
 
