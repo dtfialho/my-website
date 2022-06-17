@@ -1,13 +1,18 @@
 import styled from 'styled-components'
-import mediaQuery from 'styles/media-query'
+import media, { generateMedia, defaultBreakpoints } from 'styled-media-query'
+
+const customMediaQuery = generateMedia({
+  ...defaultBreakpoints,
+  tablet: '992px'
+})
 
 export const Wrapper = styled.main`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 153px 15px 100px;
+  padding: 153px 16px 100px;
 
-  ${mediaQuery.greaterThan('medium')`
-    padding: 193px 15px 100px;
+  ${media.greaterThan('medium')`
+    padding-top: 193px;
   `}
 `
 
@@ -17,7 +22,7 @@ export const Title = styled.h1`
   text-transform: uppercase;
   margin-bottom: 40px;
 
-  ${mediaQuery.greaterThan('medium')`
+  ${media.greaterThan('medium')`
     font-size: 3.5rem;
     margin-bottom: 72px;
   `}
@@ -28,12 +33,12 @@ export const Posts = styled.div`
   grid-template-columns: 1fr;
   grid-row-gap: 16px;
 
-  ${mediaQuery.greaterThan('medium')`
+  ${media.greaterThan('medium')`
     gap: 24px;
     grid-template-columns: repeat(2, 1fr);
   `}
 
-  ${mediaQuery.greaterThan('tablet')`
+  ${customMediaQuery.greaterThan('tablet')`
     grid-row-gap: 48px;
     grid-column-gap: 32px;
     grid-template-columns: repeat(3, 1fr);
