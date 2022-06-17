@@ -72,6 +72,8 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
             {content}
           </ReactMarkdown>
         </S.Article>
+
+        <S.Back href="/blog">Voltar</S.Back>
       </S.Wrapper>
     </>
   )
