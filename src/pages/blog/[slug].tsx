@@ -17,11 +17,12 @@ type PostPageProps = {
 const PostPage = ({
   slug,
   content,
-  title,
+  title: postTitle,
   date,
   excerpt: description,
   hero_image
 }: PostPageProps) => {
+  const title = `${postTitle} | Diego T. Fialho`
   const url = `https://www.diegotfialho.com.br/blog/${slug}`
   const image = `https://www.diegotfialho.com.br/${hero_image}`
   const twitter: TwitterProps = {
