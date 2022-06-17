@@ -23,66 +23,6 @@ const Blog = ({ posts }: BlogProps) => (
             excerpt={excerpt}
           />
         ))}
-        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
-          <Post
-            key={slug}
-            title={title}
-            slug={slug}
-            date={date}
-            hero_image={image}
-            excerpt={excerpt}
-          />
-        ))}
-        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
-          <Post
-            key={slug}
-            title={title}
-            slug={slug}
-            date={date}
-            hero_image={image}
-            excerpt={excerpt}
-          />
-        ))}
-        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
-          <Post
-            key={slug}
-            title={title}
-            slug={slug}
-            date={date}
-            hero_image={image}
-            excerpt={excerpt}
-          />
-        ))}
-        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
-          <Post
-            key={slug}
-            title={title}
-            slug={slug}
-            date={date}
-            hero_image={image}
-            excerpt={excerpt}
-          />
-        ))}
-        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
-          <Post
-            key={slug}
-            title={title}
-            slug={slug}
-            date={date}
-            hero_image={image}
-            excerpt={excerpt}
-          />
-        ))}
-        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
-          <Post
-            key={slug}
-            title={title}
-            slug={slug}
-            date={date}
-            hero_image={image}
-            excerpt={excerpt}
-          />
-        ))}
       </S.Posts>
     </S.Wrapper>
   </>

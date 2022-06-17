@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import format from 'date-fns/format'
 import Image from 'next/image'
+import gfm from 'remark-gfm'
 
 import Header from 'components/header'
 import * as S from './styles'
@@ -49,7 +50,7 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
     <>
       <Header fixed />
       <S.Wrapper>
-        <article>
+        <S.Article>
           <S.Title>{title}</S.Title>
           <S.Date>
             <small>Postado em: {format(new Date(date), 'dd/MM/yyyy')}</small>
@@ -63,10 +64,14 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
             />
           </S.ArticleImage>
 
-          <ReactMarkdown components={MarkdownComponents}>
+          <ReactMarkdown
+            remarkPlugins={[gfm]}
+            components={MarkdownComponents}
+            linkTarget="_blank"
+          >
             {content}
           </ReactMarkdown>
-        </article>
+        </S.Article>
       </S.Wrapper>
     </>
   )

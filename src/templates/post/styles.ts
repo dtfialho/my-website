@@ -11,6 +11,12 @@ export const Wrapper = styled.main`
   `}
 `
 
+export const Article = styled.article`
+  p {
+    text-align: justify;
+  }
+`
+
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 0;

@@ -54,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
     color: inherit;
   }
 `
