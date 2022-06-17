@@ -9,7 +9,7 @@ Oi pessoal, bem vindos! Meu nome é Diego T. Fialho, como esse é o primeiro pos
 
 Depois de um tempinho com a ideia na cabeça, resolvi colocar um projeto que já tinha em mente mas sempre ~procrastinei~ demorei bastante para colocar em desenvolvimento, que é o blog desse meu site.
 
-Bom, atualmente trabalho como desenvolvedor front-end mas já trabalhei também como fullstack anteriormente. Desenvolvimento é uma paixão que levo tanto para o lado profissional como passatempo, adoro desenvolver algoritmos em Javascript e criar páginas a partir de layouts prototipados no figma, photoshop, etc.
+Bom, atualmente trabalho como desenvolvedor front-end mas já trabalhei também como fullstack anteriormente. Desenvolvimento é uma paixão que levo tanto para o lado profissional como passatempo, adoro desenvolver algoritmos em Javascript e criar páginas com um código bem estruturado e organizado a partir de layouts prototipados no figma, photoshop, etc.
 
 Também no meu tempo livre, gosto de ouvir músicas, jogar vídeo game, ler um livro ou dar uma olhada rápida no Twitter. Outra paixão que tenho é World of Warcraft, tenho todos os livros que tiveram tradução e alguns que só tem em inglês, sou um grande fã desde a época do Warcraft 3 e ainda jogo até hoje.
 
