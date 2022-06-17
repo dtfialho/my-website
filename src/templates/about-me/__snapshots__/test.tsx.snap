@@ -4,7 +4,7 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 153px 15px 100px;
+  padding: 153px 16px 100px;
 }
 
 .c1 {
@@ -67,7 +67,7 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
 
 @media (min-width:768px) {
   .c0 {
-    padding: 193px 15px 100px;
+    padding: 193px 16px 100px;
   }
 }
 
