@@ -15,6 +15,10 @@ export const Article = styled.article`
   p {
     text-align: justify;
   }
+
+  a {
+    text-decoration: underline;
+  }
 `
 
 export const Title = styled.h1`
