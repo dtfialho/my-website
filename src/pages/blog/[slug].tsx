@@ -3,10 +3,57 @@ import path from 'path'
 import matter from 'gray-matter'
 
 import Post, { PostProps } from 'templates/post'
+import Seo, {
+  TwitterProps,
+  twitterDefaultProps,
+  OpenGraphProps
+} from 'components/seo'
 
-const PostPage = ({ content, title, date, hero_image }: PostProps) => (
-  <Post content={content} title={title} date={date} hero_image={hero_image} />
-)
+type PostPageProps = {
+  slug: string
+  excerpt: string
+} & PostProps
+
+const PostPage = ({
+  slug,
+  content,
+  title,
+  date,
+  excerpt: description,
+  hero_image
+}: PostPageProps) => {
+  const url = `https://www.diegotfialho.com.br/blog/${slug}`
+  const image = `https://www.diegotfialho.com.br/${hero_image}`
+  const twitter: TwitterProps = {
+    ...twitterDefaultProps,
+    image
+  }
+  const openGraph: OpenGraphProps = {
+    site_name: 'Diego T. Fialho',
+    url,
+    title,
+    description,
+    images: [{ url: image }]
+  }
+
+  return (
+    <>
+      <Seo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={openGraph}
+        twitter={twitter}
+      />
+      <Post
+        content={content}
+        title={title}
+        date={date}
+        hero_image={hero_image}
+      />
+    </>
+  )
+}
 
 export default PostPage
 
@@ -35,6 +82,7 @@ export async function getStaticProps({ params: { slug } }: StaticProps) {
 
   return {
     props: {
+      slug,
       content,
       ...data
     }

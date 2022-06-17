@@ -1,29 +1,39 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Head from 'next/head'
 
 import Template from 'templates/blog'
 import { PostType } from 'components/post'
+import Seo from 'components/seo'
 
-type IndexProps = {
+type BlogProps = {
   posts: Array<PostType>
 }
 
-const Index = ({ posts }: IndexProps) => (
-  <>
-    <Head>
-      <title>Blog | Diego T. Fialho</title>
-      <meta
-        name="description"
-        content="My personal website made with Next.js"
+const Blog = ({ posts }: BlogProps) => {
+  const title = 'Blog | Diego T. Fialho'
+  const description = 'Aqui tem alguns conteúdos sobre programação e front-end.'
+  const url = 'https://www.diegotfialho.com.br/blog'
+
+  return (
+    <>
+      <Seo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          site_name: 'Diego T. Fialho',
+          url,
+          title,
+          description,
+          images: [{ url: 'https://www.diegotfialho.com.br/icon-512x512.png' }]
+        }}
       />
-      <link rel="shortcut icon" href="/img/icon-512x512.png" />
-      <link rel="apple-touch-icon" href="/img/icon-512x512.png" />
-    </Head>
-    <Template posts={posts} />
-  </>
-)
+
+      <Template posts={posts} />
+    </>
+  )
+}
 
 export async function getStaticProps() {
   const postsFolder = path.join('posts')
@@ -47,4 +57,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Index
+export default Blog

@@ -5,7 +5,7 @@ hero_image: '/img/hello-world.png'
 excerpt: 'Oi pessoal! Bem vindos ao meu blog.'
 ---
 
-Oi pessoal! Meu nome é Diego T. Fialho, como esse é o primeiro post ele vai ser um pouco mais curtinho, o suficiente só para me apresentar e passar para vocês o conteúdo que pretendo postar de tempos em tempos.
+Oi pessoal, bem vindos! Meu nome é Diego T. Fialho, como esse é o primeiro post ele vai ser um pouco mais curtinho, o suficiente só para me apresentar e passar para vocês o conteúdo que pretendo postar de tempos em tempos.
 
 Depois de um tempinho com a ideia na cabeça, resolvi colocar um projeto que já tinha em mente mas sempre ~procrastinei~ demorei bastante para colocar em desenvolvimento, que é o blog desse meu site.
 

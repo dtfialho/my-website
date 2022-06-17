@@ -1,21 +1,28 @@
-import Head from 'next/head'
 import Template from 'templates/about-me'
+import Seo from 'components/seo'
 
 const AboutMe = () => {
+  const title = 'Sobre mim | Diego T. Fialho'
+  const description = 'Um pouquinho sobre mim e o que faço.'
+  const url = 'https://www.diegotfialho.com.br/about-me'
+
   return (
-    <div>
-      <Head>
-        <title>Sobre mim | Diego T. Fialho</title>
-        <meta
-          name="description"
-          content="My personal website made with Next.js"
-        />
-        <link rel="shortcut icon" href="/img/icon-512x512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512x512.png" />
-      </Head>
+    <>
+      <Seo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          site_name: 'Diego T. Fialho',
+          url,
+          title,
+          description,
+          images: [{ url: 'https://www.diegotfialho.com.br/icon-512x512.png' }]
+        }}
+      />
 
       <Template />
-    </div>
+    </>
   )
 }
 
