@@ -48,7 +48,7 @@ const PostPage = ({
       />
       <Post
         content={content}
-        title={title}
+        title={postTitle}
         date={date}
         hero_image={hero_image}
       />

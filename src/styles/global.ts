@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -36,7 +37,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 28px;
+    line-height: 1.2;
+
+    ${media.greaterThan('medium')`
+      font-size: 40px;
+    `}
   }
 
   h2 {

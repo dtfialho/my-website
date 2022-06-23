@@ -12,10 +12,6 @@ export const Wrapper = styled.main`
 `
 
 export const Article = styled.article`
-  p {
-    text-align: justify;
-  }
-
   a {
     text-decoration: underline;
   }
