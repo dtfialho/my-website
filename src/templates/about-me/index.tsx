@@ -12,8 +12,8 @@ const AboutMe = () => (
           src="/img/me.jpeg"
           layout="fixed"
           alt="Minha foto de perfil"
-          width={200}
-          height={200}
+          width={150}
+          height={150}
         />
         <S.Title>Sobre mim</S.Title>
       </S.TitleContainer>

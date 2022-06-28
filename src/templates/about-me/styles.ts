@@ -11,7 +11,7 @@ export const Wrapper = styled.main`
   `}
 `
 
-export const TitleContainer = styled.section`
+export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,8 +19,8 @@ export const TitleContainer = styled.section`
   margin-bottom: 20px;
 
   > span {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
   }
 

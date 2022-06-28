@@ -46,17 +46,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h2 {
-    font-size: 1.7rem;
-  }
+    font-size: 24px;
 
-  h3 {
-    font-size: 1.2rem;
+    ${media.greaterThan('medium')`
+      font-size: 26px;
+    `}
   }
 
   p,
   li {
-    font-size: 1.25rem;
-    line-height: 1.7;
+    line-height: 1.3;
   }
 
   a {

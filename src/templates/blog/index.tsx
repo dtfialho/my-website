@@ -12,18 +12,16 @@ const Blog = ({ posts }: BlogProps) => (
     <S.Wrapper>
       <S.Title>Posts recentes</S.Title>
 
-      <S.Posts>
-        {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
-          <Post
-            key={slug}
-            title={title}
-            slug={slug}
-            date={date}
-            hero_image={image}
-            excerpt={excerpt}
-          />
-        ))}
-      </S.Posts>
+      {posts.map(({ slug, title, hero_image: image, date, excerpt }) => (
+        <Post
+          key={slug}
+          title={title}
+          slug={slug}
+          date={date}
+          hero_image={image}
+          excerpt={excerpt}
+        />
+      ))}
     </S.Wrapper>
   </>
 )

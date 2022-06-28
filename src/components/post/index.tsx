@@ -13,22 +13,18 @@ export type PostType = {
 
 const Post = ({ slug, title, date, hero_image: image, excerpt }: PostType) => (
   <S.Wrapper>
-    <S.ImageWrapper>
-      <a href={`/blog/${slug}`}>
+    <S.Link href={`/blog/${slug}`}>
+      <S.ImageWrapper>
         <Image src={image} layout="fill" objectFit="cover" alt={title} />
-      </a>
-    </S.ImageWrapper>
-    <S.Content>
-      <S.Title>
-        <a href={`/blog/${slug}`}>{title}</a>
-      </S.Title>
-      <S.Description>
-        <a href={`/blog/${slug}`}>{excerpt}</a>
-      </S.Description>
-      <S.Date>
-        Em: <span>{format(new Date(date), 'dd/MM/yyyy')}</span>
-      </S.Date>
-    </S.Content>
+      </S.ImageWrapper>
+      <S.Content>
+        <S.Title>{title}</S.Title>
+        <S.Description>{excerpt}</S.Description>
+        <S.Date>
+          Em: <span>{format(new Date(date), 'dd/MM/yyyy')}</span>
+        </S.Date>
+      </S.Content>
+    </S.Link>
   </S.Wrapper>
 )
 

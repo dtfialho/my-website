@@ -1,29 +1,53 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.article`
-  box-shadow: rgb(0 0 0 / 15%) 0px 0px 20px;
-  border: 1px solid rgb(217, 217, 217);
+  &:not(:last-child) {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+`
+
+export const Link = styled.a`
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  ${media.greaterThan('medium')`
+    flex-direction: row;
+  `}
 `
 
 export const ImageWrapper = styled.figure`
   position: relative;
-  width: 100%;
-  height: 250px;
+  width: 300px;
+  height: 150px;
 `
 
 export const Content = styled.div`
-  padding: 16px;
+  padding-top: 16px;
+
+  ${media.greaterThan('medium')`
+    padding: 16px 24px 0;
+  `}
 `
 
 export const Title = styled.h2`
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 `
 
 export const Description = styled.p`
-  margin-bottom: 0;
+  margin-bottom: 4px;
 `
 
-export const Date = styled.p`
+export const Date = styled.em`
   font-size: 0.8rem;
   font-style: italic;
+  margin-bottom: 0;
+  color: #666;
 `

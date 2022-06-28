@@ -30,8 +30,8 @@ export const Content = styled.section`
 `
 
 export const Title = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 8px;
   cursor: default;
 
   ${media.greaterThan('medium')`
