@@ -27,8 +27,8 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
 }
 
 .c1 > span {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -119,11 +119,11 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
   <main
     class="c0"
   >
-    <section
+    <div
       class="c1"
     >
       <span
-        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 200px; height: 200px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 150px; height: 150px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
       >
         <img
           alt="Minha foto de perfil"
@@ -139,7 +139,7 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
       >
         Sobre mim
       </h1>
-    </section>
+    </div>
     <p>
       Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na
        

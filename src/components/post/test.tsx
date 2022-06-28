@@ -22,11 +22,10 @@ describe('Components/Post', () => {
 
     render(<Post {...data} />)
 
-    screen
-      .getAllByRole('link', { name: data.title })
-      .forEach((item) =>
-        expect(item).toHaveAttribute('href', `/blog/${data.slug}`)
-      )
+    expect(screen.getByRole('link', { name: data.title })).toHaveAttribute(
+      'href',
+      `/blog/${data.slug}`
+    )
     expect(screen.getByAltText(data.title)).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: data.title })

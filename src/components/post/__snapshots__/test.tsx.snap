@@ -1,43 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components/Post Should render correctly 1`] = `
-.c0 {
-  box-shadow: rgb(0 0 0 / 15%) 0px 0px 20px;
-  border: 1px solid rgb(217,217,217);
+.c0:not(:last-child) {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .c1 {
-  position: relative;
-  width: 100%;
-  height: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.c1:hover {
+  opacity: 0.7;
 }
 
 .c2 {
-  padding: 16px;
+  position: relative;
+  width: 300px;
+  height: 150px;
 }
 
 .c3 {
-  margin-bottom: 16px;
+  padding-top: 16px;
 }
 
 .c4 {
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 
 .c5 {
+  margin-bottom: 4px;
+}
+
+.c6 {
   font-size: 0.8rem;
   font-style: italic;
+  margin-bottom: 0;
+  color: #666;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    padding: 16px 24px 0;
+  }
 }
 
 <div>
   <article
     class="c0"
   >
-    <figure
+    <a
       class="c1"
+      href="/blog/slug-for-test"
+      title="Some title for testing"
     >
-      <a
-        href="/blog/slug-for-test"
+      <figure
+        class="c2"
       >
         <span
           style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
@@ -51,38 +86,30 @@ exports[`Components/Post Should render correctly 1`] = `
           />
           <noscript />
         </span>
-      </a>
-    </figure>
-    <div
-      class="c2"
-    >
-      <h2
+      </figure>
+      <div
         class="c3"
       >
-        <a
-          href="/blog/slug-for-test"
+        <h2
+          class="c4"
         >
           Some title for testing
-        </a>
-      </h2>
-      <p
-        class="c4"
-      >
-        <a
-          href="/blog/slug-for-test"
+        </h2>
+        <p
+          class="c5"
         >
           lorem ipsum dolor sit amet
-        </a>
-      </p>
-      <p
-        class="c5"
-      >
-        Em: 
-        <span>
-          27/05/2022
-        </span>
-      </p>
-    </div>
+        </p>
+        <em
+          class="c6"
+        >
+          Em: 
+          <span>
+            27/05/2022
+          </span>
+        </em>
+      </div>
+    </a>
   </article>
 </div>
 `;

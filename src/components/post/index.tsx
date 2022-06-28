@@ -13,7 +13,7 @@ export type PostType = {
 
 const Post = ({ slug, title, date, hero_image: image, excerpt }: PostType) => (
   <S.Wrapper>
-    <S.Link href={`/blog/${slug}`}>
+    <S.Link href={`/blog/${slug}`} title={title}>
       <S.ImageWrapper>
         <Image src={image} layout="fill" objectFit="cover" alt={title} />
       </S.ImageWrapper>
