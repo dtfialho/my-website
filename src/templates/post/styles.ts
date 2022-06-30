@@ -22,7 +22,7 @@ export const Title = styled.h1`
   margin-bottom: 0;
 `
 
-export const Date = styled.em`
+export const Date = styled.p`
   display: block;
   text-align: center;
   margin-bottom: 32px;

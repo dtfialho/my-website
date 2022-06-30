@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Templates/Post Should render correctly 1`] = `
+.c0 {
+  max-width: 912px;
+  margin: 0 auto;
+  padding: 153px 16px 100px;
+}
+
+.c1 a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.c3 {
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.c4 {
+  position: relative;
+  height: 250px;
+  margin-bottom: 32px;
+}
+
+.c5 {
+  color: #4c57ba;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-top: 32px;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    padding-top: 193px;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width:768px) {
+  .c4 {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+<div>
+  <header>
+    Header
+  </header>
+  <main
+    class="c0"
+  >
+    <article
+      class="c1"
+    >
+      <h1
+        class="c2"
+      >
+        Luke is comming! :D
+      </h1>
+      <p
+        class="c3"
+      >
+        <small>
+          Postado em: 
+          29/06/2022
+        </small>
+      </p>
+      <div
+        class="c4"
+      >
+        <span
+          style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+        >
+          <img
+            alt="Luke is comming! :D"
+            data-nimg="fill"
+            decoding="async"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+          />
+          <noscript />
+        </span>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fugit numquam tempora voluptatum voluptas in, doloremque maiores natus cum voluptate culpa perferendis ipsam pariatur unde optio id amet dolorum inventore.
+      </p>
+    </article>
+    <a
+      class="c5"
+      href="/blog"
+    >
+      Voltar
+    </a>
+  </main>
+</div>
+`;

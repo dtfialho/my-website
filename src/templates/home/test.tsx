@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { TweenMax } from 'gsap'
+
 import * as Header from 'components/header'
-import Template from './'
+import Home from './'
 
 jest.mock('components/header')
 const mockedHeader = Header.default as jest.Mock
@@ -13,7 +14,7 @@ describe('Templates/Home', () => {
     jest.useFakeTimers()
     mockedHeader.mockImplementation(() => <header>Header</header>)
 
-    render(<Template />)
+    render(<Home />)
     jest.runAllTimers()
 
     expect(TweenMax.to).toHaveBeenCalled()
