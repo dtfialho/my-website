@@ -29,6 +29,12 @@ exports[`Components/Post Should render correctly 1`] = `
   height: 150px;
 }
 
+.c2 img {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 .c3 {
   padding-top: 16px;
 }

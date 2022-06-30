@@ -27,6 +27,10 @@ export const ImageWrapper = styled.figure`
   position: relative;
   width: 300px;
   height: 150px;
+
+  img {
+    transform: translateZ(0);
+  }
 `
 
 export const Content = styled.div`
