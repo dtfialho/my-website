@@ -12,6 +12,6 @@ touch $file
 echo "---" > $file
 echo "title: '${title}'" >> $file
 echo "date: '${now}'" >> $file
-echo "hero_image: '${slug}.${image}'" >> $file
+echo "hero_image: '/img/${slug}.${image}'" >> $file
 echo "excerpt: '${excerpt}'" >> $file
 echo "---" >> $file
