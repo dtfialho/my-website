@@ -280,8 +280,32 @@ E por último o `.prettierrc`:
 }
 ```
 
-E pronto! Agora temos uma aplicação bem simples configurada e que segue padrões de código. Nesse print, estou colocando as versões de cada pacote que foi utilizado para esse post.
+E pronto! Agora temos uma aplicação bem simples configurada e que segue padrões de código. Estou colocando as versões de cada pacote que foi utilizado para esse post.
 
-![pacotes utilizados](/img/pacotes-aplicacao-em-react-sem-create-react-app.png)
+```json
+"dependencies": {
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "styled-components": "^5.3.5"
+},
+"devDependencies": {
+  "@babel/core": "^7.18.5",
+  "@babel/eslint-parser": "^7.18.2",
+  "@babel/plugin-transform-runtime": "^7.18.5",
+  "@babel/preset-env": "^7.18.2",
+  "@babel/preset-react": "^7.17.12",
+  "@babel/runtime": "^7.18.3",
+  "babel-loader": "^8.2.5",
+  "eslint": "^8.18.0",
+  "eslint-config-prettier": "^8.5.0",
+  "eslint-plugin-prettier": "^4.1.0",
+  "eslint-plugin-react": "^7.30.1",
+  "html-webpack-plugin": "^5.5.0",
+  "prettier": "^2.7.1",
+  "webpack": "^5.73.0",
+  "webpack-cli": "^4.10.0",
+  "webpack-dev-server": "^4.9.2"
+}
+```
 
 Espero que esse post tenha sido útil e que tenham gostado! Logo mais eu volto com o próximo post trazendo mais conteúdo. Até mais!
