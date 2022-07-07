@@ -135,7 +135,7 @@ module.exports = {
 ```
 
 Agora que configuramos o nosso webpack, ainda tem mais um arquivo que precisamos configurar, então vamos adicionar esse trecho de código no `.babelrc`.
-```
+```json
 {
   "presets": [
     "@babel/preset-env",
