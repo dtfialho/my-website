@@ -12,6 +12,28 @@ exports[`Templates/Post Should render correctly 1`] = `
   text-decoration: underline;
 }
 
+.c1 pre,
+.c1 ul {
+  margin-bottom: 24px;
+}
+
+.c1 p code,
+.c1 li code {
+  display: inline-block;
+  padding: 2px 4px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+.c1 pre {
+  line-height: 1.4;
+  color: #fff;
+  background-color: #282c34;
+  border-radius: 6px;
+  cursor: default;
+}
+
 .c2 {
   text-align: center;
   margin-bottom: 0;
