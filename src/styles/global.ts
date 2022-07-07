@@ -53,14 +53,33 @@ const GlobalStyles = createGlobalStyle`
     `}
   }
 
+  ul {
+    padding-left: 16px;
+  }
+
   p,
   li {
     line-height: 1.3;
   }
 
+  li {
+    margin-bottom: 4px;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  code {
+    display: block;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    span {
+      white-space: pre-wrap;
+    }
   }
 `
 

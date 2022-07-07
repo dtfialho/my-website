@@ -70,6 +70,7 @@ export const SkillItemTitle = styled.h3`
 
 export const SkillsList = styled.ul`
   list-style-type: none;
+  padding-left: 0;
 `
 
 export const Contact = styled.h2`

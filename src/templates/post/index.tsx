@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import ReactMarkdown from 'react-markdown'
 import format from 'date-fns/format'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import gfm from 'remark-gfm'
 
 import Header from 'components/header'
 import * as S from './styles'
+
+const CodeHighlight = dynamic(() => import('components/code-highlight'))
 
 export type PostProps = {
   content: string
@@ -15,8 +19,7 @@ export type PostProps = {
 
 const Post = ({ content, title, date, hero_image }: PostProps) => {
   const MarkdownComponents: object = {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    p: (paragraph: { children?: boolean; node?: any }) => {
+    p: (paragraph: { children?: any; node?: any }) => {
       const { node } = paragraph
 
       if (node.children[0].tagName === 'img') {
@@ -43,6 +46,18 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
       }
 
       return <p>{paragraph.children}</p>
+    },
+
+    pre: (pre: { children?: any }) => pre.children,
+
+    code: (code: { className?: string; inline?: boolean; children?: any }) => {
+      if (code.inline) {
+        return <code>{code.children}</code>
+      }
+
+      const language = code?.className?.replace('language-', '')
+
+      return <CodeHighlight language={language} value={code.children} />
     }
   }
 

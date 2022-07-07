@@ -15,6 +15,30 @@ export const Article = styled.article`
   a {
     text-decoration: underline;
   }
+
+  pre,
+  ul {
+    margin-bottom: 24px;
+  }
+
+  p,
+  li {
+    code {
+      display: inline-block;
+      padding: 2px 4px;
+      color: #c7254e;
+      background-color: #f9f2f4;
+      border-radius: 4px;
+    }
+  }
+
+  pre {
+    line-height: 1.4;
+    color: #fff;
+    background-color: #282c34;
+    border-radius: 6px;
+    cursor: default;
+  }
 `
 
 export const Title = styled.h1`
