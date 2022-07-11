@@ -299,6 +299,7 @@ E pronto! Agora temos uma aplicação bem simples configurada e que segue padrõ
   "@babel/preset-env": "^7.18.2",
   "@babel/preset-react": "^7.17.12",
   "@babel/runtime": "^7.18.3",
+  "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
   "babel-loader": "^8.2.5",
   "eslint": "^8.18.0",
   "eslint-config-prettier": "^8.5.0",
@@ -306,6 +307,7 @@ E pronto! Agora temos uma aplicação bem simples configurada e que segue padrõ
   "eslint-plugin-react": "^7.30.1",
   "html-webpack-plugin": "^5.5.0",
   "prettier": "^2.7.1",
+  "react-refresh": "^0.14.0",
   "webpack": "^5.73.0",
   "webpack-cli": "^4.10.0",
   "webpack-dev-server": "^4.9.2"
