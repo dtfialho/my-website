@@ -47,7 +47,7 @@ Primeiro vamos criar uma pasta para o nosso projeto e dentro dela vamos adiciona
 Vamos começar configurando o Webpack para a aplicação, então vamos adicionar algumas dependências no nosso projeto.
 
 ```
-yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader @babel/core @babel/runtime @babel/plugin-transform-runtime @babel/runtime @babel/preset-env @babel/preset-react @babel/eslint-parser eslint
+yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader @babel/core @babel/runtime @babel/plugin-transform-runtime @babel/runtime @babel/preset-env @babel/preset-react @babel/eslint-parser eslint @pmmmwh/react-refresh-webpack-plugin react-refresh
 ```
 
 Após instaladas vamos configurar nossos três arquivos do webpack:
@@ -101,8 +101,13 @@ module.exports = {
 
 No arquivo `development.js` vamos adicionar:
 ```javascript
+// fazemos o require do módulo para o fast refresh (hot reloading)
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 // fazemos um require do módulo common.js que criamos no outro arquivo
 const common = require('./common')
+
+// adicionamos o módulo de fast refresh nos plugins
+common.plugins.push(new ReactRefreshPlugin())
 
 module.exports = {
   // fazemos um destructuring das configurações no common.js
@@ -116,8 +121,7 @@ module.exports = {
     port: '3000',
     static: ['../public'],
     open: true,
-    hot: true,
-    liveReload: true
+    hot: true
   }
 }
 ```
