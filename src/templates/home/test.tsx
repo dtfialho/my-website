@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { TweenMax } from 'gsap'
 
 import * as Header from 'components/header'
@@ -10,12 +10,14 @@ const mockedHeader = Header.default as jest.Mock
 jest.spyOn(TweenMax, 'to')
 
 describe('Templates/Home', () => {
-  it('Should render correctly', async () => {
+  it('Should render correctly', () => {
     jest.useFakeTimers()
     mockedHeader.mockImplementation(() => <header>Header</header>)
 
-    render(<Home />)
-    jest.runAllTimers()
+    act(() => {
+      render(<Home />)
+      jest.runAllTimers()
+    })
 
     expect(TweenMax.to).toHaveBeenCalled()
     expect(screen.getByText(/Diego T. Fialho/)).toBeInTheDocument()
