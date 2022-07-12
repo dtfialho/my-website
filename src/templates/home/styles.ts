@@ -2,10 +2,13 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
-  background-image: url('/img/bg.jpg');
-  background-size: cover;
+  position: relative;
   height: 100vh;
   color: #fff;
+
+  > span {
+    z-index: -1;
+  }
 
   &::before {
     display: block;
