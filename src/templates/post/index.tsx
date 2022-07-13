@@ -76,6 +76,7 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
               alt={title}
               layout="fill"
               objectFit="contain"
+              priority
             />
           </S.ArticleImage>
 
