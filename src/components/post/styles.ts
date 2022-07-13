@@ -24,9 +24,22 @@ export const Link = styled.a`
 `
 
 export const ImageWrapper = styled.figure`
+  flex-shrink: 0;
   position: relative;
-  width: 300px;
+  width: 100%;
   height: 150px;
+  margin: 0 auto;
+
+  ${media.between('small', 'medium')`
+    width: 500px;
+    height: 300px;
+    max-width: 100%;
+  `}
+
+  ${media.greaterThan('medium')`
+    width: 300px;
+    margin: 0;
+  `}
 
   img {
     transform: translateZ(0);
