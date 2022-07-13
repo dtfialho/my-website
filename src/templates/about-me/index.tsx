@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import Header from 'components/header'
 import SocialMedia from 'components/social-media'
 import * as S from './styles'
@@ -14,6 +15,7 @@ const AboutMe = () => (
           alt="Minha foto de perfil"
           width={150}
           height={150}
+          priority
         />
         <S.Title>Sobre mim</S.Title>
       </S.TitleContainer>
