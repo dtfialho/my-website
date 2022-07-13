@@ -46,7 +46,7 @@ Primeiro vamos criar uma pasta para o nosso projeto e dentro dela vamos adiciona
 ## Configurando o Webpack
 Vamos começar configurando o Webpack para a aplicação, então vamos adicionar algumas dependências no nosso projeto.
 
-```
+```bash
 yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader @babel/core @babel/runtime @babel/plugin-transform-runtime @babel/runtime @babel/preset-env @babel/preset-react @babel/eslint-parser eslint @pmmmwh/react-refresh-webpack-plugin react-refresh
 ```
 
@@ -153,7 +153,7 @@ Agora que configuramos o nosso webpack, ainda tem mais um arquivo que precisamos
 
 ## Adicionando o React
 Agora vamos adicionar o React ao nosso projeto, para isso vamos rodar:
-```
+```bash
 yarn add react react-dom
 ```
 
@@ -207,7 +207,7 @@ Após isso ao rodar `yarn start` nós teremos um servidor de desenvolvimento rod
 
 Bem, para isso podemos utilizar uma solução bem simples que funciona muito bem para essa aplicação e não precisaremos configurar um loader para fazer o parse do css. Essa solução é o `styled-components`, assim nós utilizamos uma técnica chamada `css in JS`, para utilizarmos é bem simples. Vamos primeiro instalar o pacote com o comando:
 
-```
+```bash
 yarn add styled-components
 ```
 
@@ -236,7 +236,7 @@ export default App
 Bom, além de termos nossa aplicação já funcional, é sempre interessante mantermos o padrão do código e podemos combinar o prettier que faz muito bem essa parte com o eslint que nos ajuda a encontrar problemas no nosso código.
 
 Para configurá-los vamos adicionar mais alguns pacotes:
-```
+```bash
 yarn add -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react prettier
 ```
 

@@ -8,7 +8,7 @@ excerpt: 'Nesse post mostro como fazer um accordion utilizando só HTML e CSS, s
 Fala pessoal! Voltando mais uma vez, hoje trago um post bem rapidinho sobre uma feature que é bem comum de vermos sendo utilizada. Existem várias formas de se criar um accordion e nesse post estou trazendo para vocês uma versão bem simples utilizando apenas HTML e CSS, sem uma única linha de Javascript.
 
 Sem mais delongas vamos ao código. A estrutura do HTML é bem simples:
-```html
+```markup
 <div class="accordion">
   <div class="accordion-item">
     <input type="checkbox" id="accordion-item-1" class="item-input" />
@@ -69,7 +69,7 @@ E o css:
 
 ## Explicando o código
 
-```html
+```markup
 <div class="accordion">
   ...
 </div>
@@ -83,7 +83,7 @@ E o css:
 ```
 Para o container principal do accordion usamos apenas uma `div` com a classe `accordion`. Adicionamos uma borda para poder ver as dimensões do accordion com mais facilidade, e arredondamos as bordas escondendo o overflow para garantir que as bordas fiquem arredondadas.
 
-```html
+```markup
 <div class="accordion-item">
   ...
 </div>
@@ -100,7 +100,7 @@ Cada item do accordion será uma `div` com a classe `accordion-item`. Aqui temos
 
 Dentro de cada `accordion-item` temos três elementos. Um `input` checkbox, uma `label` para o input e uma `div` para o conteúdo.
 
-```html
+```markup
 <input type="checkbox" id="accordion-item-1" class="item-input" />
 <label for="accordion-item-1" class="item-label">...</label>
 ```
@@ -125,7 +125,7 @@ Dentro de cada `accordion-item` temos três elementos. Um `input` checkbox, uma 
 ```
 Vamos esconder o input com um `display: none` e a nossa label leva um `display: flex` com `justify-content: space-between`. Aqui eu utilizei o pseudo elemento `::after` para criar um ícone que tem uma transição e fica sempre no lado direito da label, mas podemos usar também um ícone em svg ou uma imagem para deixar mais bonitinho, por agora vou deixar assim mesmo e vocês podem usar a criatividade para melhorar. :)
 
-```html
+```markup
 <div class="item-content">...</div>
 ```
 ```css
