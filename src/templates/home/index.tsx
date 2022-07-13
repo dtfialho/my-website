@@ -20,6 +20,7 @@ const Home = () => {
         alt="Background image"
         objectFit="cover"
         layout="fill"
+        priority
       />
       <Header />
       <S.Content ref={content}>
