@@ -148,4 +148,10 @@ Por último temos nossa div que vai ter o conteúdo de cada item do accordion, a
 ```
 E aqui é onde a mágica acontece. Ao clicar na label, o input fica como `checked` então usamos a pseudo classe `:checked` e adicionamos um `max-height: 100vh` na div do conteúdo, fazendo ela ficar visível e rotacionamos o nosso "ícone". Ao clicar novamente na label, a regra não se aplica e o conteúdo volta a ficar oculto.
 
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJvRjxr" data-user="dtfialho" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/dtfialho/pen/OJvRjxr">
+  HTML and CSS Accordion</a> by Diego T. Fialho (<a href="https://codepen.io/dtfialho">@dtfialho</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 Aqui tem o [link](https://codepen.io/dtfialho/pen/OJvRjxr) do codepen com esse exemplo para poderem brincar e testar. E é isso! Espero que tenham gostado, qualquer feedback é só comentar lá no [twitter](https://twitter.com/dtfialho). Um abraço e até o próximo post!

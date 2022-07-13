@@ -67,11 +67,6 @@ export const ArticleImage = styled.div`
   `}
 `
 
-export const ImageWrapper = styled.div`
-  width: fit-content;
-  margin: 0 auto 24px;
-`
-
 export const Back = styled.a`
   color: #4c57ba;
   text-decoration: underline;
