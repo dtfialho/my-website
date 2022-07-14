@@ -5,6 +5,7 @@ import * as Header from 'components/header'
 import Post, { PostProps } from './'
 
 jest.mock('remark-gfm', () => ({}))
+jest.mock('rehype-raw', () => ({}))
 
 jest.mock('components/header')
 const mockedHeader = Header.default as jest.Mock

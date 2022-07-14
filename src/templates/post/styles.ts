@@ -17,7 +17,8 @@ export const Article = styled.article`
   }
 
   pre,
-  ul {
+  ul,
+  iframe {
     margin-bottom: 24px;
   }
 

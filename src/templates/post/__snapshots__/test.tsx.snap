@@ -13,7 +13,8 @@ exports[`Templates/Post Should render correctly 1`] = `
 }
 
 .c1 pre,
-.c1 ul {
+.c1 ul,
+.c1 iframe {
   margin-bottom: 24px;
 }
 

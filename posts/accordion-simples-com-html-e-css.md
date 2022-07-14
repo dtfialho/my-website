@@ -7,65 +7,12 @@ excerpt: 'Nesse post mostro como fazer um accordion utilizando só HTML e CSS, s
 
 Fala pessoal! Voltando mais uma vez, hoje trago um post bem rapidinho sobre uma feature que é bem comum de vermos sendo utilizada. Existem várias formas de se criar um accordion e nesse post estou trazendo para vocês uma versão bem simples utilizando apenas HTML e CSS, sem uma única linha de Javascript.
 
-Sem mais delongas vamos ao código. A estrutura do HTML é bem simples:
-```markup
-<div class="accordion">
-  <div class="accordion-item">
-    <input type="checkbox" id="accordion-item-1" class="item-input" />
-    <label for="accordion-item-1" class="item-label">Item 1</label>
-    <div class="item-content">Lorem ipsum dolor 1</div>
-  </div>
-  <div class="accordion-item">
-    <input type="checkbox" id="accordion-item-2" class="item-input" />
-    <label for="accordion-item-2" class="item-label">Item 2</label>
-    <div class="item-content">Lorem ipsum dolor 2</div>
-  </div>
-</div>
-```
-
-E o css:
-```css
-.accordion {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.accordion-item {
-  overflow: hidden;
-}
-.accordion-item:not(:last-child) {
-  border-bottom: 1px solid #fff;
-}
-.item-input {
-  display: none;
-}
-.item-label {
-  display: flex;
-  justify-content: space-between;
-  background-color: #282a36;
-  color: #fff;
-  padding: 16px;
-}
-.item-label::after {
-  content: '>';
-  width: 1em;
-  height: 1em;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-.item-content {
-  transition: all 0.3s ease-in-out;
-  max-height: 0;
-  padding: 0 16px;
-}
-.item-input:checked ~ .item-label::after {
-  transform: rotate(90deg);
-}
-.item-input:checked ~ .item-content {
-  max-height: 100vh;
-  padding: 16px;
-}
-```
+Sem mais delongas vamos ao código que é bem simples:
+<iframe height="300" style="width: 100%;" scrolling="no" title="HTML and CSS Accordion" src="https://codepen.io/dtfialho/embed/OJvRjxr?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/dtfialho/pen/OJvRjxr">
+  HTML and CSS Accordion</a> by Diego T. Fialho (<a href="https://codepen.io/dtfialho">@dtfialho</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## Explicando o código
 
@@ -148,10 +95,4 @@ Por último temos nossa div que vai ter o conteúdo de cada item do accordion, a
 ```
 E aqui é onde a mágica acontece. Ao clicar na label, o input fica como `checked` então usamos a pseudo classe `:checked` e adicionamos um `max-height: 100vh` na div do conteúdo, fazendo ela ficar visível e rotacionamos o nosso "ícone". Ao clicar novamente na label, a regra não se aplica e o conteúdo volta a ficar oculto.
 
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJvRjxr" data-user="dtfialho" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/dtfialho/pen/OJvRjxr">
-  HTML and CSS Accordion</a> by Diego T. Fialho (<a href="https://codepen.io/dtfialho">@dtfialho</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-Aqui tem o [link](https://codepen.io/dtfialho/pen/OJvRjxr) do codepen com esse exemplo para poderem brincar e testar. E é isso! Espero que tenham gostado, qualquer feedback é só comentar lá no [twitter](https://twitter.com/dtfialho). Um abraço e até o próximo post!
+Qualquer feedback é só comentar lá no [twitter](https://twitter.com/dtfialho). Um abraço e até o próximo post!

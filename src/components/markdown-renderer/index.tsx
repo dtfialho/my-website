@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import dynamic from 'next/dynamic'
 import gfm from 'remark-gfm'
 import Image from 'next/image'
+import rehypeRaw from 'rehype-raw'
 
 import * as S from './styles'
 const CodeHighlight = dynamic(() => import('components/code-highlight'))
@@ -60,6 +61,7 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       remarkPlugins={[gfm]}
       components={MarkdownComponents}
       linkTarget="_blank"
+      rehypePlugins={[rehypeRaw]}
     >
       {content}
     </ReactMarkdown>
