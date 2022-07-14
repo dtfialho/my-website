@@ -9,13 +9,27 @@ export type PostType = {
   hero_image: string
   title: string
   excerpt: string
+  imgPriority?: boolean
 }
 
-const Post = ({ slug, title, date, hero_image: image, excerpt }: PostType) => (
+const Post = ({
+  slug,
+  title,
+  date,
+  hero_image: image,
+  excerpt,
+  imgPriority
+}: PostType) => (
   <S.Wrapper>
     <S.Link href={`/blog/${slug}`} title={title}>
       <S.ImageWrapper>
-        <Image src={image} layout="fill" objectFit="cover" alt={title} />
+        <Image
+          src={image}
+          layout="fill"
+          objectFit="cover"
+          alt={title}
+          priority={imgPriority}
+        />
       </S.ImageWrapper>
       <S.Content>
         <S.Title>{title}</S.Title>
