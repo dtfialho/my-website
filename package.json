@@ -1,6 +1,6 @@
 {
   "name": "my-website",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -49,6 +49,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "globby": "^13.1.2",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "jest-styled-components": "^7.0.4",
