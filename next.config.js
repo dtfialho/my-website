@@ -5,7 +5,7 @@ module.exports = {
   },
   webpack: function (config, { isServer }) {
     if (isServer) {
-      require('./src/lib/generate-sitemap.js')
+      require('./src/lib/generate-seo.js')
     }
     config.module.rules.push({
       test: /\.md$/,
