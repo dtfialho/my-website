@@ -12,5 +12,9 @@ module.exports = {
       use: 'raw-loader'
     })
     return config
+  },
+  i18n: {
+    locales: ['pt-BR', 'en'],
+    defaultLocales: 'pt-BR'
   }
 }
