@@ -33,6 +33,7 @@ exports[`Templates/Post Should render correctly 1`] = `
   background-color: #282c34;
   border-radius: 6px;
   cursor: default;
+  max-width: none;
 }
 
 .c2 {

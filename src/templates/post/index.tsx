@@ -1,5 +1,6 @@
 import format from 'date-fns/format'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Header from 'components/header'
 import MarkdownRenderer from 'components/markdown-renderer'
@@ -34,7 +35,9 @@ const Post = ({ content, title, date, hero_image }: PostProps) => (
         <MarkdownRenderer content={content} />
       </S.Article>
 
-      <S.Back href="/blog">Voltar</S.Back>
+      <Link href="/blog" passHref>
+        <S.Back>Voltar</S.Back>
+      </Link>
     </S.Wrapper>
   </>
 )

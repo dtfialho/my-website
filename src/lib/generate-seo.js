@@ -43,11 +43,13 @@ function createRobots(urls) {
   fs.writeFileSync('public/robots.txt', robots)
 }
 
-import('globby').then(async ({ globby }) => {
-  const posts = await globby(['posts/*.md'])
-  const pages = await globby(['src/pages/*.tsx', '!src/pages/_*.tsx'])
-  const urls = [...posts, ...pages, 'blog']
+if (process.env.NODE_ENV === 'production') {
+  import('globby').then(async ({ globby }) => {
+    const posts = await globby(['posts/*.md'])
+    const pages = await globby(['src/pages/*.tsx', '!src/pages/_*.tsx'])
+    const urls = [...posts, ...pages, 'blog']
 
-  createSiteMap(urls)
-  createRobots(urls)
-})
+    createSiteMap(urls)
+    createRobots(urls)
+  })
+}

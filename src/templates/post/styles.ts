@@ -39,6 +39,7 @@ export const Article = styled.article`
     background-color: #282c34;
     border-radius: 6px;
     cursor: default;
+    max-width: none;
   }
 `
 
