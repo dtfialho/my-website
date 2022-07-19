@@ -70,17 +70,6 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
-
-  code {
-    display: block;
-    max-width: 100%;
-    white-space: pre-wrap;
-    word-break: break-word;
-
-    span {
-      white-space: pre-wrap;
-    }
-  }
 `
 
 export default GlobalStyles
