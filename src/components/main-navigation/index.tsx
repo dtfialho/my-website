@@ -1,7 +1,8 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
+import LanguageSelector from 'components/language-selector'
 import * as S from './styles'
 
 const MainNavigation = () => {
@@ -10,7 +11,7 @@ const MainNavigation = () => {
 
   return (
     <S.Wrapper open={open}>
-      <S.Hamburger title="Menu" onClick={() => setOpen(!open)}>
+      <S.Hamburger type="button" title="Menu" onClick={() => setOpen(!open)}>
         <S.Icon open={open}></S.Icon>
       </S.Hamburger>
 
@@ -31,6 +32,10 @@ const MainNavigation = () => {
           <Link href="/about-me" passHref>
             <S.Link active={asPath === '/about-me'}>Sobre mim</S.Link>
           </Link>
+        </S.Item>
+
+        <S.Item>
+          <LanguageSelector />
         </S.Item>
       </S.Container>
     </S.Wrapper>

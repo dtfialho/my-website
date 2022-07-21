@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+
 import Nav from './'
 
 jest.mock('next/router', () => ({
@@ -18,7 +19,8 @@ const useRouter = jest.spyOn(require('next/router'), 'useRouter')
 describe('MainNavigation', () => {
   it('Should render correctly', () => {
     useRouter.mockImplementation(() => ({
-      asPath: '/'
+      asPath: '/',
+      locale: 'pt-BR'
     }))
 
     const { container } = render(<Nav />)
