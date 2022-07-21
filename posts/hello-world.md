@@ -1,7 +1,7 @@
 ---
 title: 'Hello world!'
 date: '2022-06-17T00:00:00-03:00'
-hero_image: '/img/hello-world.png'
+hero_image: '/img/posts/hello-world.png'
 excerpt: 'Oi pessoal! Bem vindos ao meu blog.'
 ---
 

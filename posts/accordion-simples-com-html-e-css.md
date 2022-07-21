@@ -1,7 +1,7 @@
 ---
 title: 'Criando um accordion simples com somente HTML e CSS'
 date: '2022-07-13T12:01:42-0300'
-hero_image: '/img/accordion-simples-com-html-e-css.jpg'
+hero_image: '/img/posts/accordion-simples-com-html-e-css.jpg'
 excerpt: 'Nesse post mostro como fazer um accordion utilizando só HTML e CSS, sem nenhuma linha de Javascript'
 ---
 
