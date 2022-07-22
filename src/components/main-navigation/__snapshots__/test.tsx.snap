@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainNavigation Should render correctly 1`] = `
+.c6 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .c0 {
   background: none;
   -webkit-appearance: none;
@@ -170,6 +179,7 @@ exports[`MainNavigation Should render correctly 1`] = `
     <button
       class="c0"
       title="Menu"
+      type="button"
     >
       <span
         class="c1"
@@ -207,6 +217,21 @@ exports[`MainNavigation Should render correctly 1`] = `
         >
           Sobre mim
         </a>
+      </li>
+      <li
+        class="c3"
+      >
+        <button
+          class="c6"
+          type="button"
+        >
+          <img
+            alt="Active language"
+            height="22"
+            src="/img/pt-BR.jpg"
+            width="29"
+          />
+        </button>
       </li>
     </ul>
   </nav>
