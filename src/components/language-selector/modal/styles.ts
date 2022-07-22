@@ -110,6 +110,7 @@ export const List = styled.ul<{ open: boolean }>`
     ${!open &&
     css`
       li {
+        opacity: 0;
         padding: 0 8px;
       }
     `}
@@ -128,6 +129,7 @@ export const ListItem = styled.li`
   margin: 0;
   display: flex;
   cursor: pointer;
+  opacity: 1;
 
   &:not(:last-child) {
     border-bottom: 1px solid #d9d9d9;
