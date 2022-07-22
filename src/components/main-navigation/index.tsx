@@ -34,7 +34,7 @@ const MainNavigation = () => {
           </Link>
         </S.Item>
 
-        <S.Item>
+        <S.Item onClick={() => setOpen(!open)}>
           <LanguageSelector />
         </S.Item>
       </S.Container>
