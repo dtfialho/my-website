@@ -10,7 +10,11 @@ const CodeHighlight = ({ language = '', value }: CodeHighlightProps) => (
   <SyntaxHighlighter
     language={language}
     style={dracula}
-    customStyle={{ paddingLeft: '16px', paddingRight: '16px' }}
+    customStyle={{
+      paddingLeft: '16px',
+      paddingRight: '16px',
+      marginBottom: '24px'
+    }}
   >
     {value}
   </SyntaxHighlighter>

@@ -5,14 +5,14 @@ hero_image: '/img/posts/criando-uma-aplicacao-em-react-sem-create-react-app.png'
 excerpt: 'On this article I show you how to create a simple React application without using the create-react-app'
 ---
 
-Fala pessoal! Depois de um tempinho sem voltar para escrever um post, resolvi trazer um ponto que é bem importante. Hoje em dia temos vários frameworks que trazem aplicações já configuradas prontas para desenvolver, porém, as vezes a maioria das funcionalidades que vem nesses frameworks não são usadas. Então, nesses casos pode valer a pena implementar uma aplicação mais simples do zero.
+Speak up guys! After a while without comming back to write a post, I decided to bring up a point that is very important. Nowadays we have several frameworks that bring applications already configured ready to develop, however, sometimes most of the features that come in these frameworks are not used. So, in these cases it might be worth implementing a simpler application from scratch.
 
-Para quem quiser dar uma olhada direto no repositório, é esse [aqui](https://github.com/dtfialho/simple-react). Sintam-se livres para fazer um fork e contribuir :)
+For those who want to take a direct look at the repository, [this is it](https://github.com/dtfialho/simple-react). Feel free to fork and contribute :)
 
-Sem mais delongas vamos ao que interessa.
+And now, let's get to the point.
 
-## Estrutura do projeto
-A estrutura é bem simples:
+## Project structure
+The structure is simple:
 
 ```
 — public/
@@ -32,53 +32,53 @@ A estrutura é bem simples:
 — package.json
 ```
 
-Explicando:
-- **public**: pasta para os arquivos estáticos da aplicação
-- **src**: pasta raiz onde ficam os componentes
-- **webpack**: pasta para os arquivos de configuração do webpack
-- **.babelrc**: arquivo de configuração do babel
-- **.eslintignore** e **.eslintrc**: arquivos de configuração do eslint
-- **.prettierignore** e **.prettierrc**: arquivos de configuração do prettier
-- **package.json**: arquivo de configuração com as dependências do projeto e os scripts automatizados
+Explaining:
+- **public**: folder for the static file of the application
+- **src**: root folder where we add our components
+- **webpack**: folder for the Webpack configuration files
+- **.babelrc**: file for the babel configuration
+- **.eslintignore** e **.eslintrc**: file for the eslint configuration
+- **.prettierignore** e **.prettierrc**: file for the prettier configuration
+- **package.json**: configuration file with project dependencies and automated scripts
 
-Primeiro vamos criar uma pasta para o nosso projeto e dentro dela vamos adicionar essa estrutura que mostrei. Por hora vamos só criar as pastas e arquivos e ao longo do post vamos adicionando as configurações de cada um.
+First we will create a folder for our project and inside it we will add this structure that I showed. For now we will just create the folders and files and throughout the post we will add the settings for each one.
 
-## Configurando o Webpack
-Vamos começar configurando o Webpack para a aplicação, então vamos adicionar algumas dependências no nosso projeto.
+## Configuring Webpack
+Let's start by configuring Webpack for the application, so let's add some dependencies to our project.
 
 ```bash
 yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader @babel/core @babel/runtime @babel/plugin-transform-runtime @babel/runtime @babel/preset-env @babel/preset-react @babel/eslint-parser eslint @pmmmwh/react-refresh-webpack-plugin react-refresh
 ```
 
-Após instaladas vamos configurar nossos três arquivos do webpack:
-- `common.js`: arquivo com configurações mais gerais, que entram tanto para o build de produção quanto para o de desenvolvimento.
-- `development.js`: arquivo com as configurações para rodar o ambiente de desenvolvimento.
-- `production.js`: arquivo com as configurações de gerar o build para produção.
+Once installed, let's configure our three webpack files:
+- `common.js`: file with more general settings, which are included in both the production and development builds.
+- `development.js`: file with the settings to run the development environment.
+- `production.js`: file with the settings to generate the build for production.
 
-No arquivo `common.js` vamos adicionar o seguinte trecho de código:
+In the `common.js` file we will add the following code snippet:
 ```javascript
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-  // entrypoint da aplicação
+  // application entrypoint
   entry: path.join(__dirname, '..', 'src', 'index.js'),
 
-  // diretório onde os arquivos serão salvos depois de compilados e nome do bundle
+  // directory where files will be saved after compilation and bundle name
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
     filename: 'main.js'
   },
 
-  // target 'web' indicando que será uma aplicação que rodará no client
+  // target 'web' indicating that it will be an application that will run on the client
   target: 'web',
 
-  // extensões que serão lidas
+  // extensions that will be read
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   },
 
-  // configura o módulo do babel para compilar os arquivos javascript excluindo a pasta node_modules
+  // configure babel module to compile javascript files and ignoring the node_modules folder
   module: {
     rules: [
       {
@@ -89,7 +89,7 @@ module.exports = {
     ]
   },
 
-  // adiciona o plugin HtmlWebpackPlugin que é responsável por compilar o arquivo HTML conforme o necessário
+  // adds the HtmlWebpackPlugin which is responsible for compiling the HTML file as needed
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '..', 'public', 'index.html')
@@ -99,24 +99,24 @@ module.exports = {
 
 ```
 
-No arquivo `development.js` vamos adicionar:
+In the `development.js` file we will add:
 ```javascript
-// fazemos o require do módulo para o fast refresh (hot reloading)
+// we require the module for fast refresh (hot reloading)
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-// fazemos um require do módulo common.js que criamos no outro arquivo
+// we require the common.js module that we created in the other file
 const common = require('./common')
 
-// adicionamos o módulo de fast refresh nos plugins
+// we add the fast refresh module in the plugins
 common.plugins.push(new ReactRefreshPlugin())
 
 module.exports = {
-  // fazemos um destructuring das configurações no common.js
+  // we add the settings of common.js via destructuring
   ...common,
 
-  // indicamos o modo que será rodado 'development'
+  // we indicate that the mode to be run is going to be 'development'
   mode: 'development',
 
-  // adicionamos a configuração do servidor de desenvolvimento
+  // we added the development server configuration
   devServer: {
     port: '3000',
     static: ['../public'],
@@ -126,19 +126,19 @@ module.exports = {
 }
 ```
 
-E por último o arquivo `production.js` é mais simples, nele só adicionamos:
+And finally the `production.js` file is simpler, in it we just add:
 ```javascript
 const common = require('./common')
 
 module.exports = {
   ...common,
 
-  // indicamos que o modo é para build de produção
+  // we indicate that the mode to be run is going to be 'production'
   mode: 'production'
 }
 ```
 
-Agora que configuramos o nosso webpack, ainda tem mais um arquivo que precisamos configurar, então vamos adicionar esse trecho de código no `.babelrc`.
+Now that we've configured our webpack, there's still one more file we need to configure, so let's add this code snippet to `.babelrc`.
 ```json
 {
   "presets": [
@@ -151,15 +151,15 @@ Agora que configuramos o nosso webpack, ainda tem mais um arquivo que precisamos
 }
 ```
 
-## Adicionando o React
-Agora vamos adicionar o React ao nosso projeto, para isso vamos rodar:
+## Adding React
+Now let's add React to our project, for that let's run:
 ```bash
 yarn add react react-dom
 ```
 
-Depois disso vamos atualizar três arquivos, o `public/index.html`, `src/index.js` e `src/App.js`.
+After that we will update three files, `public/index.html`, `src/index.js` and `src/App.js`.
 
-No `index.html` vamos adicionar um html bem minimalista:
+In `index.html` let's add a very minimalistic html:
 ```html
 <!DOCTYPE html>
 <html>
@@ -173,7 +173,7 @@ No `index.html` vamos adicionar um html bem minimalista:
 </html>
 ```
 
-No nosso `index.js` é onde a aplicação vai ser iniciada, então nele colocamos:
+In our `index.js` is where the application will be started, so in it we add:
 ```javascript
 import React from 'react'
 import { createRoot } from 'react-dom/client'
@@ -186,7 +186,7 @@ const root = createRoot(container)
 root.render(<App />)
 ```
 
-E no `App.js` vamos apenas configurar um componente simples, apenas para importar no nosso `index.js` e ver funcionando.
+And in `App.js` we'll just configure a simple component, just to import it into our `index.js` and see it working.
 ```javascript
 import React from 'react'
 
@@ -195,7 +195,7 @@ const App = () => <h1>Hello World!</h1>
 export default App
 ```
 
-Agora vamos adicionar os scripts no nosso `package.json`:
+Now let's add the scripts to our `package.json`:
 ```json
 "scripts": {
   "start": "webpack-dev-server --config webpack/development",
@@ -203,16 +203,15 @@ Agora vamos adicionar os scripts no nosso `package.json`:
 }
 ```
 
-Após isso ao rodar `yarn start` nós teremos um servidor de desenvolvimento rodando, e ao rodar `yarn build` será feito o build para produção dentro da pasta `dist`. E com isso já temos nossa aplicação pronta para ser desenvolvida. Um ponto que faltou e talvez estejam se perguntando. Mas e os estilos? Como fazer?
+After that when running `yarn start` we will have a development server running, and when running `yarn build` it will be build for production inside the `dist` folder. And with that we already have our application ready to be developed. A missing point and maybe you are wondering. But what about styles? How do we do it?
 
-Bem, para isso podemos utilizar uma solução bem simples que funciona muito bem para essa aplicação e não precisaremos configurar um loader para fazer o parse do css. Essa solução é o `styled-components`, assim nós utilizamos uma técnica chamada `css in JS`, para utilizarmos é bem simples. Vamos primeiro instalar o pacote com o comando:
+Well, for that we can use a very simple solution that works very well for this application and we won't need to configure a loader to parse the css. This solution is `styled-components`, so we use a technique called `css in JS`, to use it is very simple. Let's first install the package with the command:
 
 ```bash
 yarn add styled-components
 ```
 
-Após isso vamos criar um arquivo novo dentro da pasta `src` chamado `styles.js`.
-
+After that let's create a new file inside the `src` folder called `styles.js` and we add:
 ```javascript
 import styled from 'styled-components'
 
@@ -222,7 +221,7 @@ export const Title = styled.h1`
 `
 ```
 
-E depois alteramos o nosso `App.js` um pouco e já teremos nossos componentes completamente estilizados.
+And then we change our `App.js` a little bit and we will have our components completely styled.
 ```javascript
 import React from 'react'
 import * as S from './styles'
@@ -232,22 +231,22 @@ const App = () => <S.Title>Hello World!</S.Title>
 export default App
 ```
 
-## Configurando eslint + prettier
-Bom, além de termos nossa aplicação já funcional, é sempre interessante mantermos o padrão do código e podemos combinar o prettier que faz muito bem essa parte com o eslint que nos ajuda a encontrar problemas no nosso código.
+## Configuring eslint + prettier
+Well, in addition to having our application already functional, it is always interesting to keep the code standard and we can combine the prettier that does this part very well with the eslint that helps us find problems in our code.
 
-Para configurá-los vamos adicionar mais alguns pacotes:
+To configure them let's add some more packages:
 ```bash
 yarn add -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react prettier
 ```
 
-Nos arquivos `.eslintignore` e `.prettierignore` vamos adicionar os arquivos que não vão ser levados em consideração por essas ferramentas.
+In the `.eslintignore` and `.prettierignore` files we will add the files that will not be taken into account by these tools.
 ```
 node_modules
 yarn.lock
 dist
 ```
 
-Agora a configuração do `.eslintrc`:
+Now the `.eslintrc` configuration:
 ```json
 {
   "env": {
@@ -272,7 +271,7 @@ Agora a configuração do `.eslintrc`:
 }
 ```
 
-E por último o `.prettierrc`:
+And finally the `.prettierrc`:
 ```json
 {
   "printWidth": 100,
@@ -284,7 +283,7 @@ E por último o `.prettierrc`:
 }
 ```
 
-E pronto! Agora temos uma aplicação bem simples configurada e que segue padrões de código. Estou colocando as versões de cada pacote que foi utilizado para esse post.
+And that's it! Now we have a very simple application configured that follows code patterns. I'm putting the versions of each package that was used for this post.
 
 ```json
 "dependencies": {
@@ -314,4 +313,4 @@ E pronto! Agora temos uma aplicação bem simples configurada e que segue padrõ
 }
 ```
 
-Espero que esse post tenha sido útil e que tenham gostado! Logo mais eu volto com o próximo post trazendo mais conteúdo. Até mais!
+I hope this post was helpful and you enjoyed it! Soon I'll be back with the next post bringing more content. See you later!

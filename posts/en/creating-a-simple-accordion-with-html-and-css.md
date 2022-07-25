@@ -5,16 +5,16 @@ hero_image: '/img/posts/accordion-simples-com-html-e-css.jpg'
 excerpt: 'On this post I show you how to build an accordion using only HTML and CSS, without a single line of Javascript'
 ---
 
-Fala pessoal! Voltando mais uma vez, hoje trago um post bem rapidinho sobre uma feature que é bem comum de vermos sendo utilizada. Existem várias formas de se criar um accordion e nesse post estou trazendo para vocês uma versão bem simples utilizando apenas HTML e CSS, sem uma única linha de Javascript.
+Hello folks! Coming back once more, today I bring a very quick post about a feature that is very common to see being used. There are several ways to create an accordion and in this post I'm bringing you a very simple version using only HTML and CSS, without a single line of Javascript.
 
-Sem mais delongas vamos ao código que é bem simples:
+Well, let's go straight to the point, the code is very simple:
 <iframe height="300" style="width: 100%;" scrolling="no" title="HTML and CSS Accordion" src="https://codepen.io/dtfialho/embed/OJvRjxr?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/dtfialho/pen/OJvRjxr">
   HTML and CSS Accordion</a> by Diego T. Fialho (<a href="https://codepen.io/dtfialho">@dtfialho</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-## Explicando o código
+## Explaining the code
 
 ```markup
 <div class="accordion">
@@ -28,7 +28,7 @@ Sem mais delongas vamos ao código que é bem simples:
   overflow: hidden;
 }
 ```
-Para o container principal do accordion usamos apenas uma `div` com a classe `accordion`. Adicionamos uma borda para poder ver as dimensões do accordion com mais facilidade, e arredondamos as bordas escondendo o overflow para garantir que as bordas fiquem arredondadas.
+For the main accordion container we just use a `div` with the `accordion` class. We've added a border so you can see the accordion's dimensions more easily, and we've rounded the edges hiding the overflow to make sure the edges are rounded.
 
 ```markup
 <div class="accordion-item">
@@ -43,9 +43,9 @@ Para o container principal do accordion usamos apenas uma `div` com a classe `ac
   border-bottom: 1px solid #fff;
 }
 ```
-Cada item do accordion será uma `div` com a classe `accordion-item`. Aqui temos duas regras uma para esconder o overflow, assim quando o accordion estiver fechado o seu conteúdo não aparecerá. Outra para adicionar uma borda, assim conseguimos ver uma separação entre cada item.
+Each accordion item will be a `div` with the `accordion-item` class. Here we have two rules one to hide the overflow, so when the accordion is closed its contents will not appear. Another to add a border, so we can see a separation between each item.
 
-Dentro de cada `accordion-item` temos três elementos. Um `input` checkbox, uma `label` para o input e uma `div` para o conteúdo.
+Within each `accordion-item` we have three elements. A checkbox `input`, a `label` for the input and a `div` for the content.
 
 ```markup
 <input type="checkbox" id="accordion-item-1" class="item-input" />
@@ -70,7 +70,7 @@ Dentro de cada `accordion-item` temos três elementos. Um `input` checkbox, uma 
   transition: transform 0.3s ease-in-out;
 }
 ```
-Vamos esconder o input com um `display: none` e a nossa label leva um `display: flex` com `justify-content: space-between`. Aqui eu utilizei o pseudo elemento `::after` para criar um ícone que tem uma transição e fica sempre no lado direito da label, mas podemos usar também um ícone em svg ou uma imagem para deixar mais bonitinho, por agora vou deixar assim mesmo e vocês podem usar a criatividade para melhorar. :)
+Let's hide the input with a `display: none` and our label takes a `display: flex` with `justify-content: space-between`. Here I used the `::after` pseudo element to create an icon that has a transition and is always on the right side of the label, but we can also use an icon in svg or an image to make it cuter, for now I'll leave it like that and you can use your creativity to improve. :)
 
 ```markup
 <div class="item-content">...</div>
@@ -82,7 +82,7 @@ Vamos esconder o input com um `display: none` e a nossa label leva um `display: 
   padding: 0 16px;
 }
 ```
-Por último temos nossa div que vai ter o conteúdo de cada item do accordion, aqui iniciamos com `max-height: 0` para "escondê-la".
+Finally we have our `div` that will have the contents of each accordion item, here we start with `max-height: 0` to "hide" it.
 
 ```css
 .item-input:checked ~ .item-label::after {
@@ -93,6 +93,6 @@ Por último temos nossa div que vai ter o conteúdo de cada item do accordion, a
   padding: 16px;
 }
 ```
-E aqui é onde a mágica acontece. Ao clicar na label, o input fica como `checked` então usamos a pseudo classe `:checked` e adicionamos um `max-height: 100vh` na div do conteúdo, fazendo ela ficar visível e rotacionamos o nosso "ícone". Ao clicar novamente na label, a regra não se aplica e o conteúdo volta a ficar oculto.
+And here is where the magic happens. When clicking on the label, the input becomes `checked` so we use the `:checked` pseudo class and add a `max-height: 100vh` to the content div, making it visible and rotating our "icon". When clicking on the label again, the rule does not apply and the content is hidden again.
 
-Bom pessoa, por agora é isso. Espero que tenham gostado e qualquer feedback é só comentar lá no [twitter](https://twitter.com/dtfialho). Um abraço e até o próximo post!
+Well folks, that's it for now. I hope you liked it and any feedback just comment on [twitter](https://twitter.com/dtfialho). Regards and see you next post!

@@ -211,7 +211,7 @@ Bem, para isso podemos utilizar uma solução bem simples que funciona muito bem
 yarn add styled-components
 ```
 
-Após isso vamos criar um arquivo novo dentro da pasta `src` chamado `styles.js`.
+Após isso vamos criar um arquivo novo dentro da pasta `src` chamado `styles.js` e adicionamos:
 
 ```javascript
 import styled from 'styled-components'
