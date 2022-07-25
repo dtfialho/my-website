@@ -1,7 +1,4 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-
+import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
 import Template from 'templates/blog'
 import { PostType } from 'components/post'
 import Seo from 'components/seo'
@@ -40,21 +37,7 @@ type StaticPageProps = {
 }
 
 export async function getStaticProps({ locale }: StaticPageProps) {
-  const dir = locale === 'pt-BR' ? 'default' : locale
-  const postsFolder = path.join('posts', dir)
-  const files = fs.readdirSync(postsFolder)
-  const posts = files.map((filename) => {
-    const slug = filename.replace('.md', '')
-    const filePath = path.join('posts', dir, filename)
-    const markdown = fs.readFileSync(filePath)
-    const { data } = matter(markdown)
-
-    return {
-      slug,
-      ...data
-    }
-  })
-
+  const posts = getAllPostsByLocale(locale)
   return {
     props: {
       posts
