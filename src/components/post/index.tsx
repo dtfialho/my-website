@@ -37,7 +37,7 @@ const Post = ({
           <S.Title>{title}</S.Title>
           <S.Description>{excerpt}</S.Description>
           <S.Date>
-            Em: <span>{format(new Date(date), 'dd/MM/yyyy')}</span>
+            Postado em: <span>{format(new Date(date), 'dd/MM/yyyy')}</span>
           </S.Date>
         </S.Content>
       </S.Link>

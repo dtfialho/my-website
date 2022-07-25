@@ -35,12 +35,17 @@ const Blog = ({ posts }: BlogProps) => {
   )
 }
 
-export async function getStaticProps() {
-  const postsFolder = path.join('posts')
+type StaticPageProps = {
+  locale: string
+}
+
+export async function getStaticProps({ locale }: StaticPageProps) {
+  const dir = locale === 'pt-BR' ? 'default' : locale
+  const postsFolder = path.join('posts', dir)
   const files = fs.readdirSync(postsFolder)
   const posts = files.map((filename) => {
     const slug = filename.replace('.md', '')
-    const filePath = path.join('posts', filename)
+    const filePath = path.join('posts', dir, filename)
     const markdown = fs.readFileSync(filePath)
     const { data } = matter(markdown)
 
