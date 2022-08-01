@@ -5,7 +5,7 @@ hero_image: '/img/posts/criando-uma-aplicacao-em-react-sem-create-react-app.png'
 excerpt: 'On this article I show you how to create a simple React application without using the create-react-app'
 ---
 
-Speak up guys! After a while without comming back to write a post, I decided to bring up a point that is very important. Nowadays we have several frameworks that bring applications already configured ready to develop, however, sometimes most of the features that come in these frameworks are not used. So, in these cases it might be worth implementing a simpler application from scratch.
+Hello everyone! After a while without comming back to write a post, I decided to bring up a point that is very important. Nowadays we have several frameworks that bring applications already configured ready to develop, however, sometimes most of the features that come in these frameworks are not used. So, in these cases it might be worth implementing a simpler application from scratch.
 
 For those who want to take a direct look at the repository, [this is it](https://github.com/dtfialho/simple-react). Feel free to fork and contribute :)
 

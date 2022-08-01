@@ -1,4 +1,4 @@
-import getAllPagePaths from 'lib/get-all-page-paths'
+import getAllPostPaths from 'lib/get-all-post-paths'
 import getPagePostContent from 'lib/get-page-post-content'
 
 import Post, { PostProps } from 'templates/post'
@@ -62,7 +62,7 @@ type StaticPathsProps = {
 }
 
 export async function getStaticPaths({ locales }: StaticPathsProps) {
-  const paths = getAllPagePaths(locales)
+  const paths = getAllPostPaths(locales)
 
   return {
     paths,

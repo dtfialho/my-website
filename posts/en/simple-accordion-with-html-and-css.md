@@ -5,7 +5,7 @@ hero_image: '/img/posts/accordion-simples-com-html-e-css.jpg'
 excerpt: 'On this post I show you how to build an accordion using only HTML and CSS, without a single line of Javascript'
 ---
 
-Hello folks! Coming back once more, today I bring a very quick post about a feature that is very common to see being used. There are several ways to create an accordion and in this post I'm bringing you a very simple version using only HTML and CSS, without a single line of Javascript.
+Hello everyone! Coming back once more, today I bring a very quick post about a feature that is very common to see being used. There are several ways to create an accordion and in this post I'm bringing you a very simple version using only HTML and CSS, without a single line of Javascript.
 
 Well, let's go straight to the point, the code is very simple:
 <iframe height="300" style="width: 100%;" scrolling="no" title="HTML and CSS Accordion" src="https://codepen.io/dtfialho/embed/OJvRjxr?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">

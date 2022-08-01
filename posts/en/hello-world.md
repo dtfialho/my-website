@@ -5,7 +5,7 @@ hero_image: '/img/posts/hello-world.png'
 excerpt: 'Hey everyone! Wellcome to my blog.'
 ---
 
-Hello everyone, wellcome! My name is Diego T. Fialho, this is my first post so it is going to be a little faster, only to introduce myself and give you an overview about the content that I'm going to post from time to time.
+Hello everyone, welcome! My name is Diego T. Fialho, this is my first post so it is going to be a little faster, only to introduce myself and give you an overview about the content that I'm going to post from time to time.
 
 After a little while with the idea, I decided to put a project I already had in mind but ~I always procratinated~ it always took me a long time to put it into development, wich is the bog of my website.
 

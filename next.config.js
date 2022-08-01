@@ -1,4 +1,6 @@
-module.exports = {
+const nextTranslate = require('next-translate')
+
+module.exports = nextTranslate({
   swcMinify: true,
   compiler: {
     styledComponents: true
@@ -12,9 +14,5 @@ module.exports = {
       use: 'raw-loader'
     })
     return config
-  },
-  i18n: {
-    locales: ['pt-BR', 'en'],
-    defaultLocale: 'pt-BR'
   }
-}
+})
