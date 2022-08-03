@@ -7,20 +7,20 @@ export function middleware({
   nextUrl: { pathname, locale },
   url
 }: NextRequest) {
-  if (!pathname.includes('/blog/')) {
+  const locales = Object.keys(redirects)
+
+  if (!locales.includes(locale)) {
     return
   }
 
-  const locales = Object.keys(redirects)
+  const postsToRedirect = Object.keys(redirects[locale])
+  const path = postsToRedirect.find((post) => pathname.includes(post))
 
-  if (locales.includes(locale)) {
-    const postsToRedirect = Object.keys(redirects[locale])
-
-    for (let i = 0; i < postsToRedirect.length; i++) {
-      const path = postsToRedirect[i]
-      if (pathname.includes(path)) {
-        return NextResponse.redirect(new URL(`${redirects[locale][path]}`, url))
-      }
-    }
+  if (path) {
+    return NextResponse.redirect(new URL(`${redirects[locale][path]}`, url))
   }
+}
+
+export const config = {
+  matcher: '/blog/:path*'
 }
