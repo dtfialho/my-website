@@ -1,6 +1,7 @@
 import format from 'date-fns/format'
-import { screen, render } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
+import { renderWithTranslate } from 'utils/test-utils'
 import * as Header from 'components/header'
 import Post, { PostProps } from './'
 
@@ -21,7 +22,12 @@ const postProps: PostProps = {
 
 describe('Templates/Post', () => {
   it('Should render correctly', () => {
-    const { container } = render(<Post {...postProps} />)
+    const { container } = renderWithTranslate(<Post {...postProps} />)
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Should render correctly in en', () => {
+    const { container } = renderWithTranslate(<Post {...postProps} />, 'en')
     expect(container).toMatchSnapshot()
   })
 
@@ -29,7 +35,7 @@ describe('Templates/Post', () => {
     const parsedDate = format(new Date(postProps.date), 'dd/MM/yyyy')
     const dateRegex = new RegExp(parsedDate)
 
-    render(<Post {...postProps} />)
+    renderWithTranslate(<Post {...postProps} />)
     expect(await screen.findByRole('heading', { name: postProps.title }))
     expect(screen.queryByText(dateRegex)).toBeInTheDocument()
     expect(screen.getByText(postProps.content)).toBeInTheDocument()

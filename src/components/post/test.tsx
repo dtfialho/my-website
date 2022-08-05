@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import format from 'date-fns/format'
 
+import { renderWithTranslate } from 'utils/test-utils'
 import Post, { PostType } from './'
 
 const data: PostType = {
@@ -13,14 +14,19 @@ const data: PostType = {
 
 describe('Components/Post', () => {
   it('Should render correctly', () => {
-    const { container } = render(<Post {...data} />)
+    const { container } = renderWithTranslate(<Post {...data} />)
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Should render correctly in en', () => {
+    const { container } = renderWithTranslate(<Post {...data} />)
     expect(container).toMatchSnapshot()
   })
 
   it('Should render with the correct given props', () => {
     const parsedDate = format(new Date(data.date), 'dd/MM/yyyy')
 
-    render(<Post {...data} />)
+    renderWithTranslate(<Post {...data} />)
 
     expect(screen.getByRole('link', { name: data.title })).toHaveAttribute(
       'href',

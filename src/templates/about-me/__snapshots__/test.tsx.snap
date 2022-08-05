@@ -137,35 +137,7 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
       </h1>
     </div>
     <p>
-      Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na
-       
-      <a
-        href="http://www.personare.com.br"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Personare
-      </a>
-      . Já trabalhei como Fullstack Developer na
-       
-      <a
-        href="https://www.maxisite.net/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Maxisite
-      </a>
-       
-      e Frontend Developer na
-       
-      <a
-        href="https://www.alterdata.com.br/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Alterdata Software
-      </a>
-      .
+      Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na Personare. Já trabalhei como Fullstack Developer na Maxisite e Frontend Developer na Alterdata Software.
     </p>
     <p>
       Apaixonado por tecnologia desde cedo sempre fui curioso para aprender. Aos 20 anos, fiz meu primeiro curso na área de tecnologia no SENAI e aos 23 ingressei na faculdade de Tecnologia da Informação e Comunicação pela FAETERJ - Petrópolis.
@@ -177,7 +149,8 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
       class="c3"
     >
       <h2>
-        Um pouco do que eu faço:
+        Um pouco do que eu faço
+        :
       </h2>
       <div
         class="c4"
@@ -209,7 +182,8 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
               Javascript
             </li>
             <li>
-              Pré-processadores (sass, less, stylus)
+              Pré-processadores
+               (sass, less, stylus)
             </li>
             <li>
               React
@@ -268,13 +242,10 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
               Scrum
             </li>
             <li>
-              Sistemas de controle de versão (git)
+              Git
             </li>
             <li>
               TDD
-            </li>
-            <li>
-              Wordpress
             </li>
           </ul>
         </div>
@@ -284,6 +255,273 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
       class="c8"
     >
       Contato
+    </h2>
+    <div
+      class="c9"
+    >
+      <section>
+        Social media
+      </section>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`Templates/AboutMe Should render correctly in en 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 153px 16px 100px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.c1 > span {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.c2 {
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+.c3 {
+  margin: 50px 0 40px;
+  border-bottom: 1px solid rgb(153,46,36);
+}
+
+.c5 {
+  margin-bottom: 40px;
+}
+
+.c6 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(153,46,36);
+}
+
+.c7 {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.c8 {
+  text-align: center;
+}
+
+.c9 {
+  color: #333;
+  text-align: center;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    padding: 193px 16px 100px;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width:768px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width:768px) {
+  .c5 {
+    -webkit-flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+  }
+}
+
+<div>
+  <header>
+    Header
+  </header>
+  <main
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <img
+        alt="My profile picture"
+        height="150"
+        layout="fixed"
+        src="/img/me.jpeg"
+        width="150"
+      />
+      <h1
+        class="c2"
+      >
+        About me
+      </h1>
+    </div>
+    <p>
+      Hello! My name is Diego Teixeira Fialho, born at Petrópolis, RJ - Brazil and currently I work as a Frontend Web Developer at Personare. I also worked as a Fullstack Developer at Maxisite and as Frontend Developer at Alterdata Software.
+    </p>
+    <p>
+      Passionate about technology since soon I was always curious to learn. At 20 years old, I took my first course in technology at SENAI and at 23 years old I entered college at FAETERJ - Petrópolis.
+    </p>
+    <p>
+      I love developing and study new technologies that appear each day to make our life as developers easier. With blood half coffee and half code, I love to create and idealize components using Javascript frameworks and concepts for a clean and well structured code.
+    </p>
+    <div
+      class="c3"
+    >
+      <h2>
+        A little about what I do
+        :
+      </h2>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <h3
+            class="c6"
+          >
+            Frontend
+          </h3>
+          <ul
+            class="c7"
+          >
+            <li>
+              Angular
+            </li>
+            <li>
+              AngularJS
+            </li>
+            <li>
+              CSS3
+            </li>
+            <li>
+              HTML5
+            </li>
+            <li>
+              Javascript
+            </li>
+            <li>
+              CSS Preprocessors
+               (sass, less, stylus)
+            </li>
+            <li>
+              React
+            </li>
+            <li>
+              Styled Components
+            </li>
+            <li>
+              Next JS
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c5"
+        >
+          <h3
+            class="c6"
+          >
+            Backend
+          </h3>
+          <ul
+            class="c7"
+          >
+            <li>
+              Node
+            </li>
+            <li>
+              PHP
+            </li>
+            <li>
+              Object Oriented programming
+            </li>
+            <li>
+              Python
+            </li>
+            <li>
+              MySql
+            </li>
+            <li>
+              PostgreeSQL
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c5"
+        >
+          <h3
+            class="c6"
+          >
+            Others
+          </h3>
+          <ul
+            class="c7"
+          >
+            <li>
+              Scrum
+            </li>
+            <li>
+              Git
+            </li>
+            <li>
+              TDD
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h2
+      class="c8"
+    >
+      Contact
     </h2>
     <div
       class="c9"
