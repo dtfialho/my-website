@@ -2,6 +2,10 @@
   "locales": ["pt-BR", "en"],
   "defaultLocale": "pt-BR",
   "pages": {
-    "*": ["common"]
+    "*": ["common"],
+    "/": ["home"],
+    "/about-me": ["about-me"],
+    "/blog": ["blog"],
+    "/blog/[slug]": ["post"]
   }
 }

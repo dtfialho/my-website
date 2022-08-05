@@ -1,3 +1,5 @@
+import useTranslation from 'next-translate/useTranslation'
+
 import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
 import Template from 'templates/blog'
 import { PostType } from 'components/post'
@@ -8,8 +10,9 @@ type BlogProps = {
 }
 
 const Blog = ({ posts }: BlogProps) => {
+  const { t } = useTranslation()
   const title = 'Blog | Diego T. Fialho'
-  const description = 'Aqui tem alguns conteúdos sobre programação e front-end.'
+  const description = t('blog:description')
   const url = 'https://www.diegotfialho.com.br/blog'
 
   return (

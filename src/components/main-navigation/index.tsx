@@ -1,3 +1,4 @@
+import useTranslation from 'next-translate/useTranslation'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
@@ -6,6 +7,7 @@ import LanguageSelector from 'components/language-selector'
 import * as S from './styles'
 
 const MainNavigation = () => {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const { asPath } = useRouter()
 
@@ -30,7 +32,9 @@ const MainNavigation = () => {
 
         <S.Item>
           <Link href="/about-me" passHref>
-            <S.Link active={asPath === '/about-me'}>Sobre mim</S.Link>
+            <S.Link active={asPath === '/about-me'}>
+              {t('common:aboutMe')}
+            </S.Link>
           </Link>
         </S.Item>
 

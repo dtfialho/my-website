@@ -1,0 +1,13 @@
+{
+  "title": "Sobre mim",
+  "description": "Um pouquinho sobre mim e o que faço.",
+  "profilePicture": "Minha foto de perfil",
+  "firstParagraph": "Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na Personare. Já trabalhei como Fullstack Developer na Maxisite e Frontend Developer na Alterdata Software.",
+  "secondParagraph": "Apaixonado por tecnologia desde cedo sempre fui curioso para aprender. Aos 20 anos, fiz meu primeiro curso na área de tecnologia no SENAI e aos 23 ingressei na faculdade de Tecnologia da Informação e Comunicação pela FAETERJ - Petrópolis.",
+  "thirdParagraph": "Amo desenvolver e estudar novas tecnologias que surgem a cada dia para facilitar a nossa vida como desenvolvedores. Com o sangue metade café e metade código, amo criar e idealizar componentes utilizando frameworks Javascript e conceitos para um código limpo e bem estruturado.",
+  "whatIDo": "Um pouco do que eu faço",
+  "preProcessors": "Pré-processadores",
+  "oop": "Programação Orientada a Objetos",
+  "others": "Outros",
+  "contact": "Contato"
+}
