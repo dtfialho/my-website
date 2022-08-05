@@ -14,10 +14,16 @@ const LanguageSelectorContext = createContext<ContextProps>({
 
 type ProviderProps = {
   children: ReactNode
+  initialState?: {
+    showModal: boolean
+  }
 }
 
-const LanguageSelectorProvider = ({ children }: ProviderProps) => {
-  const [showModal, setShowModal] = useState(false)
+const LanguageSelectorProvider = ({
+  children,
+  initialState
+}: ProviderProps) => {
+  const [showModal, setShowModal] = useState(!!initialState?.showModal)
 
   return (
     <LanguageSelectorContext.Provider value={{ showModal, setShowModal }}>

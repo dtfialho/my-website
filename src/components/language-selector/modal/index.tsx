@@ -50,6 +50,8 @@ const LanguageSelectorModal = () => {
                   src={`/img/${selectedLocale || activeLocale}.jpg`}
                   width="29"
                   height="22"
+                  alt="Active locale"
+                  title="Active locale"
                 />
               </S.FlagWrapper>
 
