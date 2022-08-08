@@ -21,7 +21,9 @@ const AboutMe = () => {
           url,
           title,
           description,
-          images: [{ url: 'https://www.diegotfialho.com.br/icon-512x512.png' }]
+          images: [
+            { url: 'https://www.diegotfialho.com.br/img/icon-512x512.png' }
+          ]
         }}
       />
 
