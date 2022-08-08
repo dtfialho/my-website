@@ -1,9 +1,13 @@
+import useTranslation from 'next-translate/useTranslation'
+
 import Template from 'templates/about-me'
 import Seo from 'components/seo'
 
 const AboutMe = () => {
-  const title = 'Sobre mim | Diego T. Fialho'
-  const description = 'Um pouquinho sobre mim e o que faço.'
+  const { t } = useTranslation()
+
+  const title = `${t('about-me:title')} | Diego T. Fialho`
+  const description = t('about-me:description')
   const url = 'https://www.diegotfialho.com.br/about-me'
 
   return (

@@ -12,3 +12,5 @@ yarn-error.log
 dist
 .swc
 .env
+public/sitemap.xml
+public/robots.txt

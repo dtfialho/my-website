@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/LanguageSelector Should match snapshot 1`] = `
+.c0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+<div>
+  <button
+    class="c0"
+    type="button"
+  >
+    <img
+      alt="Active language"
+      height="22"
+      src="/img/pt-BR.jpg"
+      width="29"
+    />
+  </button>
+</div>
+`;

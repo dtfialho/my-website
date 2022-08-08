@@ -1,7 +1,7 @@
 ---
 title: 'Criando uma aplicação em React sem create-react-app'
 date: '2022-07-07T14:45:49-0300'
-hero_image: '/img/criando-uma-aplicacao-em-react-sem-create-react-app.png'
+hero_image: '/img/posts/criando-uma-aplicacao-em-react-sem-create-react-app.png'
 excerpt: 'Nesse artigo mostro como criar uma aplicação em React bem minimalista sem usar o create-react-app'
 ---
 
@@ -211,7 +211,7 @@ Bem, para isso podemos utilizar uma solução bem simples que funciona muito bem
 yarn add styled-components
 ```
 
-Após isso vamos criar um arquivo novo dentro da pasta `src` chamado `styles.js`.
+Após isso vamos criar um arquivo novo dentro da pasta `src` chamado `styles.js` e adicionamos:
 
 ```javascript
 import styled from 'styled-components'

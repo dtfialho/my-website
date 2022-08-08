@@ -1,117 +1,84 @@
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
 
 import Header from 'components/header'
 import SocialMedia from 'components/social-media'
 import * as S from './styles'
 
-const AboutMe = () => (
-  <>
-    <Header fixed />
-    <S.Wrapper>
-      <S.TitleContainer>
-        <Image
-          src="/img/me.jpeg"
-          layout="fixed"
-          alt="Minha foto de perfil"
-          width={150}
-          height={150}
-          priority
-        />
-        <S.Title>Sobre mim</S.Title>
-      </S.TitleContainer>
+const AboutMe = () => {
+  const { t } = useTranslation()
 
-      <p>
-        Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e
-        atualmente trabalho como Frontend Developer na{' '}
-        <a
-          href="http://www.personare.com.br"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Personare
-        </a>
-        . Já trabalhei como Fullstack Developer na{' '}
-        <a
-          href="https://www.maxisite.net/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Maxisite
-        </a>{' '}
-        e Frontend Developer na{' '}
-        <a
-          href="https://www.alterdata.com.br/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Alterdata Software
-        </a>
-        .
-      </p>
+  return (
+    <>
+      <Header fixed />
+      <S.Wrapper>
+        <S.TitleContainer>
+          <Image
+            src="/img/me.jpeg"
+            layout="fixed"
+            alt={t('about-me:profilePicture')}
+            width={150}
+            height={150}
+            priority
+          />
+          <S.Title>{t('about-me:title')}</S.Title>
+        </S.TitleContainer>
 
-      <p>
-        Apaixonado por tecnologia desde cedo sempre fui curioso para aprender.
-        Aos 20 anos, fiz meu primeiro curso na área de tecnologia no SENAI e aos
-        23 ingressei na faculdade de Tecnologia da Informação e Comunicação pela
-        FAETERJ - Petrópolis.
-      </p>
+        <p>{t('about-me:firstParagraph')}</p>
 
-      <p>
-        Amo desenvolver e estudar novas tecnologias que surgem a cada dia para
-        facilitar a nossa vida como desenvolvedores. Com o sangue metade café e
-        metade código, amo criar e idealizar componentes utilizando frameworks
-        Javascript e conceitos para um código limpo e bem estruturado.
-      </p>
+        <p>{t('about-me:secondParagraph')}</p>
 
-      <S.SkillsContainer>
-        <h2>Um pouco do que eu faço:</h2>
+        <p>{t('about-me:thirdParagraph')}</p>
 
-        <S.Items>
-          <S.Skills>
-            <S.SkillItemTitle>Frontend</S.SkillItemTitle>
-            <S.SkillsList>
-              <li>Angular</li>
-              <li>AngularJS</li>
-              <li>CSS3</li>
-              <li>HTML5</li>
-              <li>Javascript</li>
-              <li>Pré-processadores (sass, less, stylus)</li>
-              <li>React</li>
-              <li>Styled Components</li>
-              <li>Next JS</li>
-            </S.SkillsList>
-          </S.Skills>
+        <S.SkillsContainer>
+          <h2>{t('about-me:whatIDo')}:</h2>
 
-          <S.Skills>
-            <S.SkillItemTitle>Backend</S.SkillItemTitle>
-            <S.SkillsList>
-              <li>Node</li>
-              <li>PHP</li>
-              <li>Programação Orientada a Objetos</li>
-              <li>Python</li>
-              <li>MySql</li>
-              <li>PostgreeSQL</li>
-            </S.SkillsList>
-          </S.Skills>
+          <S.Items>
+            <S.Skills>
+              <S.SkillItemTitle>Frontend</S.SkillItemTitle>
+              <S.SkillsList>
+                <li>Angular</li>
+                <li>AngularJS</li>
+                <li>CSS3</li>
+                <li>HTML5</li>
+                <li>Javascript</li>
+                <li>{t('about-me:preProcessors')} (sass, less, stylus)</li>
+                <li>React</li>
+                <li>Styled Components</li>
+                <li>Next JS</li>
+              </S.SkillsList>
+            </S.Skills>
 
-          <S.Skills>
-            <S.SkillItemTitle>Outros</S.SkillItemTitle>
-            <S.SkillsList>
-              <li>Scrum</li>
-              <li>Sistemas de controle de versão (git)</li>
-              <li>TDD</li>
-              <li>Wordpress</li>
-            </S.SkillsList>
-          </S.Skills>
-        </S.Items>
-      </S.SkillsContainer>
+            <S.Skills>
+              <S.SkillItemTitle>Backend</S.SkillItemTitle>
+              <S.SkillsList>
+                <li>Node</li>
+                <li>PHP</li>
+                <li>{t('about-me:oop')}</li>
+                <li>Python</li>
+                <li>MySql</li>
+                <li>PostgreeSQL</li>
+              </S.SkillsList>
+            </S.Skills>
 
-      <S.Contact>Contato</S.Contact>
-      <S.SocialMediaWrapper>
-        <SocialMedia />
-      </S.SocialMediaWrapper>
-    </S.Wrapper>
-  </>
-)
+            <S.Skills>
+              <S.SkillItemTitle>{t('about-me:others')}</S.SkillItemTitle>
+              <S.SkillsList>
+                <li>Scrum</li>
+                <li>Git</li>
+                <li>TDD</li>
+              </S.SkillsList>
+            </S.Skills>
+          </S.Items>
+        </S.SkillsContainer>
+
+        <S.Contact>{t('about-me:contact')}</S.Contact>
+        <S.SocialMediaWrapper>
+          <SocialMedia />
+        </S.SocialMediaWrapper>
+      </S.Wrapper>
+    </>
+  )
+}
 
 export default AboutMe

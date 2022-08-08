@@ -442,6 +442,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.14.0":
+  version "7.18.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.9.tgz#b4fcfce55db3d2e5e080d2490f608a3b9f407f4a"
+  integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.3.1":
   version "7.18.6"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.18.6.tgz"
@@ -908,7 +915,15 @@
     "@babel/runtime" "^7.13.10"
     "@styled-icons/styled-icon" "^10.6.0"
 
-"@styled-icons/styled-icon@^10.6.0":
+"@styled-icons/feather@^10.34.0":
+  version "10.34.0"
+  resolved "https://registry.yarnpkg.com/@styled-icons/feather/-/feather-10.34.0.tgz#fdef1b4231e1ff6cfe454da741161f532788177b"
+  integrity sha512-UdhKaUC8T98V5H4WEh+UBRfVT7ZTcPpgUUrXlRM2CWanuNIUKpIjj0SKhsnkuprqtzV1L6s3Koa40VTfpG9LYQ==
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@styled-icons/styled-icon" "^10.6.3"
+
+"@styled-icons/styled-icon@^10.6.0", "@styled-icons/styled-icon@^10.6.3":
   version "10.6.3"
   resolved "https://registry.npmjs.org/@styled-icons/styled-icon/-/styled-icon-10.6.3.tgz"
   integrity sha512-/A95L3peioLoWFiy+/eKRhoQ9r/oRrN/qzbSX4hXU1nGP2rUXcX3LWUhoBNAOp9Rw38ucc/4ralY427UUNtcGQ==
@@ -4273,6 +4288,11 @@ next-seo@^5.4.0:
   version "5.4.0"
   resolved "https://registry.npmjs.org/next-seo/-/next-seo-5.4.0.tgz"
   integrity sha512-R9DhajPwJnR/lsF2hZ8cN8uqr5CVITsRrCG1AF5+ufcaybKYOvnH8sH9MaH4/hpkps3PQ9H71S7J7SPYixAYzQ==
+
+next-translate@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/next-translate/-/next-translate-1.5.0.tgz#b1e5c4a8e55e31b3ed1b9428529f27c289c6b7bc"
+  integrity sha512-6amnuJWw22XbaM2DVhsYaOXelFLjTbMqTgqvB+h9VfE/H2aQ/edfT06ONQLQbsVV/I7Hn+93LTaV1/qOo6Kf9A==
 
 next@^12.1.0:
   version "12.1.0"

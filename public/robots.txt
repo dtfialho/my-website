@@ -1,7 +1,0 @@
-User-Agent: *
-Allow: /blog/accordion-simples-com-html-e-css
-Allow: /blog/criando-uma-aplicacao-em-react-sem-create-react-app
-Allow: /blog/hello-world
-Allow: /about-me
-Allow: /
-Allow: /blog

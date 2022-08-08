@@ -1,4 +1,4 @@
-import { screen, render } from '@testing-library/react'
+import { renderWithTranslate } from 'utils/test-utils'
 import * as Header from 'components/header'
 import * as SocialMedia from 'components/social-media'
 import Template from './'
@@ -13,10 +13,15 @@ describe('Templates/AboutMe', () => {
     mockedHeader.mockImplementation(() => <header>Header</header>)
     mockedContact.mockImplementation(() => <section>Social media</section>)
 
-    const { container } = render(<Template />)
-    expect(
-      screen.getByRole('img', { name: /Minha foto de perfil/ })
-    ).toBeInTheDocument()
+    const { container } = renderWithTranslate(<Template />)
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Should render correctly in en', () => {
+    mockedHeader.mockImplementation(() => <header>Header</header>)
+    mockedContact.mockImplementation(() => <section>Social media</section>)
+
+    const { container } = renderWithTranslate(<Template />, 'en')
     expect(container).toMatchSnapshot()
   })
 })

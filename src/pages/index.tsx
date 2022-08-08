@@ -1,9 +1,12 @@
+import useTranslation from 'next-translate/useTranslation'
+
 import Template from 'templates/home'
 import Seo from 'components/seo'
 
 const Home = () => {
+  const { t } = useTranslation()
   const title = 'Home | Diego T. Fialho'
-  const description = 'Meu site feito com Next.js'
+  const description = t('home:description')
   const url = 'https://www.diegotfialho.com.br'
 
   return (

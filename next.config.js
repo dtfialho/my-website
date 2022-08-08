@@ -1,4 +1,6 @@
-module.exports = {
+const nextTranslate = require('next-translate')
+
+module.exports = nextTranslate({
   swcMinify: true,
   compiler: {
     styledComponents: true
@@ -13,4 +15,4 @@ module.exports = {
     })
     return config
   }
-}
+})

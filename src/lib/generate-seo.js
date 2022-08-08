@@ -6,19 +6,21 @@ function replace(page) {
     .replace('.tsx', '')
     .replace('.md', '')
     .replace('posts', 'blog')
+    .replace(/\/default|\/en/, '')
 }
 
 function addPage(page, robots) {
   const route = replace(page)
   const url = route === 'index' ? '' : route
+  const locale = page.match(/\/en/) ? '/en' : ''
 
   if (robots) {
-    return `Allow: /${url}`
+    return `Allow: ${locale}/${url}`
   }
 
   return `
     <url>
-      <loc>${`${process.env.BASE_URL}/${url}`}</loc>
+      <loc>${`${process.env.BASE_URL}${locale}/${url}`}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
@@ -45,9 +47,18 @@ function createRobots(urls) {
 
 if (process.env.NODE_ENV === 'production') {
   import('globby').then(async ({ globby }) => {
-    const posts = await globby(['posts/*.md'])
-    const pages = await globby(['src/pages/*.tsx', '!src/pages/_*.tsx'])
-    const urls = [...posts, ...pages, 'blog']
+    const ptBrPosts = await globby(['posts/default/*.md'])
+    const enPosts = await globby(['posts/en/*.md'])
+    const urls = [
+      ...ptBrPosts,
+      ...enPosts,
+      '',
+      'en',
+      'blog',
+      'en/blog',
+      'about-me',
+      'en/about-me'
+    ]
 
     createSiteMap(urls)
     createRobots(urls)

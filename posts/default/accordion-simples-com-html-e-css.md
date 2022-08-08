@@ -1,7 +1,7 @@
 ---
 title: 'Criando um accordion simples com somente HTML e CSS'
 date: '2022-07-13T12:01:42-0300'
-hero_image: '/img/accordion-simples-com-html-e-css.jpg'
+hero_image: '/img/posts/accordion-simples-com-html-e-css.jpg'
 excerpt: 'Nesse post mostro como fazer um accordion utilizando só HTML e CSS, sem nenhuma linha de Javascript'
 ---
 
@@ -95,4 +95,4 @@ Por último temos nossa div que vai ter o conteúdo de cada item do accordion, a
 ```
 E aqui é onde a mágica acontece. Ao clicar na label, o input fica como `checked` então usamos a pseudo classe `:checked` e adicionamos um `max-height: 100vh` na div do conteúdo, fazendo ela ficar visível e rotacionamos o nosso "ícone". Ao clicar novamente na label, a regra não se aplica e o conteúdo volta a ficar oculto.
 
-Bom pessoa, por agora é isso. Espero que tenham gostado e qualquer feedback é só comentar lá no [twitter](https://twitter.com/dtfialho). Um abraço e até o próximo post!
+Bom pessoal, por agora é isso. Espero que tenham gostado e qualquer feedback é só comentar lá no [twitter](https://twitter.com/dtfialho). Um abraço e até o próximo post!

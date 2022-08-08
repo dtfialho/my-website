@@ -1,7 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import useTranslation from 'next-translate/useTranslation'
 
+import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
 import Template from 'templates/blog'
 import { PostType } from 'components/post'
 import Seo from 'components/seo'
@@ -11,8 +10,9 @@ type BlogProps = {
 }
 
 const Blog = ({ posts }: BlogProps) => {
+  const { t } = useTranslation()
   const title = 'Blog | Diego T. Fialho'
-  const description = 'Aqui tem alguns conteúdos sobre programação e front-end.'
+  const description = t('blog:description')
   const url = 'https://www.diegotfialho.com.br/blog'
 
   return (
@@ -35,21 +35,12 @@ const Blog = ({ posts }: BlogProps) => {
   )
 }
 
-export async function getStaticProps() {
-  const postsFolder = path.join('posts')
-  const files = fs.readdirSync(postsFolder)
-  const posts = files.map((filename) => {
-    const slug = filename.replace('.md', '')
-    const filePath = path.join('posts', filename)
-    const markdown = fs.readFileSync(filePath)
-    const { data } = matter(markdown)
+type StaticPageProps = {
+  locale: string
+}
 
-    return {
-      slug,
-      ...data
-    }
-  })
-
+export async function getStaticProps({ locale }: StaticPageProps) {
+  const posts = getAllPostsByLocale(locale)
   return {
     props: {
       posts
