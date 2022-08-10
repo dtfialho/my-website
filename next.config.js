@@ -5,7 +5,10 @@ module.exports = nextTranslate({
   compiler: {
     styledComponents: true
   },
-  webpack: function (config) {
+  webpack: function (config, { isServer }) {
+    if (isServer) {
+      require('./src/lib/generate-seo.js')
+    }
     config.module.rules.push({
       test: /\.md$/,
       use: 'raw-loader'
