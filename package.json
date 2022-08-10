@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint src",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@styled-icons/fa-brands": "^10.26.0",
@@ -53,6 +54,7 @@
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "jest-styled-components": "^7.0.4",
+    "next-sitemap": "^3.1.17",
     "prettier": "^2.5.1",
     "raw-loader": "^4.0.2",
     "typescript": "^4.5.5"
