@@ -58,7 +58,7 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
       <a
         class="c2"
         href="https://github.com/dtfialho"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer me"
         target="_blank"
         title="Github"
       >
@@ -88,7 +88,7 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
       <a
         class="c2"
         href="https://www.linkedin.com/in/diego-teixeira-fialho-35b58ab0/"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer me"
         target="_blank"
         title="Linkedin"
       >
@@ -118,7 +118,7 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
       <a
         class="c2"
         href="https://twitter.com/dtfialho"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer me"
         target="_blank"
         title="Twitter"
       >

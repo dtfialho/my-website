@@ -9,7 +9,7 @@ const SocialMedia = () => (
       <S.Link
         href="https://github.com/dtfialho"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer me"
         title="Github"
       >
         <Github title="Ícone do Github" size={30} />
@@ -20,7 +20,7 @@ const SocialMedia = () => (
       <S.Link
         href="https://www.linkedin.com/in/diego-teixeira-fialho-35b58ab0/"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer me"
         title="Linkedin"
       >
         <Linkedin title="Ícone do Linkedin" size={30} />
@@ -31,7 +31,7 @@ const SocialMedia = () => (
       <S.Link
         href="https://twitter.com/dtfialho"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer me"
         title="Twitter"
       >
         <Twitter title="Ícone do Twitter" size={30} />
