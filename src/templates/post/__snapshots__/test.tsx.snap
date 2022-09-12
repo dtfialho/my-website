@@ -54,10 +54,17 @@ exports[`Templates/Post Should render correctly 1`] = `
 }
 
 .c5 {
-  color: #4c57ba;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  background-color: #4c57ba;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 24px;
   margin-top: 32px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c5:hover {
+  opacity: 0.8;
 }
 
 @media (min-width:768px) {
@@ -181,10 +188,17 @@ exports[`Templates/Post Should render correctly in en 1`] = `
 }
 
 .c5 {
-  color: #4c57ba;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  background-color: #4c57ba;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 24px;
   margin-top: 32px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c5:hover {
+  opacity: 0.8;
 }
 
 @media (min-width:768px) {
