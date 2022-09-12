@@ -70,7 +70,14 @@ export const ArticleImage = styled.div`
 `
 
 export const Back = styled.a`
-  color: #4c57ba;
-  text-decoration: underline;
+  background-color: #4c57ba;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 24px;
   margin-top: 32px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `
