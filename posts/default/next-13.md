@@ -339,4 +339,4 @@ export default async function Head() {
 }
 ```
 
-Bom pessoal, foi um post bem rapidinho. Para mais detalhes estou deixando o [link](https://nextjs.org/blog/next-13) do post oficial no blog do Next. Espero que tenham gostado e até a próxima!
+Bom pessoal, foi um post bem rapidinho com apenas algumas das mudanças. Para mais detalhes estou deixando o [link](https://nextjs.org/blog/next-13) do post oficial no blog do Next que é bem mais completo. Espero que tenham gostado e até a próxima!
