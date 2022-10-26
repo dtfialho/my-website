@@ -128,7 +128,7 @@ exports[`Templates/Post Should render correctly 1`] = `
       class="c5"
       href="/blog"
     >
-      Voltar
+      Ver todos os posts
     </a>
   </main>
 </div>
@@ -262,7 +262,7 @@ exports[`Templates/Post Should render correctly in en 1`] = `
       class="c5"
       href="/blog"
     >
-      Back
+      See all posts
     </a>
   </main>
 </div>
