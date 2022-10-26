@@ -2,13 +2,13 @@
 title: 'Next 13!'
 date: '2022-10-25T20:13:01-03:00'
 hero_image: '/img/posts/next-13.png'
-excerpt: 'Nesse post mostro algumas das mudanças principais no Next 13.'
+excerpt: 'In this post I show some main changes in Next 13.'
 ---
 
-Oi pessoal! Como várias pessoas devem saber, hoje rolou a Next Conf 2022, e nela apresentaram features sensacionais e nesse post vou trazer para vocês alguns dos pontos que mudaram da versão 12 para a versão 13 do Next! Então pega o cafézinho e vamos direto ao ponto.
+Hello everyone! As you all should know, today happened the Next Conf 2022, and some amazing features were presented. On this post I bring to you some of the features that changed from version 12 to version 13 of Next! So grab some coffee and let's go straight to the point.
 
 ## pages
-O diretório `pages` foi movido para um novo chamado `app`. As pastas dentro desse diretório definirão as rotas da aplicação e não menos importante, agora utilizamos um arquivo `page.tsx` dentro de cada uma dessas pastas para definir a UI da página. Por exemplo, antes a estrutura era: `pages/hello.tsx` ou `pages/blog/[slug].tsx`. Agora ficam assim respectivamente: `app/hello/page.tsx` ou `app/blog/[slug]/page.tsx`.
+The `pages` directory was moved to a new one called `app`. The folders inside this directory will define the application routes and not less important, now we use a file called `page.tsx` inside each one of these folders to define the page UI. For instance, before the structure was: `pages/hello.tsx` or `pages/blog/[slug].tsx`. Now they are respectivelly `app/hello/page.tsx` or `app/blog/[slug]/page.tsx`.
 
 ```jsx
 // app/blog/[slug]/page.tsx
@@ -28,10 +28,10 @@ export default async function PostPage({ params: { slug } }) {
 }
 ```
 
-## Uma nova forma de organizar a UI
-No Next 13 os diretórios dentro de `app` são para as rotas e os arquivos são para a interface, além disso podemos criar arquivos específicos para construir partes específicas da interface que funcionam da mesma forma que o `page.tsx` ficando dentro do diretório de uma rota, por exemplo: `app/hello/layout.tsx`, `app/hello/loading.tsx`, `app/hello/error.tsx` ou `app/hello/layout.tsx`.
+## A new way of organizing the UI
+In Next 13 the directories inside `app` are for the routes and files are for the interface, beside this we can create specific files to build specific parts of the interface that works the same way as the `page.tsx` inside a route directorie, for instance: `app/hello/layout.tsx`, `app/hello/loading.tsx`, `app/hello/error.tsx` or `app/hello/layout.tsx`.
 
-- **layout.tsx**: usamos esse arquivo para definir um componente "wrapper". Dentro dele também podemos fazer um fetch para requisitar dados.
+- **layout.tsx**: we use this file as a wrapper component. Inside it we can also make a fetch call to request some data.
 
 ```jsx
 export default function Layout({ children }) {
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
 }
 ```
 
-- **loading.tsx**: podemos agora definir um componente que mostra um "loader" durante a requisição de uma rota.
+- **loading.tsx**: now we can define a component that shows a loader during some routing request.
 
 ```jsx
 export default function Loading() {
@@ -48,9 +48,9 @@ export default function Loading() {
 ```
 
 ## getStaticProps
-Agora extraímos dados de páginas estáticas dentro de uma função customizada e podemos chamar essa função diretamente dentro do nosso componente. Os dados retornados por essa função são armazenados em cache até serem revalidados manualmente.
+Now we can extract data for static pages inside a custom function and we call this function directly inside our component. The returned data from this function are stored in cache until be manually revalidated.
 
-Antes:
+Before:
 
 ```javascript
 export async function getStaticProps() {
@@ -65,7 +65,7 @@ export async function getStaticProps() {
 }
 ```
 
-Depois:
+After:
 
 ```jsx
 async function fetchData() {
@@ -83,9 +83,9 @@ export default async function Page() {
 ```
 
 ## getServerSideProps
-Nossa forma de criar páginas SSR também mudou, agora fica da mesma forma que o `getStaticProps`. A única diferença é que precisamos passar `{ cache: "no-store" }` para o fetch da função.
+Our way of creating SSR pages also changed, now it is the same way as the `getStaticProps` method. The only difference is that we need to pass `{ cache: "no-store" }` to our fetch.
 
-Antes:
+Before:
 
 ```javascript
 export async function getServerSideProps() {
@@ -100,7 +100,7 @@ export async function getServerSideProps() {
 }
 ```
 
-Depois:
+After:
 
 ```jsx
 async function fetchData() {
@@ -118,9 +118,9 @@ export default async function Page() {
 ```
 
 ## getStaticPaths
-A função `getStaticPaths` foi renomeada para `generateStaticParams` e a chave `paths.params` não existe mais.
+The function `getStaticPaths` was renamed to `generateStaticParams` and the key `paths.params` doesn't exist anymore.
 
-Antes:
+Before:
 
 ```jsx
 export async function getStaticPaths() {
@@ -145,7 +145,7 @@ export default function Post({ post }) {
 }
 ```
 
-Depois:
+After:
 
 ```jsx
 export async function generateStaticParams() {
@@ -167,9 +167,9 @@ export default async function({ params }) {
 ```
 
 ## ISR
-Nossa forma de regenerar páginas estáticas de forma incremental (Incremental Static Regeneration ou somente ISR) também está mais simples. Agora apenas passamos a opção `{ next: { revalidate: <number> } }` no fetch da função.
+Our way of regenerate incremental static pages (Incremental Static Regeneration or just ISR) also is simpler. Now we just pass the option `{ next: { revalidate: <number> } }` in our fetch.
 
-Antes:
+Before:
 
 ```javascript
 export async function getStaticProps({ params }) {
@@ -185,7 +185,7 @@ export async function getStaticProps({ params }) {
 }
 ```
 
-Depois:
+After:
 
 ```jsx
 async function fetchPost(params) {
@@ -206,16 +206,16 @@ export default async function({ params }) {
 }
 ```
 
-Se estiver utilizando um client de API customizado ou não pode utilizar o fetch, é possível fazer dessa forma.
+If you are using a custom API client or can't use fetch, it is possible do this way.
 
 ```javascript
 export const revalidate = 60
 ```
 
-## Migrando o _document.tsx e _app.tsx
-Agora os arquivos `_document.tsx` e `_app.tsx` foram movidos para o arquivo `layout.tsx` que fica na raiz da pasta `app`. Precisamos adicionar as tags `html` e `body`. A tag `head` é opicional e os estilos globais são importados nesse arquivo, e não menos importante é que esse layout é obrigatório pois ele serve de "wrapper" para todas as páginas.
+## Migrating _document.tsx and _app.tsx
+Now our files `_document.tsx` and `_app.tsx` were moved to the file `layout.tsx` that stays in the root of the `app` folder. We need to add the `html` and `body` tags. The `head` tag is optional and the global styles need to be imported on this file, and not less important is that layout is required because it is used as a wrapper to all pages.
 
-Antes:
+Before:
 
 ```jsx
 // pages/_document.tsx
@@ -244,7 +244,7 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 ```
 
-Depois:
+After:
 
 ```jsx
 // app/layout.tsx
@@ -263,9 +263,9 @@ export default function Layout({ children }) {
 ```
 
 ## pages/404.tsx
-A forma de retornar uma página customizada quando uma página não é entrada também mudou. Agora o arquivo se chama `not-found.tsx`, para mostrar essa página retornamos o componente chamando uma função `notFound` dentro de um arquivo `page.tsx`.
+The way of return a custom page when some page is not found also changed. Now the file is called `not-found.tsx`, to show this page we return the component calling a function `notFound` inside a `page.tsx` file.
 
-Antes:
+Before:
 
 ```jsx
 // pages/404.tsx
@@ -274,7 +274,7 @@ export default function NotFound() {
 }
 ```
 
-Depois:
+After:
 
 ```jsx
 // app/blog/[slug]/not-found.tsx
@@ -303,9 +303,9 @@ export default async function PostPage({ params }) {
 ```
 
 ## next/head
-`next/head` agora é um arquivo que fica dentro de cada pasta de rota. O `head.tsx` é um server component, então podemos fazer requisições de dados dentro desse arquivo. Um detalhe é que as tags permitidas nesse arquivo são `title`, `meta`, `link` e `script`.
+`next/head` is now a file that stays inside each route folder. The `head.tsx` is a server component, then we can make requests to some data inside this file. One details is that the allowed tags in this file are `title`, `meta`, `link` and `script`.
 
-Antes:
+Before:
 ```jsx
 // pages/index.tsx
 import Head from 'next/head'
@@ -322,7 +322,7 @@ export default function Index() {
 }
 ```
 
-Depois:
+After:
 ```jsx
 // pages/blog/head.tsx
 async function getData() {
@@ -339,4 +339,4 @@ export default async function Head() {
 }
 ```
 
-Bom pessoal, foi um post bem rapidinho. Para mais detalhes estou deixando o [link](https://nextjs.org/blog/next-13) do post oficial no blog do Next. Espero que tenham gostado e até a próxima!
+Well, it was a very quick post. For more details I leave the oficial post [link](https://nextjs.org/blog/next-13) in the Next blog. I hope you enjoyed and I see you later!
