@@ -3,6 +3,7 @@ title: 'Hello world!'
 date: '2022-06-17T00:00:00-03:00'
 hero_image: '/img/posts/hello-world.png'
 excerpt: 'Oi pessoal! Bem vindos ao meu blog.'
+keywords: 'Hello world, My Website, Next, Next.JS, Next Js, Diego T. Fialho, Diego, Diego Fialho'
 ---
 
 Oi pessoal, bem vindos! Meu nome é Diego T. Fialho, como esse é o primeiro post ele vai ser um pouco mais curtinho, o suficiente só para me apresentar e passar para vocês o conteúdo que pretendo postar de tempos em tempos.

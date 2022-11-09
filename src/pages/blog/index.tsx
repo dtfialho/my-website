@@ -4,6 +4,7 @@ import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
 import Template from 'templates/blog'
 import { PostType } from 'components/post'
 import Seo from 'components/seo'
+import Keywords from 'components/seo/keywords'
 
 type BlogProps = {
   posts: Array<PostType>
@@ -11,8 +12,10 @@ type BlogProps = {
 
 const Blog = ({ posts }: BlogProps) => {
   const { t } = useTranslation()
+
   const title = 'Blog | Diego T. Fialho'
   const description = t('blog:description')
+  const keywords = t('blog:keywords')
   const url = 'https://www.diegotfialho.com.br/blog'
 
   return (
@@ -31,6 +34,7 @@ const Blog = ({ posts }: BlogProps) => {
           ]
         }}
       />
+      <Keywords content={keywords} />
 
       <Template posts={posts} />
     </>

@@ -3,6 +3,7 @@ title: 'Hello world!'
 date: '2022-06-17T00:00:00-03:00'
 hero_image: '/img/posts/hello-world.png'
 excerpt: 'Hey everyone! Wellcome to my blog.'
+keywords: 'Hello world, My Website, Next, Next.JS, Next Js, Diego T. Fialho, Diego, Diego Fialho'
 ---
 
 Hello everyone, welcome! My name is Diego T. Fialho, this is my first post so it is going to be a little faster, only to introduce myself and give you an overview about the content that I'm going to post from time to time.

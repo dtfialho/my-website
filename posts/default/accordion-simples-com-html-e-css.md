@@ -3,6 +3,7 @@ title: 'Criando um accordion simples com somente HTML e CSS'
 date: '2022-07-13T12:01:42-0300'
 hero_image: '/img/posts/accordion-simples-com-html-e-css.jpg'
 excerpt: 'Nesse post mostro como fazer um accordion utilizando só HTML e CSS, sem nenhuma linha de Javascript'
+keywords: 'Accordion, Javascript, Accordion Simples, Accordion com HTML e CSS, Accordion sem Javascript, HTML, CSS'
 ---
 
 Fala pessoal! Voltando mais uma vez, hoje trago um post bem rapidinho sobre uma feature que é bem comum de vermos sendo utilizada. Existem várias formas de se criar um accordion e nesse post estou trazendo para vocês uma versão bem simples utilizando apenas HTML e CSS, sem uma única linha de Javascript.
