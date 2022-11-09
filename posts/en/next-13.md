@@ -3,6 +3,7 @@ title: 'Next 13!'
 date: '2022-10-25T20:13:01-03:00'
 hero_image: '/img/posts/next-13.png'
 excerpt: 'In this post I show some main changes in Next 13.'
+keywords: 'Next 13, Next.JS, Next JS, Next, Next Conf 2022'
 ---
 
 Hello everyone! As you all should know, today happened the Next Conf 2022, and some amazing features were presented. On this post I bring to you some of the features that changed from version 12 to version 13 of Next! So grab some coffee and let's go straight to the point.

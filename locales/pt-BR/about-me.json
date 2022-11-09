@@ -1,6 +1,7 @@
 {
   "title": "Sobre mim",
   "description": "Um pouquinho sobre mim e o que faço.",
+  "keywords": "Sobre mim, Diego T. Fialho, Diego Fialho",
   "profilePicture": "Minha foto de perfil",
   "firstParagraph": "Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na Personare. Já trabalhei como Fullstack Developer na Maxisite e Frontend Developer na Alterdata Software.",
   "secondParagraph": "Apaixonado por tecnologia desde cedo sempre fui curioso para aprender. Aos 20 anos, fiz meu primeiro curso na área de tecnologia no SENAI e aos 23 ingressei na faculdade de Tecnologia da Informação e Comunicação pela FAETERJ - Petrópolis.",

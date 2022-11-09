@@ -7,16 +7,19 @@ import Seo, {
   twitterDefaultProps,
   OpenGraphProps
 } from 'components/seo'
+import Keywords from 'components/seo/keywords'
 
 type PostPageProps = {
   slug: string
   excerpt: string
+  keywords: string
 } & PostProps
 
 const PostPage = ({
   slug,
   content,
   title: postTitle,
+  keywords,
   date,
   excerpt: description,
   hero_image
@@ -45,6 +48,7 @@ const PostPage = ({
         openGraph={openGraph}
         twitter={twitter}
       />
+      <Keywords content={keywords} />
       <Post
         content={content}
         title={postTitle}

@@ -3,6 +3,7 @@ title: 'Creating a React application without create-react-app'
 date: '2022-07-07T14:45:49-0300'
 hero_image: '/img/posts/criando-uma-aplicacao-em-react-sem-create-react-app.png'
 excerpt: 'On this article I show you how to create a simple React application without using the create-react-app'
+keywords: 'React, Create React App, create-react-app, No Create React App, Without Create React App, Javascript, JS'
 ---
 
 Hello everyone! After a while without comming back to write a post, I decided to bring up a point that is very important. Nowadays we have several frameworks that bring applications already configured ready to develop, however, sometimes most of the features that come in these frameworks are not used. So, in these cases it might be worth implementing a simpler application from scratch.
