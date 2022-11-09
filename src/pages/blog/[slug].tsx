@@ -12,6 +12,7 @@ import Keywords from 'components/seo/keywords'
 type PostPageProps = {
   slug: string
   excerpt: string
+  keywords: string
 } & PostProps
 
 const PostPage = ({
