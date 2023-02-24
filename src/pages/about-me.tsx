@@ -23,9 +23,7 @@ const AboutMe = () => {
           url,
           title,
           description,
-          images: [
-            { url: 'https://www.diegotfialho.dev/img/icon-512x512.png' }
-          ]
+          images: [{ url: 'https://www.diegotfialho.dev/img/icon-512x512.png' }]
         }}
       />
       <Keywords content={keywords} />
