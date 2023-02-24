@@ -10,7 +10,7 @@ const Home = () => {
   const title = 'Home | Diego T. Fialho'
   const description = t('home:description')
   const keywords = t('home:keywords')
-  const url = 'https://www.diegotfialho.com.br'
+  const url = 'https://www.diegotfialho.dev'
 
   return (
     <>
@@ -24,7 +24,7 @@ const Home = () => {
           title,
           description,
           images: [
-            { url: 'https://www.diegotfialho.com.br/img/icon-512x512.png' }
+            { url: 'https://www.diegotfialho.dev/img/icon-512x512.png' }
           ]
         }}
       />

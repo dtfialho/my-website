@@ -16,7 +16,7 @@ const Blog = ({ posts }: BlogProps) => {
   const title = 'Blog | Diego T. Fialho'
   const description = t('blog:description')
   const keywords = t('blog:keywords')
-  const url = 'https://www.diegotfialho.com.br/blog'
+  const url = 'https://www.diegotfialho.dev/blog'
 
   return (
     <>
@@ -30,7 +30,7 @@ const Blog = ({ posts }: BlogProps) => {
           title,
           description,
           images: [
-            { url: 'https://www.diegotfialho.com.br/img/icon-512x512.png' }
+            { url: 'https://www.diegotfialho.dev/img/icon-512x512.png' }
           ]
         }}
       />

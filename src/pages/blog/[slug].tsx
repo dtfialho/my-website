@@ -25,8 +25,8 @@ const PostPage = ({
   hero_image
 }: PostPageProps) => {
   const title = `${postTitle} | Diego T. Fialho`
-  const url = `https://www.diegotfialho.com.br/blog/${slug}`
-  const image = `https://www.diegotfialho.com.br/${hero_image}`
+  const url = `https://www.diegotfialho.dev/blog/${slug}`
+  const image = `https://www.diegotfialho.dev/${hero_image}`
   const twitter: TwitterProps = {
     ...twitterDefaultProps,
     image
