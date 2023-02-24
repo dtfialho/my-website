@@ -10,7 +10,7 @@ const AboutMe = () => {
   const title = `${t('about-me:title')} | Diego T. Fialho`
   const description = t('about-me:description')
   const keywords = t('about-me:keywords')
-  const url = 'https://www.diegotfialho.com.br/about-me'
+  const url = 'https://www.diegotfialho.dev/about-me'
 
   return (
     <>
@@ -24,7 +24,7 @@ const AboutMe = () => {
           title,
           description,
           images: [
-            { url: 'https://www.diegotfialho.com.br/img/icon-512x512.png' }
+            { url: 'https://www.diegotfialho.dev/img/icon-512x512.png' }
           ]
         }}
       />

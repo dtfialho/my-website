@@ -8,7 +8,7 @@ export type TwitterProps = {
 
 export const twitterDefaultProps: TwitterProps = {
   site: '@dtfialho',
-  image: 'https://www.diegotfialho.com.br/icon-512x512.png',
+  image: 'https://www.diegotfialho.dev/icon-512x512.png',
   cardType: 'summary_large_image'
 }
 
