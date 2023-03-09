@@ -8,8 +8,8 @@ keywords: 'Next 13, Next.JS, Next JS, Next, Next Conf 2022'
 
 Oi pessoal! Como várias pessoas devem saber, hoje rolou a Next Conf 2022, e nela apresentaram features sensacionais e nesse post vou trazer para vocês alguns dos pontos que mudaram da versão 12 para a versão 13 do Next! Então pega o cafézinho e vamos direto ao ponto.
 
-## pages
-O diretório `pages` foi movido para um novo chamado `app`. As pastas dentro desse diretório definirão as rotas da aplicação e não menos importante, agora utilizamos um arquivo `page.tsx` dentro de cada uma dessas pastas para definir a UI da página. Por exemplo, antes a estrutura era: `pages/hello.tsx` ou `pages/blog/[slug].tsx`. Agora ficam assim respectivamente: `app/hello/page.tsx` ou `app/blog/[slug]/page.tsx`.
+## app
+Agora além diretório `pages` temos um novo chamado `app`. As pastas dentro desse diretório definirão as rotas da aplicação e não menos importante, agora utilizamos um arquivo `page.tsx` dentro de cada uma dessas pastas para definir a UI da página. Por exemplo, antes a estrutura era: `pages/hello.tsx` ou `pages/blog/[slug].tsx`. Agora ficam assim respectivamente: `app/hello/page.tsx` ou `app/blog/[slug]/page.tsx`.
 
 ```jsx
 // app/blog/[slug]/page.tsx
