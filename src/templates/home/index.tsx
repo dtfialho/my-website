@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useRef } from 'react'
 import { TweenMax } from 'gsap'

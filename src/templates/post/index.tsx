@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import format from 'date-fns/format'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 
 import Header from 'components/header'
