@@ -26,7 +26,7 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
   margin-bottom: 20px;
 }
 
-.c1 > span {
+.c1 > img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -297,7 +297,7 @@ exports[`Templates/AboutMe Should render correctly in en 1`] = `
   margin-bottom: 20px;
 }
 
-.c1 > span {
+.c1 > img {
   width: 150px;
   height: 150px;
   border-radius: 50%;

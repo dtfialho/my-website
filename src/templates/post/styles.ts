@@ -63,6 +63,10 @@ export const ArticleImage = styled.div`
   height: 250px;
   margin-bottom: 32px;
 
+  img {
+    object-fit: contain;
+  }
+
   ${media.greaterThan('medium')`
     height: 300px;
     margin-bottom: 40px;

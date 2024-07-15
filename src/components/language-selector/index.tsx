@@ -21,10 +21,6 @@ const LanguageSelector = () => {
           width="29"
           height="22"
           alt={`Active language ${activeLocale}`}
-          style={{
-            maxWidth: '100%',
-            height: 'auto'
-          }}
         />
       </S.Button>
     </>

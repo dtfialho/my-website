@@ -129,7 +129,7 @@ export const List = styled.ul<ListProps>`
     max-height: 0;
     background-color: #fff;
     overflow: hidden;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s cubic-bezier(0.2, 0, 0.2, 1);
 
     ${!open && listModifiers.closed()}
     ${open && listModifiers.open()}

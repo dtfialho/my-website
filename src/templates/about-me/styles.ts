@@ -18,7 +18,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   margin-bottom: 20px;
 
-  > span {
+  > img {
     width: 150px;
     height: 150px;
     border-radius: 50%;

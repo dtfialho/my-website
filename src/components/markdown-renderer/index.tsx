@@ -34,10 +34,6 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
               height={height}
               alt={alt}
               priority={isPriority}
-              style={{
-                maxWidth: '100%',
-                height: 'auto'
-              }}
             />
           </S.ImageWrapper>
         )

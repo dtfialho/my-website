@@ -37,9 +37,6 @@ const Post = ({
               priority={imgPriority}
               fill
               sizes="100vw"
-              style={{
-                objectFit: 'cover'
-              }}
             />
           </S.ImageWrapper>
           <S.Content>

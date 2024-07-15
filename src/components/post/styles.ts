@@ -30,6 +30,10 @@ export const ImageWrapper = styled.figure`
   height: 150px;
   margin: 0 auto;
 
+  img {
+    object-fit: cover;
+  }
+
   ${media.between('small', 'medium')`
     width: 500px;
     height: 300px;

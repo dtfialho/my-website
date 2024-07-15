@@ -242,7 +242,7 @@ exports[`MainNavigation Should render correctly 1`] = `
             loading="lazy"
             src="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75"
             srcset="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75 2x"
-            style="color: transparent; max-width: 100%; height: auto;"
+            style="color: transparent;"
             width="29"
           />
         </button>
@@ -494,7 +494,7 @@ exports[`MainNavigation Should render correctly in en 1`] = `
             loading="lazy"
             src="/_next/image?url=%2Fimg%2Fen.jpg&w=64&q=75"
             srcset="/_next/image?url=%2Fimg%2Fen.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fen.jpg&w=64&q=75 2x"
-            style="color: transparent; max-width: 100%; height: auto;"
+            style="color: transparent;"
             width="29"
           />
         </button>

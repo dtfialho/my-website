@@ -6,8 +6,9 @@ export const Wrapper = styled.main`
   height: 100vh;
   color: #fff;
 
-  > span {
+  > img {
     z-index: -1;
+    object-fit: cover;
   }
 
   &::after {

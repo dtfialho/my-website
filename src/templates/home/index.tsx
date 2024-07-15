@@ -23,10 +23,6 @@ const Home = () => {
         priority
         fill
         sizes="100vw"
-        style={{
-          objectFit: 'cover',
-          zIndex: -1
-        }}
       />
       <Header />
       <S.Content ref={content}>
