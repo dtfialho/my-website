@@ -10,7 +10,7 @@ export const Wrapper = styled.main`
     z-index: -1;
   }
 
-  &::before {
+  &::after {
     display: block;
     width: 100vw;
     height: calc(100vh - 93px);
@@ -18,6 +18,7 @@ export const Wrapper = styled.main`
     position: fixed;
     background-color: rgb(0 0 0 / 30%);
     content: '';
+    z-index: -1;
   }
 `
 
