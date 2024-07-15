@@ -69,7 +69,12 @@ const LanguageSelectorModal = () => {
                   onClick={() => handleSelectLocale(locale)}
                 >
                   <S.FlagWrapper>
-                    <Image src={`/img/${locale}.jpg`} width="29" height="22" />
+                    <Image
+                      src={`/img/${locale}.jpg`}
+                      width="29"
+                      height="22"
+                      alt={`${locale} locale flag`}
+                    />
                   </S.FlagWrapper>
                   {locale}
                 </S.ListItem>

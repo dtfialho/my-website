@@ -137,7 +137,9 @@ export const ListItem = styled.li`
 `
 
 export const ChangeLocale = styled.button`
-  font: 700 16px/16px 'Lato', sans-serif;
+  font:
+    700 16px/16px 'Lato',
+    sans-serif;
   text-align: center;
   width: 100%;
   appearance: none;

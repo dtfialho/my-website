@@ -9,7 +9,6 @@ const useRouter = jest.spyOn(require('next/router'), 'useRouter')
 const defaultLocale = 'pt-BR'
 const mockFn = jest.fn()
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mockRouter = (props?: any) =>
   useRouter.mockImplementation(() => ({
     locale: defaultLocale,
