@@ -20,7 +20,7 @@ const LanguageSelector = () => {
           src={`/img/${activeLocale}.jpg`}
           width="29"
           height="22"
-          alt="Active language"
+          alt={`Active language ${activeLocale}`}
           style={{
             maxWidth: '100%',
             height: 'auto'

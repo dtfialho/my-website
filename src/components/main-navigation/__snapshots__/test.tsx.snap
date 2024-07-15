@@ -93,10 +93,6 @@ exports[`MainNavigation Should render correctly 1`] = `
   position: relative;
 }
 
-.c4:hover::after {
-  width: 100%;
-}
-
 .c4::after {
   display: block;
   width: 100%;
@@ -105,6 +101,10 @@ exports[`MainNavigation Should render correctly 1`] = `
   transition: width 0.3s ease-in-out;
   background-color: #fff;
   content: '';
+}
+
+.c4:hover::after {
+  width: 100%;
 }
 
 .c5 {
@@ -116,10 +116,6 @@ exports[`MainNavigation Should render correctly 1`] = `
   position: relative;
 }
 
-.c5:hover::after {
-  width: 100%;
-}
-
 .c5::after {
   display: block;
   width: 0;
@@ -128,6 +124,10 @@ exports[`MainNavigation Should render correctly 1`] = `
   transition: width 0.3s ease-in-out;
   background-color: #fff;
   content: '';
+}
+
+.c5:hover::after {
+  width: 100%;
 }
 
 @media (min-width:768px) {
@@ -192,30 +192,39 @@ exports[`MainNavigation Should render correctly 1`] = `
         class="c3"
       >
         <a
-          class="c4"
           href="/"
         >
-          Home
+          <span
+            class="c4"
+          >
+            Home
+          </span>
         </a>
       </li>
       <li
         class="c3"
       >
         <a
-          class="c5"
           href="/blog"
         >
-          Blog
+          <span
+            class="c5"
+          >
+            Blog
+          </span>
         </a>
       </li>
       <li
         class="c3"
       >
         <a
-          class="c5"
           href="/about-me"
         >
-          Sobre mim
+          <span
+            class="c5"
+          >
+            Sobre mim
+          </span>
         </a>
       </li>
       <li
@@ -226,9 +235,14 @@ exports[`MainNavigation Should render correctly 1`] = `
           type="button"
         >
           <img
-            alt="Active language"
+            alt="Active language pt-BR"
+            data-nimg="1"
+            decoding="async"
             height="22"
-            src="/img/pt-BR.jpg"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
             width="29"
           />
         </button>
@@ -331,10 +345,6 @@ exports[`MainNavigation Should render correctly in en 1`] = `
   position: relative;
 }
 
-.c4:hover::after {
-  width: 100%;
-}
-
 .c4::after {
   display: block;
   width: 100%;
@@ -343,6 +353,10 @@ exports[`MainNavigation Should render correctly in en 1`] = `
   transition: width 0.3s ease-in-out;
   background-color: #fff;
   content: '';
+}
+
+.c4:hover::after {
+  width: 100%;
 }
 
 .c5 {
@@ -354,10 +368,6 @@ exports[`MainNavigation Should render correctly in en 1`] = `
   position: relative;
 }
 
-.c5:hover::after {
-  width: 100%;
-}
-
 .c5::after {
   display: block;
   width: 0;
@@ -366,6 +376,10 @@ exports[`MainNavigation Should render correctly in en 1`] = `
   transition: width 0.3s ease-in-out;
   background-color: #fff;
   content: '';
+}
+
+.c5:hover::after {
+  width: 100%;
 }
 
 @media (min-width:768px) {
@@ -430,30 +444,39 @@ exports[`MainNavigation Should render correctly in en 1`] = `
         class="c3"
       >
         <a
-          class="c4"
           href="/"
         >
-          Home
+          <span
+            class="c4"
+          >
+            Home
+          </span>
         </a>
       </li>
       <li
         class="c3"
       >
         <a
-          class="c5"
           href="/blog"
         >
-          Blog
+          <span
+            class="c5"
+          >
+            Blog
+          </span>
         </a>
       </li>
       <li
         class="c3"
       >
         <a
-          class="c5"
           href="/about-me"
         >
-          About me
+          <span
+            class="c5"
+          >
+            About me
+          </span>
         </a>
       </li>
       <li
@@ -464,9 +487,14 @@ exports[`MainNavigation Should render correctly in en 1`] = `
           type="button"
         >
           <img
-            alt="Active language"
+            alt="Active language en"
+            data-nimg="1"
+            decoding="async"
             height="22"
-            src="/img/en.jpg"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg%2Fen.jpg&w=64&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fen.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fen.jpg&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
             width="29"
           />
         </button>

@@ -61,7 +61,7 @@ const LanguageSelectorModal = () => {
 
               {selectedLocale || activeLocale}
 
-              <S.DropdownIcon rotate={showList}>
+              <S.DropdownIcon rotated={showList}>
                 <CaretDown size={15} />
               </S.DropdownIcon>
             </S.ActiveItem>

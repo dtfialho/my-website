@@ -79,22 +79,46 @@ export const FlagWrapper = styled.figure`
   margin-right: 8px;
 `
 
-export const DropdownIcon = styled.span<{ rotate: boolean }>`
-  ${({ rotate }) => css`
+type DropdownIconProps = {
+  rotated: boolean
+}
+
+const dropdownIconModifiers = {
+  rotated: () => css`
+    transform: translateY(-50%) rotateX(-180deg);
+  `
+}
+
+export const DropdownIcon = styled.span<DropdownIconProps>`
+  ${({ rotated }) => css`
     display: block;
     position: absolute;
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
 
-    ${rotate &&
-    css`
-      transform: translateY(-50%) rotateX(-180deg);
-    `}
+    ${rotated && dropdownIconModifiers.rotated()}
   `}
 `
 
-export const List = styled.ul<{ open: boolean }>`
+type ListProps = {
+  open: boolean
+}
+
+const listModifiers = {
+  open: () => css`
+    max-height: 200px;
+    border: 1px solid #d9d9d9;
+  `,
+  closed: () => css`
+    li {
+      opacity: 0;
+      padding: 0 8px;
+    }
+  `
+}
+
+export const List = styled.ul<ListProps>`
   ${({ open }) => css`
     position: absolute;
     top: 100%;
@@ -107,19 +131,8 @@ export const List = styled.ul<{ open: boolean }>`
     overflow: hidden;
     transition: 0.3s ease-in-out;
 
-    ${!open &&
-    css`
-      li {
-        opacity: 0;
-        padding: 0 8px;
-      }
-    `}
-
-    ${open &&
-    css`
-      max-height: 200px;
-      border: 1px solid #d9d9d9;
-    `}
+    ${!open && listModifiers.closed()}
+    ${open && listModifiers.open()}
   `}
 `
 

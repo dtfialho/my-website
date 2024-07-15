@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { render, RenderOptions } from '@testing-library/react'
+import { render, RenderResult } from '@testing-library/react'
 
 const getFileTranslations = (locale = 'pt-BR', key: string) => {
   const [file, prop] = key.split(':')
@@ -10,7 +10,7 @@ const getFileTranslations = (locale = 'pt-BR', key: string) => {
 export const renderWithTranslate = (
   children: ReactNode,
   locale = 'pt-BR'
-): RenderOptions => {
+): RenderResult => {
   const useTranslation = jest.spyOn(
     require('next-translate/useTranslation'),
     'default'
@@ -19,5 +19,5 @@ export const renderWithTranslate = (
     t: (key: string) => getFileTranslations(locale, key)
   }))
 
-  return render(<>{children}</>)
+  return render(children)
 }

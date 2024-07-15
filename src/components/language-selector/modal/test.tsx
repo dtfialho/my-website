@@ -23,32 +23,38 @@ const mockRouter = (props?: any) =>
 describe('Components/LanguageSelector/Modal', () => {
   it('Should render correctly', () => {
     mockRouter()
+
     const { container } = renderWithTranslate(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>
     )
+
     expect(container).toMatchSnapshot()
   })
 
   it('Should render correctly in en', () => {
     mockRouter({ locale: 'en' })
+
     const { container } = renderWithTranslate(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>,
       'en'
     )
+
     expect(container).toMatchSnapshot()
   })
 
   it('Should render with select language button disabled', () => {
     mockRouter()
+
     renderWithTranslate(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>
     )
+
     expect(
       screen.getByRole('button', { name: /Alterar idioma/ })
     ).toBeDisabled()
@@ -56,13 +62,16 @@ describe('Components/LanguageSelector/Modal', () => {
 
   it('Should enable button on change selected language', async () => {
     mockRouter()
+
     renderWithTranslate(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>
     )
-    userEvent.click(screen.getByRole('button', { name: /Active locale/ }))
-    userEvent.click(await screen.findByText('en'))
+
+    await userEvent.click(screen.getByRole('button', { name: /Active locale/ }))
+    await userEvent.click(await screen.findByAltText('en locale flag'))
+
     expect(
       screen.getByRole('button', { name: /Alterar idioma/ })
     ).not.toBeDisabled()
@@ -70,18 +79,21 @@ describe('Components/LanguageSelector/Modal', () => {
 
   it('Should redirect to next location on change language and close modal modal', async () => {
     mockRouter()
-    await act(async () => {
-      renderWithTranslate(
-        <LanguageSelectorProvider initialState={{ showModal: true }}>
-          <Modal />
-        </LanguageSelectorProvider>
-      )
-      userEvent.click(screen.getByRole('button', { name: /Active locale/ }))
-      userEvent.click(await screen.findByText('en'))
-      userEvent.click(
-        await screen.findByRole('button', { name: /Alterar idioma/ })
-      )
-    })
+
+    renderWithTranslate(
+      <LanguageSelectorProvider initialState={{ showModal: true }}>
+        <Modal />
+      </LanguageSelectorProvider>
+    )
+
+    await userEvent.click(
+      screen.getByRole('button', { name: /active locale/i })
+    )
+    await userEvent.click(await screen.findByAltText('en locale flag'))
+    await userEvent.click(
+      await screen.findByRole('button', { name: /alterar idioma/i })
+    )
+
     expect(mockFn).toHaveBeenCalled()
     expect(
       screen.queryByText('Selecione a sua linguagem')

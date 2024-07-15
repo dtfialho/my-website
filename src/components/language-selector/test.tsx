@@ -12,6 +12,7 @@ describe('components/LanguageSelector', () => {
     }))
 
     const { container } = render(<LanguageSelector />)
+
     expect(container).toMatchSnapshot()
   })
 
@@ -21,8 +22,9 @@ describe('components/LanguageSelector', () => {
     }))
 
     render(<LanguageSelector />)
+
     expect(
-      screen.getByRole('img', { name: /Active language/ })
-    ).toHaveAttribute('src', `/img/${defaultLocale}.jpg`)
+      screen.getByAltText(`Active language ${defaultLocale}`)
+    ).toBeInTheDocument()
   })
 })

@@ -27,12 +27,15 @@ describe('Templates/Blog', () => {
         excerpt: 'the other lorem ipsum dolor sit amet'
       }
     ]
+
     render(<Blog posts={posts} />)
 
     posts.forEach(({ title, date, slug, excerpt }) => {
       const parsedDate = format(new Date(date), 'dd/MM/yyyy')
 
-      expect(screen.getByRole('link', { name: title })).toHaveAttribute(
+      const linkRegex = new RegExp(title, 'i')
+
+      expect(screen.getByRole('link', { name: linkRegex })).toHaveAttribute(
         'href',
         `/blog/${slug}`
       )

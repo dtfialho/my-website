@@ -1,4 +1,5 @@
-import { createContext, useState, ReactNode } from 'react'
+import { createContext, useState } from 'react'
+import type { PropsWithChildren } from 'react'
 
 type ContextProps = {
   showModal: boolean
@@ -7,13 +8,10 @@ type ContextProps = {
 
 const LanguageSelectorContext = createContext<ContextProps>({
   showModal: false,
-  setShowModal: () => {
-    return
-  }
+  setShowModal: () => {}
 })
 
 type ProviderProps = {
-  children: ReactNode
   initialState?: {
     showModal: boolean
   }
@@ -22,7 +20,7 @@ type ProviderProps = {
 const LanguageSelectorProvider = ({
   children,
   initialState
-}: ProviderProps) => {
+}: PropsWithChildren<ProviderProps>) => {
   const [showModal, setShowModal] = useState(!!initialState?.showModal)
 
   return (

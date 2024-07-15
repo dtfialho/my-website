@@ -92,42 +92,49 @@ exports[`Components/Post Should render correctly 1`] = `
     class="c0"
   >
     <a
-      class="c1"
       href="/blog/slug-for-test"
-      title="Some title for testing"
     >
-      <figure
-        class="c2"
-      >
-        <img
-          alt="Some title for testing"
-          layout="fill"
-          objectfit="cover"
-          src="/img/bg.jpg"
-        />
-      </figure>
       <div
-        class="c3"
+        class="c1"
+        title="Some title for testing"
       >
-        <h2
-          class="c4"
+        <figure
+          class="c2"
         >
-          Some title for testing
-        </h2>
-        <p
-          class="c5"
+          <img
+            alt="Some title for testing"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fbg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fbg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fbg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fbg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+          />
+        </figure>
+        <div
+          class="c3"
         >
-          lorem ipsum dolor sit amet
-        </p>
-        <em
-          class="c6"
-        >
-          Postado em
-          : 
-          <span>
-            27/05/2022
-          </span>
-        </em>
+          <h2
+            class="c4"
+          >
+            Some title for testing
+          </h2>
+          <p
+            class="c5"
+          >
+            lorem ipsum dolor sit amet
+          </p>
+          <em
+            class="c6"
+          >
+            Postado em
+            : 
+            <span>
+              27/05/2022
+            </span>
+          </em>
+        </div>
       </div>
     </a>
   </article>
@@ -226,42 +233,49 @@ exports[`Components/Post Should render correctly in en 1`] = `
     class="c0"
   >
     <a
-      class="c1"
       href="/blog/slug-for-test"
-      title="Some title for testing"
     >
-      <figure
-        class="c2"
-      >
-        <img
-          alt="Some title for testing"
-          layout="fill"
-          objectfit="cover"
-          src="/img/bg.jpg"
-        />
-      </figure>
       <div
-        class="c3"
+        class="c1"
+        title="Some title for testing"
       >
-        <h2
-          class="c4"
+        <figure
+          class="c2"
         >
-          Some title for testing
-        </h2>
-        <p
-          class="c5"
+          <img
+            alt="Some title for testing"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fbg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fbg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fbg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fbg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+          />
+        </figure>
+        <div
+          class="c3"
         >
-          lorem ipsum dolor sit amet
-        </p>
-        <em
-          class="c6"
-        >
-          Postado em
-          : 
-          <span>
-            27/05/2022
-          </span>
-        </em>
+          <h2
+            class="c4"
+          >
+            Some title for testing
+          </h2>
+          <p
+            class="c5"
+          >
+            lorem ipsum dolor sit amet
+          </p>
+          <em
+            class="c6"
+          >
+            Postado em
+            : 
+            <span>
+              27/05/2022
+            </span>
+          </em>
+        </div>
       </div>
     </a>
   </article>
