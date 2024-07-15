@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import dynamic from 'next/dynamic'
 import gfm from 'remark-gfm'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import rehypeRaw from 'rehype-raw'
 
 import * as S from './styles'
@@ -34,6 +34,10 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
               height={height}
               alt={alt}
               priority={isPriority}
+              style={{
+                maxWidth: '100%',
+                height: 'auto'
+              }}
             />
           </S.ImageWrapper>
         )

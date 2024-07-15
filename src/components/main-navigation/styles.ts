@@ -152,7 +152,7 @@ type LinkProps = {
   active: boolean
 }
 
-export const Link = styled.a<LinkProps>`
+export const Link = styled.span<LinkProps>`
   ${({ active }) => css`
     text-decoration: none;
     color: #fff;

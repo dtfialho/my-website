@@ -69,7 +69,7 @@ export const ArticleImage = styled.div`
   `}
 `
 
-export const Back = styled.a`
+export const Back = styled.span`
   background-color: #4c57ba;
   color: #fff;
   border-radius: 6px;

@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import format from 'date-fns/format'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import Header from 'components/header'
@@ -34,9 +34,12 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
             <Image
               src={hero_image}
               alt={title}
-              layout="fill"
-              objectFit="contain"
               priority
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: 'contain'
+              }}
             />
           </S.ArticleImage>
 

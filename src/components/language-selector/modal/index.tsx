@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useContext, useState } from 'react'
 import { X } from '@styled-icons/feather/X'
@@ -52,6 +52,10 @@ const LanguageSelectorModal = () => {
                   height="22"
                   alt="Active locale"
                   title="Active locale"
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto'
+                  }}
                 />
               </S.FlagWrapper>
 
@@ -74,6 +78,10 @@ const LanguageSelectorModal = () => {
                       width="29"
                       height="22"
                       alt={`${locale} locale flag`}
+                      style={{
+                        maxWidth: '100%',
+                        height: 'auto'
+                      }}
                     />
                   </S.FlagWrapper>
                   {locale}

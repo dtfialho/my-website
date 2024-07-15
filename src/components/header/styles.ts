@@ -26,7 +26,7 @@ export const Wrapper = styled.header<WrapperProps>`
   `}
 `
 
-export const LogoLink = styled.a`
+export const LogoLink = styled.span`
   svg {
     width: 50px;
   }

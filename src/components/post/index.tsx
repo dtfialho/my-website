@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import format from 'date-fns/format'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -28,15 +28,18 @@ const Post = ({
 
   return (
     <S.Wrapper>
-      <Link href={`/blog/${slug}`} passHref>
+      <Link href={`/blog/${slug}`}>
         <S.Link title={title}>
           <S.ImageWrapper>
             <Image
               src={image}
-              layout="fill"
-              objectFit="cover"
               alt={title}
               priority={imgPriority}
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: 'cover'
+              }}
             />
           </S.ImageWrapper>
           <S.Content>

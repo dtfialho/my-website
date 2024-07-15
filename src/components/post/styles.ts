@@ -9,7 +9,7 @@ export const Wrapper = styled.article`
   }
 `
 
-export const Link = styled.a`
+export const Link = styled.div`
   display: flex;
   flex-direction: column;
   transition: opacity 0.3s;

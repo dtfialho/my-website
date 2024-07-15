@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useContext } from 'react'
 
@@ -21,6 +21,10 @@ const LanguageSelector = () => {
           width="29"
           height="22"
           alt="Active language"
+          style={{
+            maxWidth: '100%',
+            height: 'auto'
+          }}
         />
       </S.Button>
     </>

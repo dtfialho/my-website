@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 
 import Header from 'components/header'
@@ -15,7 +15,6 @@ const AboutMe = () => {
         <S.TitleContainer>
           <Image
             src="/img/me.jpeg"
-            layout="fixed"
             alt={t('about-me:profilePicture')}
             width={150}
             height={150}
