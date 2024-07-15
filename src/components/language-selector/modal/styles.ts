@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Overlay = styled.div`
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0 0 0 / 80%);
   top: 0;
   left: 0;
   width: 100%;
@@ -138,7 +138,7 @@ export const ListItem = styled.li`
 
 export const ChangeLocale = styled.button`
   font:
-    700 16px/16px 'Lato',
+    700 16px/16px Lato,
     sans-serif;
   text-align: center;
   width: 100%;

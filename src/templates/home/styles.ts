@@ -16,7 +16,7 @@ export const Wrapper = styled.main`
     height: calc(100vh - 93px);
     top: 93px;
     position: fixed;
-    background: rgba(0, 0, 0, 0.3);
+    background-color: rgb(0 0 0 / 30%);
     content: '';
   }
 `

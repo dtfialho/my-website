@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:styles": "stylelint 'src/**/styles.ts'",
     "test": "jest",
     "prepare": "husky install",
     "check-ts": "tsc --project ./tsconfig.json --noEmit",
@@ -54,8 +55,11 @@
     "jest": "^27.5.1",
     "jest-styled-components": "^7.0.4",
     "next-sitemap": "^3.1.17",
+    "postcss-styled-syntax": "^0.6.4",
     "prettier": "^3.3.3",
     "raw-loader": "^4.0.2",
+    "stylelint": "^16.7.0",
+    "stylelint-config-standard": "^36.0.1",
     "tsc": "^2.0.4"
   },
   "volta": {
