@@ -1,22 +1,29 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.nav<{ open: boolean }>`
-  ${({ open }) => css`
-    ${open &&
-    css`
-      ${media.lessThan('medium')`
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.8);
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        display: flex;
-        transition: .3s ease-in-out;
-      `}
+const wrapperModifiers = {
+  open: () => css`
+    ${media.lessThan('medium')`
+      position: fixed;
+      background-color: rgb(0 0 0 / 80%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      display: flex;
+      transition: .3s ease-in-out;
     `}
+  `
+}
+
+type WrapperProps = {
+  open: boolean
+}
+
+export const Wrapper = styled.nav<WrapperProps>`
+  ${({ open }) => css`
+    ${open && wrapperModifiers.open()}
   `}
 `
 
@@ -57,7 +64,11 @@ const iconModifiers = {
   `
 }
 
-export const Icon = styled.span<{ open: boolean }>`
+type IconProps = {
+  open: boolean
+}
+
+export const Icon = styled.span<IconProps>`
   ${({ open }) => css`
     position: relative;
     display: block;
@@ -97,7 +108,11 @@ const containerModifiers = {
   `
 }
 
-export const Container = styled.ul<{ open: boolean }>`
+type ContainerProps = {
+  open: boolean
+}
+
+export const Container = styled.ul<ContainerProps>`
   ${({ open }) => css`
     visibility: hidden;
     opacity: 0;
@@ -133,17 +148,17 @@ export const Item = styled.li`
   `}
 `
 
-export const Link = styled.a<{ active: boolean }>`
+type LinkProps = {
+  active: boolean
+}
+
+export const Link = styled.span<LinkProps>`
   ${({ active }) => css`
     text-decoration: none;
     color: #fff;
     font-weight: 700;
     font-size: 20px;
     position: relative;
-
-    &:hover::after {
-      width: 100%;
-    }
 
     &::after {
       display: block;
@@ -156,6 +171,10 @@ export const Link = styled.a<{ active: boolean }>`
       ${media.lessThan('medium')`
         margin-top: 5px;
       `}
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   `}
 `

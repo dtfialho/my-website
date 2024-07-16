@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -23,7 +22,8 @@
   "include": [
     "**/*.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".jest/setup.js"
   ],
   "exclude": [
     "node_modules"

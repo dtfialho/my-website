@@ -1,3 +1,4 @@
+import type { DefaultBreakpoints } from 'styled-media-query'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
@@ -9,6 +10,11 @@ export const Wrapper = styled.main`
   ${media.greaterThan('medium')`
     padding: 193px 16px 100px;
   `}
+
+  ${media.greaterThan('992px' as keyof DefaultBreakpoints)`
+    padding-left: 160px;
+    padding-right: 160px;
+  `}
 `
 
 export const TitleContainer = styled.div`
@@ -18,7 +24,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   margin-bottom: 20px;
 
-  > span {
+  > img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -42,7 +48,7 @@ export const Title = styled.h1`
 
 export const SkillsContainer = styled.div`
   margin: 50px 0 40px;
-  border-bottom: 1px solid rgb(153, 46, 36);
+  border-bottom: 1px solid rgb(153 46 36);
 `
 
 export const Items = styled.div`
@@ -65,7 +71,7 @@ export const Skills = styled.div`
 export const SkillItemTitle = styled.h3`
   margin-bottom: 10px;
   padding-bottom: 5px;
-  border-bottom: 1px solid rgb(153, 46, 36);
+  border-bottom: 1px solid rgb(153 46 36);
 `
 
 export const SkillsList = styled.ul`

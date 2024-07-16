@@ -28,15 +28,15 @@ const Post = ({
 
   return (
     <S.Wrapper>
-      <Link href={`/blog/${slug}`} passHref>
+      <Link href={`/blog/${slug}`}>
         <S.Link title={title}>
           <S.ImageWrapper>
             <Image
               src={image}
-              layout="fill"
-              objectFit="cover"
               alt={title}
               priority={imgPriority}
+              fill
+              sizes="100vw"
             />
           </S.ImageWrapper>
           <S.Content>

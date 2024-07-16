@@ -57,7 +57,7 @@ const LanguageSelectorModal = () => {
 
               {selectedLocale || activeLocale}
 
-              <S.DropdownIcon rotate={showList}>
+              <S.DropdownIcon rotated={showList}>
                 <CaretDown size={15} />
               </S.DropdownIcon>
             </S.ActiveItem>
@@ -69,7 +69,12 @@ const LanguageSelectorModal = () => {
                   onClick={() => handleSelectLocale(locale)}
                 >
                   <S.FlagWrapper>
-                    <Image src={`/img/${locale}.jpg`} width="29" height="22" />
+                    <Image
+                      src={`/img/${locale}.jpg`}
+                      width="29"
+                      height="22"
+                      alt={`${locale} locale flag`}
+                    />
                   </S.FlagWrapper>
                   {locale}
                 </S.ListItem>

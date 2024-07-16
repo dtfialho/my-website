@@ -16,9 +16,14 @@ exports[`components/LanguageSelector Should match snapshot 1`] = `
     type="button"
   >
     <img
-      alt="Active language"
+      alt="Active language pt-BR"
+      data-nimg="1"
+      decoding="async"
       height="22"
-      src="/img/pt-BR.jpg"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75"
+      srcset="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75 2x"
+      style="color: transparent;"
       width="29"
     />
   </button>

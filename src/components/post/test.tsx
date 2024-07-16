@@ -15,11 +15,13 @@ const data: PostType = {
 describe('Components/Post', () => {
   it('Should render correctly', () => {
     const { container } = renderWithTranslate(<Post {...data} />)
+
     expect(container).toMatchSnapshot()
   })
 
   it('Should render correctly in en', () => {
     const { container } = renderWithTranslate(<Post {...data} />)
+
     expect(container).toMatchSnapshot()
   })
 
@@ -28,7 +30,9 @@ describe('Components/Post', () => {
 
     renderWithTranslate(<Post {...data} />)
 
-    expect(screen.getByRole('link', { name: data.title })).toHaveAttribute(
+    const linkRegex = new RegExp(data.title, 'i')
+
+    expect(screen.getByRole('link', { name: linkRegex })).toHaveAttribute(
       'href',
       `/blog/${data.slug}`
     )

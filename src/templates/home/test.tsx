@@ -1,5 +1,5 @@
 import { screen, act } from '@testing-library/react'
-import { TweenMax } from 'gsap'
+import gsap from 'gsap'
 
 import { renderWithTranslate } from 'utils/test-utils'
 import * as Header from 'components/header'
@@ -8,7 +8,7 @@ import Home from './'
 jest.mock('components/header')
 const mockedHeader = Header.default as jest.Mock
 
-jest.spyOn(TweenMax, 'to')
+jest.spyOn(gsap, 'to')
 
 describe('Templates/Home', () => {
   it('Should render correctly', () => {
@@ -20,7 +20,7 @@ describe('Templates/Home', () => {
       jest.runAllTimers()
     })
 
-    expect(TweenMax.to).toHaveBeenCalled()
+    expect(gsap.to).toHaveBeenCalled()
     expect(screen.getByText(/Desenvolvedor Front End/)).toBeInTheDocument()
   })
 
@@ -33,7 +33,7 @@ describe('Templates/Home', () => {
       jest.runAllTimers()
     })
 
-    expect(TweenMax.to).toHaveBeenCalled()
+    expect(gsap.to).toHaveBeenCalled()
     expect(screen.getByText(/Front End Web Developer/)).toBeInTheDocument()
   })
 })

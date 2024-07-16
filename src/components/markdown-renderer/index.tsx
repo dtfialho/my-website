@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import ReactMarkdown from 'react-markdown'
 import dynamic from 'next/dynamic'
 import gfm from 'remark-gfm'

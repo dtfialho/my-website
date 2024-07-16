@@ -16,9 +16,9 @@ export const Link = styled.a`
   display: flex;
   width: 70px;
   height: 70px;
-  color: currentColor;
+  color: currentcolor;
   border-radius: 50%;
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
   align-items: center;
   justify-content: center;
   text-decoration: none;

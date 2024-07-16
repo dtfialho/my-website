@@ -6,18 +6,20 @@ export const Wrapper = styled.main`
   height: 100vh;
   color: #fff;
 
-  > span {
+  > img {
     z-index: -1;
+    object-fit: cover;
   }
 
-  &::before {
+  &::after {
     display: block;
     width: 100vw;
     height: calc(100vh - 93px);
     top: 93px;
     position: fixed;
-    background: rgba(0, 0, 0, 0.3);
+    background-color: rgb(0 0 0 / 30%);
     content: '';
+    z-index: -1;
   }
 `
 

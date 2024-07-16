@@ -40,21 +40,19 @@ describe('MainNavigation', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('Should set active link correctly', () => {
+  it('Should set active link correctly', async () => {
     useRouter.mockImplementation(() => ({
       asPath: '/about-me'
     }))
 
     renderWithTranslate(<Nav />)
 
-    userEvent.click(screen.getByRole('button', { name: /Menu/ }))
+    await userEvent.click(screen.getByRole('button', { name: /menu/i }))
 
-    expect(screen.getByRole('link', { name: /Sobre mim/ })).toHaveStyleRule(
-      'width',
-      '100%',
-      {
-        modifier: '::after'
-      }
-    )
+    expect(
+      (await screen.findByRole('link', { name: /sobre mim/i })).children[0]
+    ).toHaveStyleRule('width', '100%', {
+      modifier: '::after'
+    })
   })
 })

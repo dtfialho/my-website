@@ -15,7 +15,6 @@ const AboutMe = () => {
         <S.TitleContainer>
           <Image
             src="/img/me.jpeg"
-            layout="fixed"
             alt={t('about-me:profilePicture')}
             width={150}
             height={150}

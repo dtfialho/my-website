@@ -34,137 +34,7 @@ exports[`Components/Post Should render correctly 1`] = `
 }
 
 .c2 img {
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-.c3 {
-  padding-top: 16px;
-}
-
-.c4 {
-  margin-bottom: 4px;
-}
-
-.c5 {
-  margin-bottom: 4px;
-}
-
-.c6 {
-  font-size: 0.8rem;
-  font-style: italic;
-  margin-bottom: 0;
-  color: #666;
-}
-
-@media (min-width:768px) {
-  .c1 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
-@media (min-width:450px) and (max-width:768px) {
-  .c2 {
-    width: 500px;
-    height: 300px;
-    max-width: 100%;
-  }
-}
-
-@media (min-width:768px) {
-  .c2 {
-    width: 300px;
-    margin: 0;
-  }
-}
-
-@media (min-width:768px) {
-  .c3 {
-    padding: 16px 24px 0;
-  }
-}
-
-<div>
-  <article
-    class="c0"
-  >
-    <a
-      class="c1"
-      href="/blog/slug-for-test"
-      title="Some title for testing"
-    >
-      <figure
-        class="c2"
-      >
-        <img
-          alt="Some title for testing"
-          layout="fill"
-          objectfit="cover"
-          src="/img/bg.jpg"
-        />
-      </figure>
-      <div
-        class="c3"
-      >
-        <h2
-          class="c4"
-        >
-          Some title for testing
-        </h2>
-        <p
-          class="c5"
-        >
-          lorem ipsum dolor sit amet
-        </p>
-        <em
-          class="c6"
-        >
-          Postado em
-          : 
-          <span>
-            27/05/2022
-          </span>
-        </em>
-      </div>
-    </a>
-  </article>
-</div>
-`;
-
-exports[`Components/Post Should render correctly in en 1`] = `
-.c0:not(:last-child) {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.c1:hover {
-  opacity: 0.7;
-}
-
-.c2 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  position: relative;
-  width: 100%;
-  height: 150px;
-  margin: 0 auto;
+  object-fit: cover;
 }
 
 .c2 img {
@@ -226,42 +96,194 @@ exports[`Components/Post Should render correctly in en 1`] = `
     class="c0"
   >
     <a
-      class="c1"
       href="/blog/slug-for-test"
-      title="Some title for testing"
     >
-      <figure
-        class="c2"
-      >
-        <img
-          alt="Some title for testing"
-          layout="fill"
-          objectfit="cover"
-          src="/img/bg.jpg"
-        />
-      </figure>
       <div
-        class="c3"
+        class="c1"
+        title="Some title for testing"
       >
-        <h2
-          class="c4"
+        <figure
+          class="c2"
         >
-          Some title for testing
-        </h2>
-        <p
-          class="c5"
+          <img
+            alt="Some title for testing"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fbg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fbg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fbg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fbg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </figure>
+        <div
+          class="c3"
         >
-          lorem ipsum dolor sit amet
-        </p>
-        <em
-          class="c6"
+          <h2
+            class="c4"
+          >
+            Some title for testing
+          </h2>
+          <p
+            class="c5"
+          >
+            lorem ipsum dolor sit amet
+          </p>
+          <em
+            class="c6"
+          >
+            Postado em
+            : 
+            <span>
+              27/05/2022
+            </span>
+          </em>
+        </div>
+      </div>
+    </a>
+  </article>
+</div>
+`;
+
+exports[`Components/Post Should render correctly in en 1`] = `
+.c0:not(:last-child) {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.c1:hover {
+  opacity: 0.7;
+}
+
+.c2 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.c2 img {
+  object-fit: cover;
+}
+
+.c2 img {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.c3 {
+  padding-top: 16px;
+}
+
+.c4 {
+  margin-bottom: 4px;
+}
+
+.c5 {
+  margin-bottom: 4px;
+}
+
+.c6 {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 0;
+  color: #666;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:450px) and (max-width:768px) {
+  .c2 {
+    width: 500px;
+    height: 300px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    width: 300px;
+    margin: 0;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    padding: 16px 24px 0;
+  }
+}
+
+<div>
+  <article
+    class="c0"
+  >
+    <a
+      href="/blog/slug-for-test"
+    >
+      <div
+        class="c1"
+        title="Some title for testing"
+      >
+        <figure
+          class="c2"
         >
-          Postado em
-          : 
-          <span>
-            27/05/2022
-          </span>
-        </em>
+          <img
+            alt="Some title for testing"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fbg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fbg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fbg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fbg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fbg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fbg.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </figure>
+        <div
+          class="c3"
+        >
+          <h2
+            class="c4"
+          >
+            Some title for testing
+          </h2>
+          <p
+            class="c5"
+          >
+            lorem ipsum dolor sit amet
+          </p>
+          <em
+            class="c6"
+          >
+            Postado em
+            : 
+            <span>
+              27/05/2022
+            </span>
+          </em>
+        </div>
       </div>
     </a>
   </article>

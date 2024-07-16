@@ -9,7 +9,7 @@ export const Wrapper = styled.article`
   }
 `
 
-export const Link = styled.a`
+export const Link = styled.div`
   display: flex;
   flex-direction: column;
   transition: opacity 0.3s;
@@ -29,6 +29,10 @@ export const ImageWrapper = styled.figure`
   width: 100%;
   height: 150px;
   margin: 0 auto;
+
+  img {
+    object-fit: cover;
+  }
 
   ${media.between('small', 'medium')`
     width: 500px;

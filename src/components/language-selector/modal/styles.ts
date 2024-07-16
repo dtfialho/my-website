@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Overlay = styled.div`
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0 0 0 / 80%);
   top: 0;
   left: 0;
   width: 100%;
@@ -79,22 +79,46 @@ export const FlagWrapper = styled.figure`
   margin-right: 8px;
 `
 
-export const DropdownIcon = styled.span<{ rotate: boolean }>`
-  ${({ rotate }) => css`
+type DropdownIconProps = {
+  rotated: boolean
+}
+
+const dropdownIconModifiers = {
+  rotated: () => css`
+    transform: translateY(-50%) rotateX(-180deg);
+  `
+}
+
+export const DropdownIcon = styled.span<DropdownIconProps>`
+  ${({ rotated }) => css`
     display: block;
     position: absolute;
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
 
-    ${rotate &&
-    css`
-      transform: translateY(-50%) rotateX(-180deg);
-    `}
+    ${rotated && dropdownIconModifiers.rotated()}
   `}
 `
 
-export const List = styled.ul<{ open: boolean }>`
+type ListProps = {
+  open: boolean
+}
+
+const listModifiers = {
+  open: () => css`
+    max-height: 200px;
+    border: 1px solid #d9d9d9;
+  `,
+  closed: () => css`
+    li {
+      opacity: 0;
+      padding: 0 8px;
+    }
+  `
+}
+
+export const List = styled.ul<ListProps>`
   ${({ open }) => css`
     position: absolute;
     top: 100%;
@@ -105,21 +129,10 @@ export const List = styled.ul<{ open: boolean }>`
     max-height: 0;
     background-color: #fff;
     overflow: hidden;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s cubic-bezier(0.2, 0, 0.2, 1);
 
-    ${!open &&
-    css`
-      li {
-        opacity: 0;
-        padding: 0 8px;
-      }
-    `}
-
-    ${open &&
-    css`
-      max-height: 200px;
-      border: 1px solid #d9d9d9;
-    `}
+    ${!open && listModifiers.closed()}
+    ${open && listModifiers.open()}
   `}
 `
 
@@ -137,7 +150,9 @@ export const ListItem = styled.li`
 `
 
 export const ChangeLocale = styled.button`
-  font: 700 16px/16px 'Lato', sans-serif;
+  font:
+    700 16px/16px Lato,
+    sans-serif;
   text-align: center;
   width: 100%;
   appearance: none;

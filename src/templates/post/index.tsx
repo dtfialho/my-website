@@ -31,13 +31,7 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
             </small>
           </S.Date>
           <S.ArticleImage>
-            <Image
-              src={hero_image}
-              alt={title}
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
+            <Image src={hero_image} alt={title} priority fill sizes="100vw" />
           </S.ArticleImage>
 
           <MarkdownRenderer content={content} />

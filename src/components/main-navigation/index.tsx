@@ -19,19 +19,19 @@ const MainNavigation = () => {
 
       <S.Container open={open}>
         <S.Item>
-          <Link href="/" passHref>
+          <Link href="/">
             <S.Link active={asPath === '/'}>Home</S.Link>
           </Link>
         </S.Item>
 
         <S.Item>
-          <Link href="/blog" passHref>
+          <Link href="/blog">
             <S.Link active={!!asPath.match(/\/blog/)}>Blog</S.Link>
           </Link>
         </S.Item>
 
         <S.Item>
-          <Link href="/about-me" passHref>
+          <Link href="/about-me">
             <S.Link active={asPath === '/about-me'}>
               {t('common:aboutMe')}
             </S.Link>

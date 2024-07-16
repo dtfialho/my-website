@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useRef } from 'react'
-import { TweenMax } from 'gsap'
+import gsap from 'gsap'
 
 import Header from 'components/header'
 import SocialMedia from 'components/social-media'
@@ -12,7 +12,7 @@ const Home = () => {
   const { t } = useTranslation()
 
   useEffect(() => {
-    TweenMax.to(content.current, 2, { autoAlpha: 1, delay: 1 })
+    gsap.to(content.current, { duration: 2, autoAlpha: 1, delay: 1 })
   }, [])
 
   return (
@@ -20,9 +20,9 @@ const Home = () => {
       <Image
         src="/img/bg.jpg"
         alt="Background image"
-        objectFit="cover"
-        layout="fill"
         priority
+        fill
+        sizes="100vw"
       />
       <Header />
       <S.Content ref={content}>
