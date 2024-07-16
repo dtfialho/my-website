@@ -1,3 +1,4 @@
+import type { DefaultBreakpoints } from 'styled-media-query'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
@@ -8,6 +9,11 @@ export const Wrapper = styled.main`
 
   ${media.greaterThan('medium')`
     padding: 193px 16px 100px;
+  `}
+
+  ${media.greaterThan('992px' as keyof DefaultBreakpoints)`
+    padding-left: 160px;
+    padding-right: 160px;
   `}
 `
 

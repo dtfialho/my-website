@@ -72,6 +72,13 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
   }
 }
 
+@media (min-width:992px) {
+  .c0 {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
 @media (min-width:768px) {
   .c1 {
     -webkit-flex-direction: row;
@@ -340,6 +347,13 @@ exports[`Templates/AboutMe Should render correctly in en 1`] = `
 @media (min-width:768px) {
   .c0 {
     padding: 193px 16px 100px;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 
