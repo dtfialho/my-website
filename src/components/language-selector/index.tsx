@@ -1,13 +1,15 @@
+'use client'
+
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import { useContext } from 'react'
+import { useLocale } from 'next-intl'
 
 import { LanguageSelectorContext } from './provider'
 import * as S from './styles'
 
 const LanguageSelector = () => {
   const { setShowModal } = useContext(LanguageSelectorContext)
-  const { locale: activeLocale } = useRouter()
+  const activeLocale = useLocale()
 
   const handleOpenModal = () => {
     setShowModal(true)

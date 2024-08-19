@@ -1,3 +1,5 @@
+'use client'
+
 import { createContext, useState } from 'react'
 import type { PropsWithChildren } from 'react'
 
@@ -17,10 +19,10 @@ type ProviderProps = {
   }
 }
 
-const LanguageSelectorProvider = ({
+function LanguageSelectorProvider({
   children,
   initialState
-}: PropsWithChildren<ProviderProps>) => {
+}: PropsWithChildren<ProviderProps>) {
   const [showModal, setShowModal] = useState(!!initialState?.showModal)
 
   return (

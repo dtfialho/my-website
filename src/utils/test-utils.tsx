@@ -3,7 +3,7 @@ import { render, RenderResult } from '@testing-library/react'
 
 const getFileTranslations = (locale = 'pt-BR', key: string) => {
   const [file, prop] = key.split(':')
-  const data = require(`locales/${locale}/${file}.json`)
+  const data = require(`messages/${locale}/${file}.json`)
   return data[prop]
 }
 

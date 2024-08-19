@@ -17,13 +17,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "**/*.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".jest/setup.js"
+    ".jest/setup.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

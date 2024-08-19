@@ -1,4 +1,6 @@
-import useTranslation from 'next-translate/useTranslation'
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useContext, useState } from 'react'
@@ -9,7 +11,7 @@ import { LanguageSelectorContext } from '../provider'
 import * as S from './styles'
 
 const LanguageSelectorModal = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const router = useRouter()
   const { locales, locale: activeLocale, pathname, asPath, query } = router
   const { showModal, setShowModal } = useContext(LanguageSelectorContext)
@@ -35,13 +37,15 @@ const LanguageSelectorModal = () => {
   return (
     <>
       <S.Overlay onClick={handleCloseModal} />
+
       <S.Wrapper>
         <S.Header>
-          <S.Title>{t('common:selectLanguage')}:</S.Title>
+          <S.Title>{t('Common.selectLanguage')}:</S.Title>
           <S.Close type="button" onClick={handleCloseModal}>
             <X size={25} strokeWidth={2} title="Close" />
           </S.Close>
         </S.Header>
+
         <S.Body>
           <S.Select>
             <S.ActiveItem type="button" onClick={() => setShowList(true)}>
@@ -87,7 +91,7 @@ const LanguageSelectorModal = () => {
             onClick={handleChangeLocale}
             disabled={!selectedLocale || selectedLocale === activeLocale}
           >
-            {t('common:changeLanguage')}
+            {t('Common.changeLanguage')}
           </S.ChangeLocale>
         </S.Body>
       </S.Wrapper>

@@ -1,9 +1,11 @@
-const nextTranslate = require('next-translate-plugin')
+import createNextIntlPlugin from 'next-intl/plugin'
+
+const withNextIntl = createNextIntlPlugin()
 
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = nextTranslate({
+export default withNextIntl({
   swcMinify: true,
   compiler: {
     styledComponents: true

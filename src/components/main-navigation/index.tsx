@@ -1,15 +1,16 @@
-import useTranslation from 'next-translate/useTranslation'
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useState } from 'react'
-import { useRouter } from 'next/router'
-
+import { usePathname } from 'next/navigation'
 import LanguageSelector from 'components/language-selector'
 import * as S from './styles'
 
 const MainNavigation = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const [open, setOpen] = useState(false)
-  const { asPath } = useRouter()
+  const path = usePathname()
 
   return (
     <S.Wrapper open={open}>
@@ -20,21 +21,19 @@ const MainNavigation = () => {
       <S.Container open={open}>
         <S.Item>
           <Link href="/">
-            <S.Link active={asPath === '/'}>Home</S.Link>
+            <S.Link active={path === '/'}>Home</S.Link>
           </Link>
         </S.Item>
 
         <S.Item>
           <Link href="/blog">
-            <S.Link active={!!asPath.match(/\/blog/)}>Blog</S.Link>
+            <S.Link active={!!path?.match(/\/blog/)}>Blog</S.Link>
           </Link>
         </S.Item>
 
         <S.Item>
           <Link href="/about-me">
-            <S.Link active={asPath === '/about-me'}>
-              {t('common:aboutMe')}
-            </S.Link>
+            <S.Link active={path === '/about-me'}>{t('Common.aboutMe')}</S.Link>
           </Link>
         </S.Item>
 
