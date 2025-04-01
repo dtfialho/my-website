@@ -6,6 +6,14 @@ const withNextIntl = createNextIntlPlugin()
  * @type {import('next').NextConfig}
  */
 export default withNextIntl({
+  rewrites: async () => {
+    return [
+      {
+        source: '/pt-BR/sobre-mim',
+        destination: '/pt-BR/about-me'
+      }
+    ]
+  },
   swcMinify: true,
   compiler: {
     styledComponents: true

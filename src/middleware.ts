@@ -1,36 +1,31 @@
 import createMiddleware from 'next-intl/middleware'
 import type { NextRequest } from 'next/server'
 
-import postRedirects from 'lib/post-redirects'
+import {
+  supportedLocales,
+  postRedirects,
+  generalRedirects
+} from 'lib/redirects'
+import { NextResponse } from 'next/server'
 
-export function middleware(request: NextRequest) {
-  const { nextUrl, url, cookies } = request
+export default async function middleware(request: NextRequest) {
+  const [, locale, ...segments] = request.nextUrl.pathname.split('/')
 
-  const locales = Object.keys(postRedirects)
-
-  // if (!locales.includes(locale)) {
-  //   return
-  // }
-
-  // const postsToRedirect = Object.keys(postRedirects[locale])
-  // const path = postsToRedirect.find((post) => pathname.includes(post))
-
-  // if (path) {
-  //   return NextResponse.redirect(new URL(`${postRedirects[locale][path]}`, url))
-  // }
-
-  const [, locale, ...segments] = nextUrl.pathname.split('/')
-  // if (locale != null && segments.join('/') === 'profile') {
-  //   const usesNewProfile =
-  //     (cookies.get('NEW_PROFILE')?.value || 'false') === 'true'
-
-  //   if (usesNewProfile) {
-  //     nextUrl.pathname = `/${locale}/profile/new`
-  //   }
-  // }
+  if (
+    locale != null &&
+    segments.length &&
+    generalRedirects[locale][segments[0]]
+  ) {
+    return NextResponse.redirect(
+      new URL(
+        `/${locale}/${generalRedirects[locale][segments[0]]}`,
+        request.nextUrl.origin
+      )
+    )
+  }
 
   const handleI18nRouting = createMiddleware({
-    locales,
+    locales: supportedLocales,
     defaultLocale: 'pt-BR'
   })
 
@@ -40,5 +35,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/', '/(pt-BR|en)/:path*']
+  matcher: ['/((?!img|_next).*)', '/', '/(pt-BR|en)']
 }
