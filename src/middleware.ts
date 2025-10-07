@@ -1,12 +1,12 @@
-import createMiddleware from 'next-intl/middleware'
 import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
 
 import {
   supportedLocales,
   postRedirects,
   generalRedirects
 } from 'lib/redirects'
-import { NextResponse } from 'next/server'
 
 export default async function middleware(request: NextRequest) {
   const [, locale, ...segments] = request.nextUrl.pathname.split('/')
@@ -35,5 +35,5 @@ export default async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!img|_next).*)', '/', '/(pt-BR|en)']
+  matcher: ['/((?!img|_next|api|favicon).*)', '/', '/(pt-BR|en)']
 }
