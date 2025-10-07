@@ -1,14 +1,15 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, getLocale } from 'next-intl/server'
 
 import Template from 'templates/home'
 
 export async function generateMetadata() {
   const t = await getTranslations()
+  const locale = await getLocale()
 
   const title = 'Home | Diego T. Fialho'
   const description = t('Home.description')
   const keywords = t('Home.keywords')
-  const url = 'https://www.diegotfialho.dev'
+  const url = `https://www.diegotfialho.dev/${locale}`
 
   return {
     keywords,
