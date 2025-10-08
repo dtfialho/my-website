@@ -2,9 +2,9 @@ import { screen } from '@testing-library/react'
 import format from 'date-fns/format'
 
 import { renderWithTranslate } from 'utils/test-utils'
-import Post, { PostType } from './'
+import Post from './'
 
-const data: PostType = {
+const data: Post = {
   slug: 'slug-for-test',
   date: '2022-05-27T00:00:00-03:00',
   hero_image: '/img/bg.jpg',

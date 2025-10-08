@@ -6,7 +6,7 @@ export async function generateMetadata() {
   const t = await getTranslations()
   const locale = await getLocale()
 
-  const title = 'Home | Diego T. Fialho'
+  const title = 'Diego T. Fialho'
   const description = t('Home.description')
   const keywords = t('Home.keywords')
   const url = `https://www.diegotfialho.dev/${locale}`

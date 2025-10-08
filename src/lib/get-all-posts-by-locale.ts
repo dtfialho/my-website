@@ -27,7 +27,7 @@ const getAllPostsByLocale = (locale: string) => {
       return compareDesc(firstDate, secondDate)
     })
 
-  return posts
+  return posts as Post[]
 }
 
 export default getAllPostsByLocale

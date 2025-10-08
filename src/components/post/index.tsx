@@ -1,28 +1,20 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import format from 'date-fns/format'
-import useTranslation from 'next-translate/useTranslation'
+import { getTranslations, getLocale } from 'next-intl/server'
 
 import * as S from './styles'
 
-export type PostType = {
-  slug: string
-  date: string
-  hero_image: string
-  title: string
-  excerpt: string
-  imgPriority?: boolean
-}
-
-const Post = ({
+const Post = async ({
   slug,
   title,
   date,
   hero_image: image,
   excerpt,
   imgPriority
-}: PostType) => {
-  const { t, lang } = useTranslation()
+}: Post) => {
+  const t = await getTranslations()
+  const lang = await getLocale()
   const dateFormat = lang === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
   const postDate = format(new Date(date), dateFormat)
 
@@ -43,7 +35,7 @@ const Post = ({
             <S.Title>{title}</S.Title>
             <S.Description>{excerpt}</S.Description>
             <S.Date>
-              {t('common:posted')}: <span>{postDate}</span>
+              {t('Common.posted')}: <span>{postDate}</span>
             </S.Date>
           </S.Content>
         </S.Link>

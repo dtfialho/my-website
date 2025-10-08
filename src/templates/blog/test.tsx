@@ -2,7 +2,6 @@ import format from 'date-fns/format'
 import { screen, render } from '@testing-library/react'
 
 import * as Header from 'components/header'
-import { PostType } from 'components/post'
 import Blog from './'
 
 jest.mock('components/header')
@@ -11,7 +10,7 @@ mockedHeader.mockImplementation(() => <header>Header</header>)
 
 describe('Templates/Blog', () => {
   it('Should display post list correctly', () => {
-    const posts: Array<PostType> = [
+    const posts: Array<Post> = [
       {
         slug: 'slug-for-test',
         date: '2022-05-27T00:00:00-03:00',

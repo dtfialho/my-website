@@ -1,21 +1,22 @@
-import useTranslation from 'next-translate/useTranslation'
+import { getTranslations } from 'next-intl/server'
 
 import Header from 'components/header'
-import Post, { PostType } from 'components/post'
+import Post from 'components/post'
 import * as S from './styles'
 
 type BlogProps = {
-  posts: Array<PostType>
+  posts: Array<Post>
 }
 
-const Blog = ({ posts }: BlogProps) => {
-  const { t } = useTranslation()
+const Blog = async ({ posts }: BlogProps) => {
+  const t = await getTranslations()
 
   return (
     <>
       <Header fixed />
+
       <S.Wrapper>
-        <S.Title>{t('blog:title')}</S.Title>
+        <S.Title>{t('Blog.title')}</S.Title>
 
         {posts.map(
           ({ slug, title, hero_image: image, date, excerpt }, index) => (

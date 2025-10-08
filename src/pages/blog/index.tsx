@@ -2,12 +2,11 @@ import useTranslation from 'next-translate/useTranslation'
 
 import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
 import Template from 'templates/blog'
-import { PostType } from 'components/post'
 import Seo from 'components/seo'
 import Keywords from 'components/seo/keywords'
 
 type BlogProps = {
-  posts: Array<PostType>
+  posts: Array<Post>
 }
 
 const Blog = ({ posts }: BlogProps) => {
