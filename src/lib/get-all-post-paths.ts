@@ -1,24 +1,26 @@
 import fs from 'fs'
 import path from 'path'
 
+import { DEFAULT_LOCALE } from 'lib/constants'
+import { supportedLocales } from './redirects'
+
 type PathsType = {
   locale: string
-  params: {
-    slug: string
-  }
+  slug: string
 }
 
-const getAllPagePaths = (locales: string[]): PathsType[] => {
+const getAllPagePaths = (): PathsType[] => {
+  const locales = supportedLocales
   const paths: PathsType[] = []
 
   locales.forEach((locale) => {
-    const dir = locale === 'pt-BR' ? 'default' : locale
+    const dir = locale === DEFAULT_LOCALE ? 'default' : locale
     const posts = fs.readdirSync(path.join('posts', dir))
 
     posts.forEach((post) => {
-      const path = {
-        params: { slug: post.replace('.md', '') },
-        locale
+      const path: PathsType = {
+        locale,
+        slug: post.replace('.md', '')
       }
       paths.push(path)
     })

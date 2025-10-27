@@ -1,4 +1,4 @@
-import useTranslation from 'next-translate/useTranslation'
+import { getTranslations, getLocale } from 'next-intl/server'
 import format from 'date-fns/format'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,9 +14,11 @@ export type PostProps = {
   hero_image: string
 }
 
-const Post = ({ content, title, date, hero_image }: PostProps) => {
-  const { t, lang } = useTranslation()
-  const dateFormat = lang === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
+const Post = async ({ content, title, date, hero_image }: PostProps) => {
+  const t = await getTranslations()
+  const locale = await getLocale()
+
+  const dateFormat = locale === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
   const postDate = format(new Date(date), dateFormat)
 
   return (
@@ -27,7 +29,7 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
           <S.Title>{title}</S.Title>
           <S.Date>
             <small>
-              {t('common:posted')}: {postDate}
+              {t('Common.posted')}: {postDate}
             </small>
           </S.Date>
           <S.ArticleImage>
@@ -38,7 +40,7 @@ const Post = ({ content, title, date, hero_image }: PostProps) => {
         </S.Article>
 
         <Link href="/blog" passHref>
-          <S.Back>{t('post:back')}</S.Back>
+          <S.Back>{t('Post.back')}</S.Back>
         </Link>
       </S.Wrapper>
     </>

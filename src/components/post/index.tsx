@@ -20,7 +20,7 @@ const Post = async ({
 
   return (
     <S.Wrapper>
-      <Link href={`/blog/${slug}`}>
+      <Link href={`/${lang}/blog/${slug}`}>
         <S.Link title={title}>
           <S.ImageWrapper>
             <Image
