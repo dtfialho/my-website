@@ -4,11 +4,20 @@ import Header from 'components/header'
 import Post from 'components/post'
 import * as S from './styles'
 
-type BlogProps = {
-  posts: Array<Post>
+type Post = {
+  slug: string
+  title: string
+  date: string
+  excerpt: string
+  hero_image: string
 }
 
-const Blog = async ({ posts }: BlogProps) => {
+type BlogProps = {
+  posts: Array<Post>
+  locale: string
+}
+
+const Blog = async ({ posts, locale }: BlogProps) => {
   const t = await getTranslations()
 
   return (
@@ -28,6 +37,7 @@ const Blog = async ({ posts }: BlogProps) => {
               hero_image={image}
               excerpt={excerpt}
               imgPriority={!index}
+              locale={locale}
             />
           )
         )}

@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server'
+import { redirect } from 'next/navigation'
 
 export default function RootPage() {
-  return NextResponse.redirect(new URL('/pt-BR/'))
+  redirect('/pt-BR/')
 }

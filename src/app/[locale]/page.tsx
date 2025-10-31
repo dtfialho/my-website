@@ -1,10 +1,16 @@
-import { getTranslations, getLocale } from 'next-intl/server'
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
 
 import Template from 'templates/home'
 
-export async function generateMetadata() {
+type ParamsType = {
+  params: {
+    locale: string
+  }
+}
+
+export async function generateMetadata({ params }: ParamsType) {
+  const { locale } = params
   const t = await getTranslations()
-  const locale = await getLocale()
 
   const title = 'Diego T. Fialho'
   const description = t('Home.description')
@@ -26,6 +32,10 @@ export async function generateMetadata() {
   }
 }
 
-export default function RootPage() {
+export default async function RootPage({ params }: ParamsType) {
+  const { locale } = params
+
+  unstable_setRequestLocale(locale)
+
   return <Template />
 }

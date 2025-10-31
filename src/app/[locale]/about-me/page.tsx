@@ -1,10 +1,16 @@
-import { getTranslations, getLocale } from 'next-intl/server'
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
 
 import Template from 'templates/about-me'
 
-export async function generateMetadata() {
+type ParamsType = {
+  params: {
+    locale: string
+  }
+}
+
+export async function generateMetadata({ params }: ParamsType) {
+  const { locale } = params
   const t = await getTranslations()
-  const locale = await getLocale()
 
   const title = `${t('AboutMe.title')} | Diego T. Fialho`
   const description = t('AboutMe.description')
@@ -26,6 +32,10 @@ export async function generateMetadata() {
   }
 }
 
-export default function AboutMe() {
+export default async function AboutMe({ params }: ParamsType) {
+  const { locale } = params
+
+  unstable_setRequestLocale(locale)
+
   return <Template />
 }

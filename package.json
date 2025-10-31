@@ -10,8 +10,7 @@
     "lint:styles": "stylelint 'src/**/styles.ts'",
     "test": "jest",
     "prepare": "husky install",
-    "check-ts": "tsc --project ./tsconfig.json --noEmit",
-    "postbuild": "next-sitemap"
+    "check-ts": "tsc --project ./tsconfig.json --noEmit"
   },
   "dependencies": {
     "@styled-icons/fa-brands": "^10.26.0",
@@ -25,7 +24,6 @@
     "next": "^14.2.5",
     "next-images": "^1.7.0",
     "next-intl": "^3.17.1",
-    "next-seo": "^5.4.0",
     "next-translate": "^2.6.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -58,8 +56,6 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-styled-components": "^7.2.0",
-    "next-sitemap": "^3.1.17",
-    "next-translate-plugin": "^2.6.2",
     "postcss-styled-syntax": "^0.6.4",
     "prettier": "^3.3.3",
     "raw-loader": "^4.0.2",

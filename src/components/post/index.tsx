@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import format from 'date-fns/format'
-import { getTranslations, getLocale } from 'next-intl/server'
+import { getTranslations } from 'next-intl/server'
 
 import * as S from './styles'
+
+type PostProps = Post & {
+  locale?: string
+}
 
 const Post = async ({
   slug,
@@ -11,12 +15,14 @@ const Post = async ({
   date,
   hero_image: image,
   excerpt,
-  imgPriority
-}: Post) => {
+  imgPriority,
+  locale
+}: PostProps) => {
   const t = await getTranslations()
-  const lang = await getLocale()
-  const dateFormat = lang === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
+  const dateFormat = locale === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
   const postDate = format(new Date(date), dateFormat)
+
+  const lang = locale || 'pt-BR'
 
   return (
     <S.Wrapper>

@@ -41,9 +41,6 @@ importers:
       next-intl:
         specifier: ^3.17.1
         version: 3.17.1(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
-      next-seo:
-        specifier: ^5.4.0
-        version: 5.15.0(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-translate:
         specifier: ^2.6.2
         version: 2.6.2(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -135,12 +132,6 @@ importers:
       jest-styled-components:
         specifier: ^7.2.0
         version: 7.2.0(styled-components@5.3.11(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))
-      next-sitemap:
-        specifier: ^3.1.17
-        version: 3.1.55(@next/env@14.2.5)(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      next-translate-plugin:
-        specifier: ^2.6.2
-        version: 2.6.2(next-translate@2.6.2(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1))
       postcss-styled-syntax:
         specifier: ^0.6.4
         version: 0.6.4(postcss@8.4.39)
@@ -340,9 +331,6 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
-
-  '@corex/deepmerge@4.0.43':
-    resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
 
   '@csstools/css-parser-algorithms@2.7.1':
     resolution: {integrity: sha512-2SJS42gxmACHgikc1WGesXLIT8d/q2l0UFM7TaEeIzdFCE/FPMtTiizcPGGJtlPo2xuQzY09OhrLTzRxqJqwGw==}
@@ -2783,27 +2771,6 @@ packages:
       next: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
-  next-seo@5.15.0:
-    resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}
-    peerDependencies:
-      next: ^8.1.1-canary.54 || >=9.0.0
-      react: '>=16.0.0'
-      react-dom: '>=16.0.0'
-
-  next-sitemap@3.1.55:
-    resolution: {integrity: sha512-ZjkRfkqoSLbU+e8W9TWWe0zfOGNA47lpvm35kNcUCmj73gpLX2PIn51gwHT/B6bgGVAFYY0OXixJDrxIIwcEHw==}
-    engines: {node: '>=14.18'}
-    hasBin: true
-    peerDependencies:
-      '@next/env': '*'
-      next: '*'
-
-  next-translate-plugin@2.6.2:
-    resolution: {integrity: sha512-qfvYG//QfP7b+A/xXGP9K+bdswkAFCabguemuEqjxu+j8pRNoF+jWKmepRXRaAcn1PqFLBj6PBvYkqD1r5k5Zw==}
-    engines: {node: '>=14.15.0'}
-    peerDependencies:
-      next-translate: '>= 2.4.1'
-
   next-translate@2.6.2:
     resolution: {integrity: sha512-Dcfo2Vyw+Ds06+8BJM0RcV/lfN7R59kTY/NP+XJgSpcrFKZV6QJuKfS+K4+OHkKBdQnF3ZOT3wk1np9eZx/PEA==}
     engines: {node: '>=16.10.0'}
@@ -3555,11 +3522,6 @@ packages:
     resolution: {integrity: sha512-/OxDN6OtAk5KBpGb28T+HZc2M+ADtvRxXrKKbUwtsLgdoxgX13hyy7ek6bFRl5+aBs2yZzB0c4CnQfAtVypW/g==}
     engines: {node: '>= 0.4'}
 
-  typescript@4.5.2:
-    resolution: {integrity: sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
-
   typescript@5.5.3:
     resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
     engines: {node: '>=14.17'}
@@ -4003,8 +3965,6 @@ snapshots:
       to-fast-properties: 2.0.0
 
   '@bcoe/v8-coverage@0.2.3': {}
-
-  '@corex/deepmerge@4.0.43': {}
 
   '@csstools/css-parser-algorithms@2.7.1(@csstools/css-tokenizer@2.4.1)':
     dependencies:
@@ -7136,24 +7096,6 @@ snapshots:
       react: 18.3.1
       use-intl: 3.17.1(react@18.3.1)
 
-  next-seo@5.15.0(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      next: 14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  next-sitemap@3.1.55(@next/env@14.2.5)(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
-    dependencies:
-      '@corex/deepmerge': 4.0.43
-      '@next/env': 14.2.5
-      minimist: 1.2.8
-      next: 14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-
-  next-translate-plugin@2.6.2(next-translate@2.6.2(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)):
-    dependencies:
-      next-translate: 2.6.2(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
-      typescript: 4.5.2
-
   next-translate@2.6.2(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
     dependencies:
       next: 14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -8006,8 +7948,6 @@ snapshots:
       has-proto: 1.0.3
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
-
-  typescript@4.5.2: {}
 
   typescript@5.5.3: {}
 

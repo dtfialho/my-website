@@ -1,4 +1,4 @@
-import { getTranslations, getLocale } from 'next-intl/server'
+import { getTranslations } from 'next-intl/server'
 import format from 'date-fns/format'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,11 +12,17 @@ export type PostProps = {
   title: string
   date: string
   hero_image: string
+  locale: string
 }
 
-const Post = async ({ content, title, date, hero_image }: PostProps) => {
+const Post = async ({
+  content,
+  title,
+  date,
+  hero_image,
+  locale
+}: PostProps) => {
   const t = await getTranslations()
-  const locale = await getLocale()
 
   const dateFormat = locale === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
   const postDate = format(new Date(date), dateFormat)
