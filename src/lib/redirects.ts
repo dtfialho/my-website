@@ -4,8 +4,6 @@ type RedirectsTypes = {
   }
 }
 
-export const supportedLocales = ['pt-BR', 'en']
-
 export const postRedirects: RedirectsTypes = {
   'pt-BR': {
     'simple-accordion-with-html-and-css': 'accordion-simples-com-html-e-css',

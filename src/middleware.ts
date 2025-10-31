@@ -2,11 +2,8 @@ import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 import createMiddleware from 'next-intl/middleware'
 
-import {
-  supportedLocales,
-  postRedirects,
-  generalRedirects
-} from 'lib/redirects'
+import { SUPPORTED_LOCALES } from 'lib/constants'
+import { postRedirects, generalRedirects } from 'lib/redirects'
 
 export default async function middleware(request: NextRequest) {
   const [, locale, ...segments] = request.nextUrl.pathname.split('/')
@@ -25,7 +22,7 @@ export default async function middleware(request: NextRequest) {
   }
 
   const handleI18nRouting = createMiddleware({
-    locales: supportedLocales,
+    locales: SUPPORTED_LOCALES,
     defaultLocale: 'pt-BR'
   })
 

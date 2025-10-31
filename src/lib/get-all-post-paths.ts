@@ -1,8 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import { DEFAULT_LOCALE } from 'lib/constants'
-import { supportedLocales } from './redirects'
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from 'lib/constants'
 
 type PathsType = {
   locale: string
@@ -10,7 +9,7 @@ type PathsType = {
 }
 
 const getAllPagePaths = (): PathsType[] => {
-  const locales = supportedLocales
+  const locales = SUPPORTED_LOCALES
   const paths: PathsType[] = []
 
   locales.forEach((locale) => {
