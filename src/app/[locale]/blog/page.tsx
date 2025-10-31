@@ -1,5 +1,6 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
 
+import { SUPPORTED_LOCALES } from 'lib/constants'
 import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
 import Template from 'templates/blog'
 
@@ -7,6 +8,10 @@ type ParamsType = {
   params: {
     locale: string
   }
+}
+
+export function generateStaticParams() {
+  return SUPPORTED_LOCALES.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({ params }: ParamsType) {
