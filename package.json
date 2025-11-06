@@ -22,7 +22,6 @@
     "gray-matter": "^4.0.3",
     "gsap": "^3.12.5",
     "next": "^14.2.5",
-    "next-images": "^1.7.0",
     "next-intl": "^3.17.1",
     "next-translate": "^2.6.2",
     "react": "^18.3.1",

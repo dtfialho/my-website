@@ -1,4 +1,4 @@
-type Post = {
+type PostType = {
   slug: string
   date: string
   hero_image: string

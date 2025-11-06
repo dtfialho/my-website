@@ -3,9 +3,10 @@ import Image from 'next/image'
 import format from 'date-fns/format'
 import { getTranslations } from 'next-intl/server'
 
+import { DEFAULT_LOCALE } from 'lib/constants'
 import * as S from './styles'
 
-type PostProps = Post & {
+type PostProps = PostType & {
   locale?: string
 }
 
@@ -16,17 +17,15 @@ const Post = async ({
   hero_image: image,
   excerpt,
   imgPriority,
-  locale
+  locale = DEFAULT_LOCALE
 }: PostProps) => {
   const t = await getTranslations()
   const dateFormat = locale === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
   const postDate = format(new Date(date), dateFormat)
 
-  const lang = locale || 'pt-BR'
-
   return (
     <S.Wrapper>
-      <Link href={`/${lang}/blog/${slug}`}>
+      <Link href={`/${locale}/blog/${slug}`}>
         <S.Link title={title}>
           <S.ImageWrapper>
             <Image

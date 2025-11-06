@@ -35,9 +35,6 @@ importers:
       next:
         specifier: ^14.2.5
         version: 14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      next-images:
-        specifier: ^1.7.0
-        version: 1.8.5(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5)))
       next-intl:
         specifier: ^3.17.1
         version: 3.17.1(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -1783,12 +1780,6 @@ packages:
     resolution: {integrity: sha512-6MgEugi8p2tiUhqO7GnPsmbCCzj0YRCwwaTbpGRyKZesjRSzkqkAE9fPp7V2yMs5hwfgbQLgdvSSkGNg1s5Uvw==}
     engines: {node: '>=18'}
 
-  file-loader@6.2.0:
-    resolution: {integrity: sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==}
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      webpack: ^4.0.0 || ^5.0.0
-
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
@@ -2760,11 +2751,6 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  next-images@1.8.5:
-    resolution: {integrity: sha512-YLBERp92v+Nu2EVxI9+wa32KRuxyxTC8ItbiHUWVPlatUoTl0yRqsNtP39c2vYv27VRvY4LlYcUGjNRBSMUIZA==}
-    peerDependencies:
-      webpack: ^4.0.0 || ^5.0.0
-
   next-intl@3.17.1:
     resolution: {integrity: sha512-cRstsLyCZ+yS8sGIwM13xW/EqMulUi0z+J4NcCcwAkmB/OETu6d+xEQfvrQ0ZQ+Fj+qwl9df698Lozyx5kAYhw==}
     peerDependencies:
@@ -3566,16 +3552,6 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
-
-  url-loader@4.1.1:
-    resolution: {integrity: sha512-3BTV812+AVHHOJQO8O5MkWgZ5aosP7GnROJwvzLS9hWDj00lZ6Z0wNak423Lp9PBZN05N+Jk/N5Si8jRAlGyWA==}
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      file-loader: '*'
-      webpack: ^4.0.0 || ^5.0.0
-    peerDependenciesMeta:
-      file-loader:
-        optional: true
 
   url-parse@1.5.10:
     resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
@@ -5731,12 +5707,6 @@ snapshots:
     dependencies:
       flat-cache: 5.0.0
 
-  file-loader@6.2.0(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))):
-    dependencies:
-      loader-utils: 2.0.4
-      schema-utils: 3.3.0
-      webpack: 5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))
-
   fill-range@7.1.1:
     dependencies:
       to-regex-range: 5.0.1
@@ -7082,12 +7052,6 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-images@1.8.5(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))):
-    dependencies:
-      file-loader: 6.2.0(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5)))
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))))(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5)))
-      webpack: 5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))
-
   next-intl@3.17.1(next@14.2.5(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
     dependencies:
       '@formatjs/intl-localematcher': 0.2.32
@@ -8006,15 +7970,6 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
-
-  url-loader@4.1.1(file-loader@6.2.0(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))))(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))):
-    dependencies:
-      loader-utils: 2.0.4
-      mime-types: 2.1.35
-      schema-utils: 3.3.0
-      webpack: 5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5))
-    optionalDependencies:
-      file-loader: 6.2.0(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.5)))
 
   url-parse@1.5.10:
     dependencies:

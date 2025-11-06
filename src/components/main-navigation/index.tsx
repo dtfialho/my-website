@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useState } from 'react'
-import { usePathname } from 'next/navigation'
+import { usePathname, useParams } from 'next/navigation'
+
 import LanguageSelector from 'components/language-selector'
 import * as S from './styles'
 
@@ -11,6 +12,8 @@ const MainNavigation = () => {
   const t = useTranslations()
   const [open, setOpen] = useState(false)
   const path = usePathname()
+  const { locale: activeLocale } = useParams()
+  const aboutMePath = `/${activeLocale === 'pt-BR' ? 'sobre-mim' : 'about-me'}`
 
   return (
     <S.Wrapper open={open}>
@@ -32,8 +35,10 @@ const MainNavigation = () => {
         </S.Item>
 
         <S.Item>
-          <Link href="/about-me">
-            <S.Link active={path === '/about-me'}>{t('Common.aboutMe')}</S.Link>
+          <Link href={aboutMePath}>
+            <S.Link active={!!path?.match(new RegExp(aboutMePath))}>
+              {t('Common.aboutMe')}
+            </S.Link>
           </Link>
         </S.Item>
 

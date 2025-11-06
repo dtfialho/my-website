@@ -2,14 +2,15 @@
 
 import Image from 'next/image'
 import { useContext } from 'react'
-import { useLocale } from 'next-intl'
+import { useParams } from 'next/navigation'
 
 import { LanguageSelectorContext } from './provider'
+import LanguageSelectorModal from './modal'
 import * as S from './styles'
 
 const LanguageSelector = () => {
-  const { setShowModal } = useContext(LanguageSelectorContext)
-  const activeLocale = useLocale()
+  const { showModal, setShowModal } = useContext(LanguageSelectorContext)
+  const { locale: activeLocale } = useParams()
 
   const handleOpenModal = () => {
     setShowModal(true)
@@ -25,6 +26,8 @@ const LanguageSelector = () => {
           alt={`Active language ${activeLocale}`}
         />
       </S.Button>
+
+      {showModal && <LanguageSelectorModal />}
     </>
   )
 }

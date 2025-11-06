@@ -1,53 +1,63 @@
-import { screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { useTranslations } from 'next-intl'
+import { useParams, usePathname } from 'next/navigation'
 
-import { renderWithTranslate } from 'utils/test-utils'
+import { getFileTranslations } from 'utils/test-utils'
 import Nav from './'
 
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '',
-      pathname: '',
-      query: '',
-      asPath: ''
-    }
-  }
-}))
-
-const useRouter = jest.spyOn(require('next/router'), 'useRouter')
+const defaultLocale = 'pt-BR'
 
 describe('MainNavigation', () => {
+  const user = userEvent.setup()
+
+  beforeAll(() => {
+    ;(usePathname as jest.Mock).mockImplementation(
+      () => `/${defaultLocale}/sobre-mim`
+    )
+  })
+
+  afterAll(() => {
+    jest.clearAllMocks()
+  })
+
   it('Should render correctly', () => {
-    useRouter.mockImplementation(() => ({
-      asPath: '/',
-      locale: 'pt-BR'
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations(defaultLocale, key)
+    )
+    ;(useParams as jest.Mock).mockImplementation(() => ({
+      locale: defaultLocale
     }))
 
-    const { container } = renderWithTranslate(<Nav />)
+    const { container } = render(<Nav />)
 
     expect(container).toMatchSnapshot()
   })
 
   it('Should render correctly in en', () => {
-    useRouter.mockImplementation(() => ({
-      asPath: '/',
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations('en', key)
+    )
+    ;(useParams as jest.Mock).mockImplementation(() => ({
       locale: 'en'
     }))
 
-    const { container } = renderWithTranslate(<Nav />, 'en')
+    const { container } = render(<Nav />)
 
     expect(container).toMatchSnapshot()
   })
 
   it('Should set active link correctly', async () => {
-    useRouter.mockImplementation(() => ({
-      asPath: '/about-me'
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations(defaultLocale, key)
+    )
+    ;(useParams as jest.Mock).mockImplementation(() => ({
+      locale: defaultLocale
     }))
 
-    renderWithTranslate(<Nav />)
+    render(<Nav />)
 
-    await userEvent.click(screen.getByRole('button', { name: /menu/i }))
+    await user.click(screen.getByRole('button', { name: /menu/i }))
 
     expect(
       (await screen.findByRole('link', { name: /sobre mim/i })).children[0]

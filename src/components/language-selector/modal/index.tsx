@@ -2,18 +2,28 @@
 
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import { useRouter, usePathname, useParams } from 'next/navigation'
 import { useContext, useState } from 'react'
 import { X } from '@styled-icons/feather/X'
 import { CaretDown } from '@styled-icons/fa-solid/CaretDown'
 
+import { SUPPORTED_LOCALES } from 'lib/constants'
 import { LanguageSelectorContext } from '../provider'
 import * as S from './styles'
+
+function replaceLocaleInPath(
+  path: string,
+  activeLocale: string,
+  newLocale: string
+) {
+  return path.replace(`${activeLocale}`, `${newLocale}`)
+}
 
 const LanguageSelectorModal = () => {
   const t = useTranslations()
   const router = useRouter()
-  const { locales, locale: activeLocale, pathname, asPath, query } = router
+  const pathname = usePathname()
+  const { locale: activeLocale } = useParams()
   const { showModal, setShowModal } = useContext(LanguageSelectorContext)
   const [showList, setShowList] = useState(false)
   const [selectedLocale, setSelectedLocale] = useState('')
@@ -22,13 +32,18 @@ const LanguageSelectorModal = () => {
     setShowModal(false)
   }
 
-  const handleSelectLocale = (locale: string) => {
-    setSelectedLocale(locale)
+  const handleSelectLocale = (newLocale: string) => {
+    setSelectedLocale(newLocale)
     setShowList(false)
   }
 
   const handleChangeLocale = async () => {
-    await router.push({ pathname, query }, asPath, { locale: selectedLocale })
+    const newPath = replaceLocaleInPath(
+      pathname,
+      activeLocale as string,
+      selectedLocale
+    )
+    router.push(newPath)
     handleCloseModal()
   }
 
@@ -67,7 +82,7 @@ const LanguageSelectorModal = () => {
             </S.ActiveItem>
 
             <S.List open={showList}>
-              {locales?.map((locale) => (
+              {SUPPORTED_LOCALES.map((locale) => (
                 <S.ListItem
                   key={locale}
                   onClick={() => handleSelectLocale(locale)}

@@ -4,27 +4,18 @@ import Header from 'components/header'
 import Post from 'components/post'
 import * as S from './styles'
 
-type Post = {
-  slug: string
-  title: string
-  date: string
-  excerpt: string
-  hero_image: string
-}
-
 type BlogProps = {
-  posts: Array<Post>
+  posts: Array<PostType>
   locale: string
 }
 
-const Blog = async ({ posts, locale }: BlogProps) => {
+const Blog = async ({ posts = [], locale }: BlogProps) => {
   const t = await getTranslations()
 
   return (
     <>
-      <Header fixed />
-
       <S.Wrapper>
+        <Header fixed />
         <S.Title>{t('Blog.title')}</S.Title>
 
         {posts.map(

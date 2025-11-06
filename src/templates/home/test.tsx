@@ -1,7 +1,9 @@
-import { screen, act } from '@testing-library/react'
+import { act } from 'react'
+import { render, screen } from '@testing-library/react'
 import gsap from 'gsap'
+import { useTranslations } from 'next-intl'
 
-import { renderWithTranslate } from 'utils/test-utils'
+import { getFileTranslations } from 'utils/test-utils'
 import * as Header from 'components/header'
 import Home from './'
 
@@ -11,12 +13,22 @@ const mockedHeader = Header.default as jest.Mock
 jest.spyOn(gsap, 'to')
 
 describe('Templates/Home', () => {
+  beforeAll(() => {
+    mockedHeader.mockImplementation(() => <header>Header</header>)
+  })
+
+  afterAll(() => {
+    jest.clearAllMocks()
+  })
+
   it('Should render correctly', () => {
     jest.useFakeTimers()
-    mockedHeader.mockImplementation(() => <header>Header</header>)
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations('pt-BR', key)
+    )
 
     act(() => {
-      renderWithTranslate(<Home />)
+      render(<Home />)
       jest.runAllTimers()
     })
 
@@ -26,10 +38,12 @@ describe('Templates/Home', () => {
 
   it('Should render correctly in en', () => {
     jest.useFakeTimers()
-    mockedHeader.mockImplementation(() => <header>Header</header>)
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations('en', key)
+    )
 
     act(() => {
-      renderWithTranslate(<Home />, 'en')
+      render(<Home />)
       jest.runAllTimers()
     })
 

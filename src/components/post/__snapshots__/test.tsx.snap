@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/Post Should render correctly 1`] = `
+exports[`components/post Should render correctly 1`] = `
 .c0:not(:last-child) {
   margin-bottom: 24px;
   padding-bottom: 24px;
@@ -96,7 +96,7 @@ exports[`Components/Post Should render correctly 1`] = `
     class="c0"
   >
     <a
-      href="/blog/slug-for-test"
+      href="/pt-BR/blog/slug-for-test"
     >
       <div
         class="c1"
@@ -145,7 +145,7 @@ exports[`Components/Post Should render correctly 1`] = `
 </div>
 `;
 
-exports[`Components/Post Should render correctly in en 1`] = `
+exports[`components/post Should render correctly in en 1`] = `
 .c0:not(:last-child) {
   margin-bottom: 24px;
   padding-bottom: 24px;
@@ -241,7 +241,7 @@ exports[`Components/Post Should render correctly in en 1`] = `
     class="c0"
   >
     <a
-      href="/blog/slug-for-test"
+      href="/en/blog/slug-for-test"
     >
       <div
         class="c1"
@@ -277,10 +277,10 @@ exports[`Components/Post Should render correctly in en 1`] = `
           <em
             class="c6"
           >
-            Postado em
+            Posted at
             : 
             <span>
-              27/05/2022
+              05/27/2022
             </span>
           </em>
         </div>
