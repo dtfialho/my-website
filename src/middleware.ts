@@ -32,5 +32,5 @@ export default async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!img|_next|api|favicon).*)', '/', '/(pt-BR|en)']
+  matcher: ['/((?!img|_next|api|favicon|sitemap|robots).*)', '/', '/(pt-BR|en)']
 }
