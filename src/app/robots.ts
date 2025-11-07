@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/'
     },
-    sitemap: 'https://www.diegotfialho.dev/sitemap.xml'
+    sitemap: 'https://www.diegotfialho.dev/sitemap.xml',
+    host: 'https://www.diegotfialho.dev'
   }
 }
