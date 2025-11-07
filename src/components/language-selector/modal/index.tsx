@@ -44,6 +44,9 @@ const LanguageSelectorModal = () => {
       selectedLocale
     )
     router.push(newPath)
+
+    document.cookie = `NEXT_LOCALE=${selectedLocale}; path=/;`
+
     handleCloseModal()
   }
 
