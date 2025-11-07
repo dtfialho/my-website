@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/${post.locale}/blog/${post.slug}`,
       lastModified: new Date(),
       changeFrequency: 'never',
-      priority: 0.5
+      priority: 1
     })
   })
 
