@@ -23,13 +23,13 @@ const MainNavigation = () => {
 
       <S.Container open={open}>
         <S.Item>
-          <Link href="/">
+          <Link href={`/${activeLocale}`}>
             <S.Link active={path === '/'}>Home</S.Link>
           </Link>
         </S.Item>
 
         <S.Item>
-          <Link href="/blog">
+          <Link href={`/${activeLocale}/blog`}>
             <S.Link active={!!path?.match(/\/blog/)}>Blog</S.Link>
           </Link>
         </S.Item>
