@@ -254,9 +254,9 @@ exports[`Templates/Post Should render correctly in en 1`] = `
         class="c3"
       >
         <small>
-          Posted on
+          Posted at
           : 
-          29/06/2022
+          06/29/2022
         </small>
       </p>
       <div

@@ -1,17 +1,29 @@
-import useTranslation from 'next-translate/useTranslation'
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import { useRouter, usePathname, useParams } from 'next/navigation'
 import { useContext, useState } from 'react'
 import { X } from '@styled-icons/feather/X'
 import { CaretDown } from '@styled-icons/fa-solid/CaretDown'
 
+import { SUPPORTED_LOCALES } from 'lib/constants'
 import { LanguageSelectorContext } from '../provider'
 import * as S from './styles'
 
+function replaceLocaleInPath(
+  path: string,
+  activeLocale: string,
+  newLocale: string
+) {
+  return path.replace(`${activeLocale}`, `${newLocale}`)
+}
+
 const LanguageSelectorModal = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const router = useRouter()
-  const { locales, locale: activeLocale, pathname, asPath, query } = router
+  const pathname = usePathname()
+  const { locale: activeLocale } = useParams()
   const { showModal, setShowModal } = useContext(LanguageSelectorContext)
   const [showList, setShowList] = useState(false)
   const [selectedLocale, setSelectedLocale] = useState('')
@@ -20,13 +32,21 @@ const LanguageSelectorModal = () => {
     setShowModal(false)
   }
 
-  const handleSelectLocale = (locale: string) => {
-    setSelectedLocale(locale)
+  const handleSelectLocale = (newLocale: string) => {
+    setSelectedLocale(newLocale)
     setShowList(false)
   }
 
   const handleChangeLocale = async () => {
-    await router.push({ pathname, query }, asPath, { locale: selectedLocale })
+    const newPath = replaceLocaleInPath(
+      pathname,
+      activeLocale as string,
+      selectedLocale
+    )
+    router.push(newPath)
+
+    document.cookie = `NEXT_LOCALE=${selectedLocale}; path=/;`
+
     handleCloseModal()
   }
 
@@ -35,13 +55,15 @@ const LanguageSelectorModal = () => {
   return (
     <>
       <S.Overlay onClick={handleCloseModal} />
+
       <S.Wrapper>
         <S.Header>
-          <S.Title>{t('common:selectLanguage')}:</S.Title>
+          <S.Title>{t('Common.selectLanguage')}:</S.Title>
           <S.Close type="button" onClick={handleCloseModal}>
             <X size={25} strokeWidth={2} title="Close" />
           </S.Close>
         </S.Header>
+
         <S.Body>
           <S.Select>
             <S.ActiveItem type="button" onClick={() => setShowList(true)}>
@@ -63,7 +85,7 @@ const LanguageSelectorModal = () => {
             </S.ActiveItem>
 
             <S.List open={showList}>
-              {locales?.map((locale) => (
+              {SUPPORTED_LOCALES.map((locale) => (
                 <S.ListItem
                   key={locale}
                   onClick={() => handleSelectLocale(locale)}
@@ -87,7 +109,7 @@ const LanguageSelectorModal = () => {
             onClick={handleChangeLocale}
             disabled={!selectedLocale || selectedLocale === activeLocale}
           >
-            {t('common:changeLanguage')}
+            {t('Common.changeLanguage')}
           </S.ChangeLocale>
         </S.Body>
       </S.Wrapper>

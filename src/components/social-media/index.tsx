@@ -1,6 +1,6 @@
-import { Github } from '@styled-icons/fa-brands/Github'
-import { Linkedin } from '@styled-icons/fa-brands/Linkedin'
-import { Twitter } from '@styled-icons/fa-brands/Twitter'
+'use client'
+
+import { Github, Linkedin, Twitter } from '@styled-icons/fa-brands'
 import * as S from './styles'
 
 const SocialMedia = () => (

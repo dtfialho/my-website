@@ -1,30 +1,35 @@
-import { screen, act } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { useTranslations } from 'next-intl'
+import { usePathname, useParams, useRouter } from 'next/navigation'
 
-import { renderWithTranslate } from 'utils/test-utils'
+import { getFileTranslations } from 'utils/test-utils'
 import { LanguageSelectorProvider } from '../provider'
 import Modal from './'
 
-const useRouter = jest.spyOn(require('next/router'), 'useRouter')
 const defaultLocale = 'pt-BR'
-const mockFn = jest.fn()
-
-const mockRouter = (props?: any) =>
-  useRouter.mockImplementation(() => ({
-    locale: defaultLocale,
-    locales: ['pt-BR', 'en'],
-    pathname: '/test',
-    asPath: '/test',
-    query: {},
-    push: mockFn,
-    ...props
-  }))
 
 describe('Components/LanguageSelector/Modal', () => {
-  it('Should render correctly', () => {
-    mockRouter()
+  const user = userEvent.setup()
+  const pathname = `/${defaultLocale}/test`
 
-    const { container } = renderWithTranslate(
+  beforeAll(() => {
+    ;(usePathname as jest.Mock).mockImplementation(() => pathname)
+    ;(useParams as jest.Mock).mockImplementation(() => ({
+      locale: defaultLocale
+    }))
+  })
+
+  afterAll(() => {
+    jest.clearAllMocks()
+  })
+
+  it('Should render correctly', () => {
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations(defaultLocale, key)
+    )
+
+    const { container } = render(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>
@@ -33,23 +38,12 @@ describe('Components/LanguageSelector/Modal', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('Should render correctly in en', () => {
-    mockRouter({ locale: 'en' })
-
-    const { container } = renderWithTranslate(
-      <LanguageSelectorProvider initialState={{ showModal: true }}>
-        <Modal />
-      </LanguageSelectorProvider>,
-      'en'
+  it('Should render with select language button disabled', () => {
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations(defaultLocale, key)
     )
 
-    expect(container).toMatchSnapshot()
-  })
-
-  it('Should render with select language button disabled', () => {
-    mockRouter()
-
-    renderWithTranslate(
+    render(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>
@@ -61,16 +55,18 @@ describe('Components/LanguageSelector/Modal', () => {
   })
 
   it('Should enable button on change selected language', async () => {
-    mockRouter()
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations(defaultLocale, key)
+    )
 
-    renderWithTranslate(
+    render(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>
     )
 
-    await userEvent.click(screen.getByRole('button', { name: /Active locale/ }))
-    await userEvent.click(await screen.findByAltText('en locale flag'))
+    await user.click(screen.getByRole('button', { name: /Active locale/ }))
+    await user.click(await screen.findByAltText('en locale flag'))
 
     expect(
       screen.getByRole('button', { name: /Alterar idioma/ })
@@ -78,23 +74,29 @@ describe('Components/LanguageSelector/Modal', () => {
   })
 
   it('Should redirect to next location on change language and close modal modal', async () => {
-    mockRouter()
+    ;(useTranslations as jest.Mock).mockImplementation(
+      () => (key: string) => getFileTranslations(defaultLocale, key)
+    )
 
-    renderWithTranslate(
+    const push = jest.fn()
+
+    ;(useRouter as jest.Mock).mockImplementation(() => ({
+      push
+    }))
+
+    render(
       <LanguageSelectorProvider initialState={{ showModal: true }}>
         <Modal />
       </LanguageSelectorProvider>
     )
 
-    await userEvent.click(
-      screen.getByRole('button', { name: /active locale/i })
-    )
-    await userEvent.click(await screen.findByAltText('en locale flag'))
-    await userEvent.click(
+    await user.click(screen.getByRole('button', { name: /active locale/i }))
+    await user.click(await screen.findByAltText('en locale flag'))
+    await user.click(
       await screen.findByRole('button', { name: /alterar idioma/i })
     )
 
-    expect(mockFn).toHaveBeenCalled()
+    expect(useRouter().push).toHaveBeenCalledWith('/en/test')
     expect(
       screen.queryByText('Selecione a sua linguagem')
     ).not.toBeInTheDocument()

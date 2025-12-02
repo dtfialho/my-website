@@ -3,8 +3,10 @@ import path from 'path'
 import matter from 'gray-matter'
 import compareDesc from 'date-fns/compareDesc'
 
+import { DEFAULT_LOCALE } from 'lib/constants'
+
 const getAllPostsByLocale = (locale: string) => {
-  const dir = locale === 'pt-BR' ? 'default' : locale
+  const dir = locale === DEFAULT_LOCALE ? 'default' : locale
   const postsFolder = path.join('posts', dir)
   const files = fs.readdirSync(postsFolder)
 
@@ -27,7 +29,7 @@ const getAllPostsByLocale = (locale: string) => {
       return compareDesc(firstDate, secondDate)
     })
 
-  return posts
+  return posts as PostType[]
 }
 
 export default getAllPostsByLocale

@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
+import { useTranslations } from 'next-intl'
 
 import Navbar from 'components/main-navigation'
 import * as S from './styles'
 
 const Header = ({ fixed = false }) => {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <S.Wrapper fixed={fixed}>
@@ -15,7 +15,7 @@ const Header = ({ fixed = false }) => {
             viewBox="0 0 512.000000 512.000000"
             preserveAspectRatio="xMidYMid meet"
           >
-            <title>{t('common:logoTitle')}</title>
+            <title>{t('Common.logoTitle')}</title>
             <g
               transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
               fill="#ffffff"

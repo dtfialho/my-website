@@ -1,6 +1,7 @@
+'use client'
+import { useRef, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
-import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 
 import Header from 'components/header'
@@ -9,7 +10,7 @@ import * as S from './styles'
 
 const Home = () => {
   const content = useRef(null)
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   useEffect(() => {
     gsap.to(content.current, { duration: 2, autoAlpha: 1, delay: 1 })
@@ -27,7 +28,7 @@ const Home = () => {
       <Header />
       <S.Content ref={content}>
         <S.Title>Diego T. Fialho</S.Title>
-        <S.Paragraph>&mdash; {t('home:subtitle')} &mdash;</S.Paragraph>
+        <S.Paragraph>&mdash; {t('Home.subtitle')} &mdash;</S.Paragraph>
         <SocialMedia />
       </S.Content>
     </S.Wrapper>

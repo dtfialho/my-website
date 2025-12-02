@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
+import { useTranslations } from 'next-intl'
 
 import Header from 'components/header'
 import SocialMedia from 'components/social-media'
 import * as S from './styles'
 
 const AboutMe = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <>
@@ -15,22 +15,22 @@ const AboutMe = () => {
         <S.TitleContainer>
           <Image
             src="/img/me.jpeg"
-            alt={t('about-me:profilePicture')}
+            alt={t('AboutMe.profilePicture')}
             width={150}
             height={150}
             priority
           />
-          <S.Title>{t('about-me:title')}</S.Title>
+          <S.Title>{t('AboutMe.title')}</S.Title>
         </S.TitleContainer>
 
-        <p>{t('about-me:firstParagraph')}</p>
+        <p>{t('AboutMe.firstParagraph')}</p>
 
-        <p>{t('about-me:secondParagraph')}</p>
+        <p>{t('AboutMe.secondParagraph')}</p>
 
-        <p>{t('about-me:thirdParagraph')}</p>
+        <p>{t('AboutMe.thirdParagraph')}</p>
 
         <S.SkillsContainer>
-          <h2>{t('about-me:whatIDo')}:</h2>
+          <h2>{t('AboutMe.whatIDo')}:</h2>
 
           <S.Items>
             <S.Skills>
@@ -41,7 +41,7 @@ const AboutMe = () => {
                 <li>CSS3</li>
                 <li>HTML5</li>
                 <li>Javascript</li>
-                <li>{t('about-me:preProcessors')} (sass, less, stylus)</li>
+                <li>{t('AboutMe.preProcessors')} (sass, less, stylus)</li>
                 <li>React</li>
                 <li>Styled Components</li>
                 <li>Next JS</li>
@@ -53,7 +53,7 @@ const AboutMe = () => {
               <S.SkillsList>
                 <li>Node</li>
                 <li>PHP</li>
-                <li>{t('about-me:oop')}</li>
+                <li>{t('AboutMe.oop')}</li>
                 <li>Python</li>
                 <li>MySql</li>
                 <li>PostgreeSQL</li>
@@ -61,7 +61,7 @@ const AboutMe = () => {
             </S.Skills>
 
             <S.Skills>
-              <S.SkillItemTitle>{t('about-me:others')}</S.SkillItemTitle>
+              <S.SkillItemTitle>{t('AboutMe.others')}</S.SkillItemTitle>
               <S.SkillsList>
                 <li>Scrum</li>
                 <li>Git</li>
@@ -71,7 +71,7 @@ const AboutMe = () => {
           </S.Items>
         </S.SkillsContainer>
 
-        <S.Contact>{t('about-me:contact')}</S.Contact>
+        <S.Contact>{t('AboutMe.contact')}</S.Contact>
         <S.SocialMediaWrapper>
           <SocialMedia />
         </S.SocialMediaWrapper>

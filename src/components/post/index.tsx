@@ -1,34 +1,31 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import format from 'date-fns/format'
-import useTranslation from 'next-translate/useTranslation'
+import { getTranslations } from 'next-intl/server'
 
+import { DEFAULT_LOCALE } from 'lib/constants'
 import * as S from './styles'
 
-export type PostType = {
-  slug: string
-  date: string
-  hero_image: string
-  title: string
-  excerpt: string
-  imgPriority?: boolean
+type PostProps = PostType & {
+  locale?: string
 }
 
-const Post = ({
+const Post = async ({
   slug,
   title,
   date,
   hero_image: image,
   excerpt,
-  imgPriority
-}: PostType) => {
-  const { t, lang } = useTranslation()
-  const dateFormat = lang === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
+  imgPriority,
+  locale = DEFAULT_LOCALE
+}: PostProps) => {
+  const t = await getTranslations()
+  const dateFormat = locale === 'en' ? 'MM/dd/yyyy' : 'dd/MM/yyyy'
   const postDate = format(new Date(date), dateFormat)
 
   return (
     <S.Wrapper>
-      <Link href={`/blog/${slug}`}>
+      <Link href={`/${locale}/blog/${slug}`}>
         <S.Link title={title}>
           <S.ImageWrapper>
             <Image
@@ -43,7 +40,7 @@ const Post = ({
             <S.Title>{title}</S.Title>
             <S.Description>{excerpt}</S.Description>
             <S.Date>
-              {t('common:posted')}: <span>{postDate}</span>
+              {t('Common.posted')}: <span>{postDate}</span>
             </S.Date>
           </S.Content>
         </S.Link>

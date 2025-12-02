@@ -1,26 +1,51 @@
-import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
 
-import redirects from 'lib/post-redirects'
+import { SUPPORTED_LOCALES } from 'lib/constants'
+import { postRedirects, generalRedirects } from 'lib/redirects'
 
-export function middleware({
-  nextUrl: { pathname, locale },
-  url
-}: NextRequest) {
-  const locales = Object.keys(redirects)
+export default async function middleware(request: NextRequest) {
+  const [, locale, ...segments] = request.nextUrl.pathname.split('/')
 
-  if (!locales.includes(locale)) {
-    return
+  if (
+    locale != null &&
+    segments.length &&
+    generalRedirects[locale][segments[0]]
+  ) {
+    return NextResponse.redirect(
+      new URL(
+        `/${locale}/${generalRedirects[locale][segments[0]]}`,
+        request.nextUrl.origin
+      )
+    )
   }
 
-  const postsToRedirect = Object.keys(redirects[locale])
-  const path = postsToRedirect.find((post) => pathname.includes(post))
+  const isPostRedirect = segments[0] === 'blog' && segments[1]
 
-  if (path) {
-    return NextResponse.redirect(new URL(`${redirects[locale][path]}`, url))
+  if (isPostRedirect && postRedirects[locale]?.[segments[1]]) {
+    return NextResponse.redirect(
+      new URL(
+        `/${locale}/blog/${postRedirects[locale][segments[1]]}`,
+        request.nextUrl.origin
+      )
+    )
+  } else if (isPostRedirect && !postRedirects[locale]?.[segments[1]]) {
+    return NextResponse.redirect(
+      new URL(`/${locale}/not-found`, request.nextUrl.origin)
+    )
   }
+
+  const handleI18nRouting = createMiddleware({
+    locales: SUPPORTED_LOCALES,
+    defaultLocale: 'pt-BR'
+  })
+
+  const response = handleI18nRouting(request)
+
+  return response
 }
 
 export const config = {
-  matcher: '/blog/:path*'
+  matcher: ['/((?!img|_next|api|favicon|sitemap|robots).*)', '/', '/(pt-BR|en)']
 }

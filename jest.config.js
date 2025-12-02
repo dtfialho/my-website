@@ -9,8 +9,9 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.js'],
   moduleDirectories: ['node_modules', '<rootDir>/'],
   moduleNameMapper: {
-    '^locales$': '<rootDir>/locales$1',
     '^components(.*)$': '<rootDir>/src/components$1',
+    '^lib(.*)$': '<rootDir>/src/lib$1',
+    '^messages$': '<rootDir>/messages$1',
     '^utils(.*)$': '<rootDir>/src/utils$1',
     'react-markdown':
       '<rootDir>/node_modules/react-markdown/react-markdown.min.js'

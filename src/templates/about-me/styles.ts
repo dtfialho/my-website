@@ -1,3 +1,5 @@
+'use client'
+
 import type { DefaultBreakpoints } from 'styled-media-query'
 import styled from 'styled-components'
 import media from 'styled-media-query'
