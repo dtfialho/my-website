@@ -21,6 +21,21 @@ export default async function middleware(request: NextRequest) {
     )
   }
 
+  const isPostRedirect = segments[0] === 'blog' && segments[1]
+
+  if (isPostRedirect && postRedirects[locale]?.[segments[1]]) {
+    return NextResponse.redirect(
+      new URL(
+        `/${locale}/blog/${postRedirects[locale][segments[1]]}`,
+        request.nextUrl.origin
+      )
+    )
+  } else if (isPostRedirect && !postRedirects[locale]?.[segments[1]]) {
+    return NextResponse.redirect(
+      new URL(`/${locale}/not-found`, request.nextUrl.origin)
+    )
+  }
+
   const handleI18nRouting = createMiddleware({
     locales: SUPPORTED_LOCALES,
     defaultLocale: 'pt-BR'
