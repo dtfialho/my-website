@@ -33,6 +33,7 @@ export const ImageWrapper = styled.figure`
 
   img {
     object-fit: cover;
+    transform: translateZ(0);
   }
 
   ${media.between('small', 'medium')`
@@ -45,10 +46,6 @@ export const ImageWrapper = styled.figure`
     width: 300px;
     margin: 0;
   `}
-
-  img {
-    transform: translateZ(0);
-  }
 `
 
 export const Content = styled.div`
