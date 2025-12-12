@@ -5,7 +5,7 @@ import createMiddleware from 'next-intl/middleware'
 import { SUPPORTED_LOCALES } from 'lib/constants'
 import { generalRedirects } from 'lib/redirects'
 
-export default async function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   const [, locale, ...segments] = request.nextUrl.pathname.split('/')
 
   if (
