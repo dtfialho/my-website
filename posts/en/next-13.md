@@ -190,7 +190,7 @@ After:
 
 ```jsx
 async function fetchPost(params) {
-  const res = await fetch(`https://api.example.com/post/${params.id}</span>, {
+  const res = await fetch(`https://api.example.com/post/${params.id}`, {
     next: {
       revalidate: 60
     }

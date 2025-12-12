@@ -29,7 +29,7 @@ Well, let's go straight to the point, the code is very simple:
   overflow: hidden;
 }
 ```
-For the main accordion container we just use a `div` with the `accordion` class. We've added a border so you can see the accordion's dimensions more easily, and we've rounded the edges hiding the overflow to make sure the edges are rounded.
+For the main accordion container we just use a <span>div</span> with the <span>accordion</span> class. We've added a border so you can see the accordion's dimensions more easily, and we've rounded the edges hiding the overflow to make sure the edges are rounded.
 
 ```markup
 <div class="accordion-item">
@@ -44,9 +44,9 @@ For the main accordion container we just use a `div` with the `accordion` class.
   border-bottom: 1px solid #fff;
 }
 ```
-Each accordion item will be a `div` with the `accordion-item` class. Here we have two rules one to hide the overflow, so when the accordion is closed its contents will not appear. Another to add a border, so we can see a separation between each item.
+Each accordion item will be a <span>div</span> with the <span>accordion-item</span> class. Here we have two rules one to hide the overflow, so when the accordion is closed its contents will not appear. Another to add a border, so we can see a separation between each item.
 
-Within each `accordion-item` we have three elements. A checkbox `input`, a `label` for the input and a `div` for the content.
+Within each <span>accordion-item</span> we have three elements. A checkbox <span>input</span>, a <span>label</span> for the input and a <span>div</span> for the content.
 
 ```markup
 <input type="checkbox" id="accordion-item-1" class="item-input" />
@@ -71,7 +71,7 @@ Within each `accordion-item` we have three elements. A checkbox `input`, a `labe
   transition: transform 0.3s ease-in-out;
 }
 ```
-Let's hide the input with a `display: none` and our label takes a `display: flex` with `justify-content: space-between`. Here I used the `::after` pseudo element to create an icon that has a transition and is always on the right side of the label, but we can also use an icon in svg or an image to make it cuter, for now I'll leave it like that and you can use your creativity to improve. :)
+Let's hide the input with a <span>display: none</span> and our label takes a <span>display: flex</span> with <span>justify-content: space-between</span>. Here I used the <span>::after</span> pseudo element to create an icon that has a transition and is always on the right side of the label, but we can also use an icon in svg or an image to make it cuter, for now I'll leave it like that and you can use your creativity to improve. :)
 
 ```markup
 <div class="item-content">...</div>
@@ -83,7 +83,7 @@ Let's hide the input with a `display: none` and our label takes a `display: flex
   padding: 0 16px;
 }
 ```
-Finally we have our `div` that will have the contents of each accordion item, here we start with `max-height: 0` to "hide" it.
+Finally we have our <span>div</span> that will have the contents of each accordion item, here we start with <span>max-height: 0</span> to "hide" it.
 
 ```css
 .item-input:checked ~ .item-label::after {
@@ -94,6 +94,6 @@ Finally we have our `div` that will have the contents of each accordion item, he
   padding: 16px;
 }
 ```
-And here is where the magic happens. When clicking on the label, the input becomes `checked` so we use the `:checked` pseudo class and add a `max-height: 100vh` to the content div, making it visible and rotating our "icon". When clicking on the label again, the rule does not apply and the content is hidden again.
+And here is where the magic happens. When clicking on the label, the input becomes <span>checked</span> so we use the <span>:checked</span> pseudo class and add a <span>max-height: 100vh</span> to the content div, making it visible and rotating our "icon". When clicking on the label again, the rule does not apply and the content is hidden again.
 
 Well folks, that's it for now. I hope you liked it and any feedback just comment on [twitter](https://twitter.com/dtfialho). Regards and see you next post!
