@@ -1,12 +1,12 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { SUPPORTED_LOCALES } from 'lib/constants'
 import Template from 'templates/home'
 
 type ParamsType = {
-  params: {
+  params: Promise<{
     locale: string
-  }
+  }>
 }
 
 export function generateStaticParams() {
@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ParamsType) {
-  const { locale } = params
+  const { locale } = await params
   const t = await getTranslations()
 
   const title = 'Diego T. Fialho'
@@ -38,9 +38,9 @@ export async function generateMetadata({ params }: ParamsType) {
 }
 
 export default async function RootPage({ params }: ParamsType) {
-  const { locale } = params
+  const { locale } = await params
 
-  unstable_setRequestLocale(locale)
+  setRequestLocale(locale)
 
   return <Template />
 }

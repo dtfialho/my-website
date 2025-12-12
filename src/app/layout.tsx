@@ -1,20 +1,18 @@
 import type { PropsWithChildren } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
+import { getMessages, setRequestLocale } from 'next-intl/server'
 
 import StyledComponentsRegistry from 'lib/styled-components-registry'
 import GlobalStyles from 'styles/global'
 import { LanguageSelectorProvider } from 'components/language-selector/provider'
 
 type LayoutProps = PropsWithChildren<{
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }>
 
-export default async function RootLayout({
-  children,
-  params: { locale = 'pt-BR' }
-}: LayoutProps) {
-  unstable_setRequestLocale(locale)
+export default async function RootLayout({ children, params }: LayoutProps) {
+  const { locale } = await params
+  setRequestLocale(locale)
   const messages = await getMessages()
 
   return (

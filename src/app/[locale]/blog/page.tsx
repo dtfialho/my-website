@@ -1,13 +1,13 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { SUPPORTED_LOCALES } from 'lib/constants'
 import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
 import Template from 'templates/blog'
 
 type ParamsType = {
-  params: {
+  params: Promise<{
     locale: string
-  }
+  }>
 }
 
 export function generateStaticParams() {
@@ -15,7 +15,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ParamsType) {
-  const { locale } = params
+  const { locale } = await params
   const t = await getTranslations()
 
   const title = 'Blog | Diego T. Fialho'
@@ -38,16 +38,10 @@ export async function generateMetadata({ params }: ParamsType) {
   }
 }
 
-type BlogProps = {
-  params: {
-    locale: string
-  }
-}
+const Blog = async ({ params }: ParamsType) => {
+  const { locale } = await params
 
-const Blog = async ({ params }: BlogProps) => {
-  const { locale } = params
-
-  unstable_setRequestLocale(locale)
+  setRequestLocale(locale)
 
   const posts = getAllPostsByLocale(locale)
 

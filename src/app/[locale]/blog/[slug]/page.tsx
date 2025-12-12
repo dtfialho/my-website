@@ -1,4 +1,4 @@
-import { unstable_setRequestLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 
 import getAllPostPaths from 'lib/get-all-post-paths'
 import getPagePostContent from 'lib/get-page-post-content'
@@ -6,10 +6,10 @@ import getPagePostContent from 'lib/get-page-post-content'
 import Post from 'templates/post'
 
 type ParamsType = {
-  params: {
+  params: Promise<{
     locale: string
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ParamsType) {
-  const { slug, locale } = params
+  const { slug, locale } = await params
 
   const {
     data: { title: postTitle, description, keywords, hero_image }
@@ -50,9 +50,9 @@ export async function generateMetadata({ params }: ParamsType) {
 }
 
 const PostPage = async ({ params }: ParamsType) => {
-  const { slug, locale } = params
+  const { slug, locale } = await params
 
-  unstable_setRequestLocale(locale)
+  setRequestLocale(locale)
 
   const {
     content,
