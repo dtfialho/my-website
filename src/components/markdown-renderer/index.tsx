@@ -39,7 +39,11 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
         )
       }
 
-      return <p>{paragraph.children}</p>
+      return <S.Text>{paragraph.children}</S.Text>
+    },
+
+    span: (span: { children?: any }) => {
+      return <S.TextWithHighlight>{span.children}</S.TextWithHighlight>
     },
 
     pre: (pre: { children?: any }) => pre.children,
@@ -59,7 +63,6 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
     <ReactMarkdown
       remarkPlugins={[gfm]}
       components={MarkdownComponents}
-      linkTarget="_blank"
       rehypePlugins={[rehypeRaw]}
     >
       {content}
