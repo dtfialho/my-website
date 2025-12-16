@@ -47,5 +47,9 @@ export default async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!img|_next|api|favicon|sitemap|robots).*)', '/', '/(pt-BR|en)']
+  matcher: [
+    '/((?!img|_next|api|favicon|sitemap|robots|googlefb3413f416380407).*)',
+    '/',
+    '/(pt-BR|en)'
+  ]
 }
