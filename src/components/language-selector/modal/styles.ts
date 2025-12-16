@@ -12,7 +12,7 @@ export const Overlay = styled.div`
 `
 
 export const Wrapper = styled.div`
-  color: #000000;
+  color: #000;
   position: fixed;
   top: 50%;
   left: 50%;

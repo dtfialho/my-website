@@ -52,11 +52,11 @@ yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loa
 ```
 
 Once installed, let's configure our three webpack files:
-- `common.js`: file with more general settings, which are included in both the production and development builds.
-- `development.js`: file with the settings to run the development environment.
-- `production.js`: file with the settings to generate the build for production.
+- <span>common.js</span>: file with more general settings, which are included in both the production and development builds.
+- <span>development.js</span>: file with the settings to run the development environment.
+- <span>production.js</span>: file with the settings to generate the build for production.
 
-In the `common.js` file we will add the following code snippet:
+In the <span>common.js</span> file we will add the following code snippet:
 ```javascript
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
@@ -100,7 +100,7 @@ module.exports = {
 
 ```
 
-In the `development.js` file we will add:
+In the <span>development.js</span> file we will add:
 ```javascript
 // we require the module for fast refresh (hot reloading)
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
@@ -127,7 +127,7 @@ module.exports = {
 }
 ```
 
-And finally the `production.js` file is simpler, in it we just add:
+And finally the <span>production.js</span> file is simpler, in it we just add:
 ```javascript
 const common = require('./common')
 
@@ -139,7 +139,7 @@ module.exports = {
 }
 ```
 
-Now that we've configured our webpack, there's still one more file we need to configure, so let's add this code snippet to `.babelrc`.
+Now that we've configured our webpack, there's still one more file we need to configure, so let's add this code snippet to <span>.babelrc</span>.
 ```json
 {
   "presets": [
@@ -158,9 +158,9 @@ Now let's add React to our project, for that let's run:
 yarn add react react-dom
 ```
 
-After that we will update three files, `public/index.html`, `src/index.js` and `src/App.js`.
+After that we will update three files, <span>public/index.html</span>, <span>src/index.js</span> and <span>src/App.js</span>.
 
-In `index.html` let's add a very minimalistic html:
+In <span>index.html</span> let's add a very minimalistic html:
 ```html
 <!DOCTYPE html>
 <html>
@@ -174,7 +174,7 @@ In `index.html` let's add a very minimalistic html:
 </html>
 ```
 
-In our `index.js` is where the application will be started, so in it we add:
+In our <span>index.js</span> is where the application will be started, so in it we add:
 ```javascript
 import React from 'react'
 import { createRoot } from 'react-dom/client'
@@ -187,7 +187,7 @@ const root = createRoot(container)
 root.render(<App />)
 ```
 
-And in `App.js` we'll just configure a simple component, just to import it into our `index.js` and see it working.
+And in <span>App.js</span> we'll just configure a simple component, just to import it into our <span>index.js</span> and see it working.
 ```javascript
 import React from 'react'
 
@@ -196,7 +196,7 @@ const App = () => <h1>Hello World!</h1>
 export default App
 ```
 
-Now let's add the scripts to our `package.json`:
+Now let's add the scripts to our <span>package.json</span>:
 ```json
 "scripts": {
   "start": "webpack-dev-server --config webpack/development",
@@ -204,15 +204,15 @@ Now let's add the scripts to our `package.json`:
 }
 ```
 
-After that when running `yarn start` we will have a development server running, and when running `yarn build` it will be build for production inside the `dist` folder. And with that we already have our application ready to be developed. A missing point and maybe you are wondering. But what about styles? How do we do it?
+After that when running <span>yarn start</span> we will have a development server running, and when running <span>yarn build</span> it will be build for production inside the <span>dist</span> folder. And with that we already have our application ready to be developed. A missing point and maybe you are wondering. But what about styles? How do we do it?
 
-Well, for that we can use a very simple solution that works very well for this application and we won't need to configure a loader to parse the css. This solution is `styled-components`, so we use a technique called `css in JS`, to use it is very simple. Let's first install the package with the command:
+Well, for that we can use a very simple solution that works very well for this application and we won't need to configure a loader to parse the css. This solution is <span>styled-components</span>, so we use a technique called <span>css in JS</span>, to use it is very simple. Let's first install the package with the command:
 
 ```bash
 yarn add styled-components
 ```
 
-After that let's create a new file inside the `src` folder called `styles.js` and we add:
+After that let's create a new file inside the <span>src</span> folder called <span>styles.js</span> and we add:
 ```javascript
 import styled from 'styled-components'
 
@@ -222,7 +222,7 @@ export const Title = styled.h1`
 `
 ```
 
-And then we change our `App.js` a little bit and we will have our components completely styled.
+And then we change our <span>App.js</span> a little bit and we will have our components completely styled.
 ```javascript
 import React from 'react'
 import * as S from './styles'
@@ -240,14 +240,14 @@ To configure them let's add some more packages:
 yarn add -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react prettier
 ```
 
-In the `.eslintignore` and `.prettierignore` files we will add the files that will not be taken into account by these tools.
+In the <span>.eslintignore</span> and <span>.prettierignore</span> files we will add the files that will not be taken into account by these tools.
 ```
 node_modules
 yarn.lock
 dist
 ```
 
-Now the `.eslintrc` configuration:
+Now the <span>.eslintrc</span> configuration:
 ```json
 {
   "env": {
@@ -272,7 +272,7 @@ Now the `.eslintrc` configuration:
 }
 ```
 
-And finally the `.prettierrc`:
+And finally the <span>.prettierrc</span>:
 ```json
 {
   "printWidth": 100,

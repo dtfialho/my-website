@@ -12,9 +12,7 @@ const customJestConfig = {
     '^components(.*)$': '<rootDir>/src/components$1',
     '^lib(.*)$': '<rootDir>/src/lib$1',
     '^messages$': '<rootDir>/messages$1',
-    '^utils(.*)$': '<rootDir>/src/utils$1',
-    'react-markdown':
-      '<rootDir>/node_modules/react-markdown/react-markdown.min.js'
+    '^utils(.*)$': '<rootDir>/src/utils$1'
   },
   testPathIgnorePatterns: ['node_modules', '.next'],
   watchPathIgnorePatterns: ['.next'],

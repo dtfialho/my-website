@@ -35,9 +35,6 @@ exports[`components/post Should render correctly 1`] = `
 
 .c2 img {
   object-fit: cover;
-}
-
-.c2 img {
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -180,9 +177,6 @@ exports[`components/post Should render correctly in en 1`] = `
 
 .c2 img {
   object-fit: cover;
-}
-
-.c2 img {
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);

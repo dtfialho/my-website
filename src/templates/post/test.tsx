@@ -6,10 +6,15 @@ import { getFileTranslations } from 'utils/test-utils'
 import * as Header from 'components/header'
 import Post, { PostProps } from './'
 
-jest.mock('remark-gfm', () => ({}))
-jest.mock('rehype-raw', () => ({}))
-
 jest.mock('components/header')
+
+jest.mock('components/markdown-renderer', () =>
+  // eslint-disable-next-line react/display-name
+  ({ content }: { content: string }) => {
+    return <p>{content}</p>
+  }
+)
+
 const mockedHeader = Header.default as jest.Mock
 mockedHeader.mockImplementation(() => <header>Header</header>)
 

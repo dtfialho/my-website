@@ -52,11 +52,11 @@ yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loa
 ```
 
 Após instaladas vamos configurar nossos três arquivos do webpack:
-- `common.js`: arquivo com configurações mais gerais, que entram tanto para o build de produção quanto para o de desenvolvimento.
-- `development.js`: arquivo com as configurações para rodar o ambiente de desenvolvimento.
-- `production.js`: arquivo com as configurações de gerar o build para produção.
+- <span>common.js`: arquivo com configurações mais gerais, que entram tanto para o build de produção quanto para o de desenvolvimento.
+- <span>development.js`: arquivo com as configurações para rodar o ambiente de desenvolvimento.
+- <span>production.js`: arquivo com as configurações de gerar o build para produção.
 
-No arquivo `common.js` vamos adicionar o seguinte trecho de código:
+No arquivo <span>common.js</span> vamos adicionar o seguinte trecho de código:
 ```javascript
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
@@ -100,7 +100,7 @@ module.exports = {
 
 ```
 
-No arquivo `development.js` vamos adicionar:
+No arquivo <span>development.js</span> vamos adicionar:
 ```javascript
 // fazemos o require do módulo para o fast refresh (hot reloading)
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
@@ -127,7 +127,7 @@ module.exports = {
 }
 ```
 
-E por último o arquivo `production.js` é mais simples, nele só adicionamos:
+E por último o arquivo <span>production.js</span> é mais simples, nele só adicionamos:
 ```javascript
 const common = require('./common')
 
@@ -139,7 +139,7 @@ module.exports = {
 }
 ```
 
-Agora que configuramos o nosso webpack, ainda tem mais um arquivo que precisamos configurar, então vamos adicionar esse trecho de código no `.babelrc`.
+Agora que configuramos o nosso webpack, ainda tem mais um arquivo que precisamos configurar, então vamos adicionar esse trecho de código no <span>.babelrc</span>.
 ```json
 {
   "presets": [
@@ -158,9 +158,9 @@ Agora vamos adicionar o React ao nosso projeto, para isso vamos rodar:
 yarn add react react-dom
 ```
 
-Depois disso vamos atualizar três arquivos, o `public/index.html`, `src/index.js` e `src/App.js`.
+Depois disso vamos atualizar três arquivos, o <span>public/index.html</span>, <span>src/index.js</span> e <span>src/App.js</span>.
 
-No `index.html` vamos adicionar um html bem minimalista:
+No <span>index.html</span> vamos adicionar um html bem minimalista:
 ```html
 <!DOCTYPE html>
 <html>
@@ -174,7 +174,7 @@ No `index.html` vamos adicionar um html bem minimalista:
 </html>
 ```
 
-No nosso `index.js` é onde a aplicação vai ser iniciada, então nele colocamos:
+No nosso <span>index.js</span> é onde a aplicação vai ser iniciada, então nele colocamos:
 ```javascript
 import React from 'react'
 import { createRoot } from 'react-dom/client'
@@ -187,7 +187,7 @@ const root = createRoot(container)
 root.render(<App />)
 ```
 
-E no `App.js` vamos apenas configurar um componente simples, apenas para importar no nosso `index.js` e ver funcionando.
+E no <span>App.js</span> vamos apenas configurar um componente simples, apenas para importar no nosso <span>index.js</span> e ver funcionando.
 ```javascript
 import React from 'react'
 
@@ -196,7 +196,7 @@ const App = () => <h1>Hello World!</h1>
 export default App
 ```
 
-Agora vamos adicionar os scripts no nosso `package.json`:
+Agora vamos adicionar os scripts no nosso <span>package.json`:
 ```json
 "scripts": {
   "start": "webpack-dev-server --config webpack/development",
@@ -204,15 +204,15 @@ Agora vamos adicionar os scripts no nosso `package.json`:
 }
 ```
 
-Após isso ao rodar `yarn start` nós teremos um servidor de desenvolvimento rodando, e ao rodar `yarn build` será feito o build para produção dentro da pasta `dist`. E com isso já temos nossa aplicação pronta para ser desenvolvida. Um ponto que faltou e talvez estejam se perguntando. Mas e os estilos? Como fazer?
+Após isso ao rodar <span>yarn start</span> nós teremos um servidor de desenvolvimento rodando, e ao rodar <span>yarn build</span> será feito o build para produção dentro da pasta <span>dist</span>. E com isso já temos nossa aplicação pronta para ser desenvolvida. Um ponto que faltou e talvez estejam se perguntando. Mas e os estilos? Como fazer?
 
-Bem, para isso podemos utilizar uma solução bem simples que funciona muito bem para essa aplicação e não precisaremos configurar um loader para fazer o parse do css. Essa solução é o `styled-components`, assim nós utilizamos uma técnica chamada `css in JS`, para utilizarmos é bem simples. Vamos primeiro instalar o pacote com o comando:
+Bem, para isso podemos utilizar uma solução bem simples que funciona muito bem para essa aplicação e não precisaremos configurar um loader para fazer o parse do css. Essa solução é o <span>styled-components</span>, assim nós utilizamos uma técnica chamada <span>css in JS</span>, para utilizarmos é bem simples. Vamos primeiro instalar o pacote com o comando:
 
 ```bash
 yarn add styled-components
 ```
 
-Após isso vamos criar um arquivo novo dentro da pasta `src` chamado `styles.js` e adicionamos:
+Após isso vamos criar um arquivo novo dentro da pasta <span>src</span> chamado <span>styles.js</span> e adicionamos:
 
 ```javascript
 import styled from 'styled-components'
@@ -223,7 +223,7 @@ export const Title = styled.h1`
 `
 ```
 
-E depois alteramos o nosso `App.js` um pouco e já teremos nossos componentes completamente estilizados.
+E depois alteramos o nosso <span>App.js</span> um pouco e já teremos nossos componentes completamente estilizados.
 ```javascript
 import React from 'react'
 import * as S from './styles'
@@ -241,14 +241,14 @@ Para configurá-los vamos adicionar mais alguns pacotes:
 yarn add -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react prettier
 ```
 
-Nos arquivos `.eslintignore` e `.prettierignore` vamos adicionar os arquivos que não vão ser levados em consideração por essas ferramentas.
+Nos arquivos <span>.eslintignore</span> e <span>.prettierignore</span> vamos adicionar os arquivos que não vão ser levados em consideração por essas ferramentas.
 ```
 node_modules
 yarn.lock
 dist
 ```
 
-Agora a configuração do `.eslintrc`:
+Agora a configuração do <span>.eslintrc`:
 ```json
 {
   "env": {
@@ -273,7 +273,7 @@ Agora a configuração do `.eslintrc`:
 }
 ```
 
-E por último o `.prettierrc`:
+E por último o <span>.prettierrc`:
 ```json
 {
   "printWidth": 100,

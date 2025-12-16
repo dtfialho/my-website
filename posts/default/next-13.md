@@ -9,7 +9,7 @@ keywords: 'Next 13, Next.JS, Next JS, Next, Next Conf 2022'
 Oi pessoal! Como várias pessoas devem saber, hoje rolou a Next Conf 2022, e nela apresentaram features sensacionais e nesse post vou trazer para vocês alguns dos pontos que mudaram da versão 12 para a versão 13 do Next! Então pega o cafézinho e vamos direto ao ponto.
 
 ## app
-Agora além diretório `pages` temos um novo chamado `app`. As pastas dentro desse diretório definirão as rotas da aplicação e não menos importante, agora utilizamos um arquivo `page.tsx` dentro de cada uma dessas pastas para definir a UI da página. Por exemplo, antes a estrutura era: `pages/hello.tsx` ou `pages/blog/[slug].tsx`. Agora ficam assim respectivamente: `app/hello/page.tsx` ou `app/blog/[slug]/page.tsx`.
+Agora além diretório <span>pages</span> temos um novo chamado <span>app</span>. As pastas dentro desse diretório definirão as rotas da aplicação e não menos importante, agora utilizamos um arquivo <span>page.tsx</span> dentro de cada uma dessas pastas para definir a UI da página. Por exemplo, antes a estrutura era: <span>pages/hello.tsx</span> ou <span>pages/blog/[slug].tsx</span>. Agora ficam assim respectivamente: <span>app/hello/page.tsx</span> ou <span>app/blog/[slug]/page.tsx</span>.
 
 ```jsx
 // app/blog/[slug]/page.tsx
@@ -30,7 +30,7 @@ export default async function PostPage({ params: { slug } }) {
 ```
 
 ## Uma nova forma de organizar a UI
-No Next 13 os diretórios dentro de `app` são para as rotas e os arquivos são para a interface, além disso podemos criar arquivos específicos para construir partes específicas da interface que funcionam da mesma forma que o `page.tsx` ficando dentro do diretório de uma rota, por exemplo: `app/hello/layout.tsx`, `app/hello/loading.tsx`, `app/hello/error.tsx` ou `app/hello/layout.tsx`.
+No Next 13 os diretórios dentro de <span>app</span> são para as rotas e os arquivos são para a interface, além disso podemos criar arquivos específicos para construir partes específicas da interface que funcionam da mesma forma que o <span>page.tsx</span> ficando dentro do diretório de uma rota, por exemplo: <span>app/hello/layout.tsx</span>, <span>app/hello/loading.tsx</span>, <span>app/hello/error.tsx</span> ou <span>app/hello/layout.tsx</span>.
 
 - **layout.tsx**: usamos esse arquivo para definir um componente "wrapper". Dentro dele também podemos fazer um fetch para requisitar dados.
 
@@ -84,7 +84,7 @@ export default async function Page() {
 ```
 
 ## getServerSideProps
-Nossa forma de criar páginas SSR também mudou, agora fica da mesma forma que o `getStaticProps`. A única diferença é que precisamos passar `{ cache: "no-store" }` para o fetch da função.
+Nossa forma de criar páginas SSR também mudou, agora fica da mesma forma que o <span>getStaticProps</span>. A única diferença é que precisamos passar <span>{ cache: "no-store" }</span> para o fetch da função.
 
 Antes:
 
@@ -119,7 +119,7 @@ export default async function Page() {
 ```
 
 ## getStaticPaths
-A função `getStaticPaths` foi renomeada para `generateStaticParams` e a chave `paths.params` não existe mais.
+A função <span>getStaticPaths</span> foi renomeada para <span>generateStaticParams</span> e a chave <span>paths.params</span> não existe mais.
 
 Antes:
 
@@ -168,7 +168,7 @@ export default async function({ params }) {
 ```
 
 ## ISR
-Nossa forma de regenerar páginas estáticas de forma incremental (Incremental Static Regeneration ou somente ISR) também está mais simples. Agora apenas passamos a opção `{ next: { revalidate: <number> } }` no fetch da função.
+Nossa forma de regenerar páginas estáticas de forma incremental (Incremental Static Regeneration ou somente ISR) também está mais simples. Agora apenas passamos a opção <span>{ next: { revalidate: <number> } }</span> no fetch da função.
 
 Antes:
 
@@ -214,7 +214,7 @@ export const revalidate = 60
 ```
 
 ## Migrando o _document.tsx e _app.tsx
-Agora os arquivos `_document.tsx` e `_app.tsx` foram movidos para o arquivo `layout.tsx` que fica na raiz da pasta `app`. Precisamos adicionar as tags `html` e `body`. A tag `head` é opicional e os estilos globais são importados nesse arquivo, e não menos importante é que esse layout é obrigatório pois ele serve de "wrapper" para todas as páginas.
+Agora os arquivos <span>_document.tsx</span> e <span>_app.tsx</span> foram movidos para o arquivo <span>layout.tsx</span> que fica na raiz da pasta <span>app</span>. Precisamos adicionar as tags <span>html</span> e <span>body</span>. A tag <span>head</span> é opicional e os estilos globais são importados nesse arquivo, e não menos importante é que esse layout é obrigatório pois ele serve de "wrapper" para todas as páginas.
 
 Antes:
 
@@ -264,7 +264,7 @@ export default function Layout({ children }) {
 ```
 
 ## pages/404.tsx
-A forma de retornar uma página customizada quando uma página não é entrada também mudou. Agora o arquivo se chama `not-found.tsx`, para mostrar essa página retornamos o componente chamando uma função `notFound` dentro de um arquivo `page.tsx`.
+A forma de retornar uma página customizada quando uma página não é entrada também mudou. Agora o arquivo se chama <span>not-found.tsx</span>, para mostrar essa página retornamos o componente chamando uma função <span>notFound</span> dentro de um arquivo <span>page.tsx</span>.
 
 Antes:
 
@@ -304,7 +304,7 @@ export default async function PostPage({ params }) {
 ```
 
 ## next/head
-`next/head` agora é um arquivo que fica dentro de cada pasta de rota. O `head.tsx` é um server component, então podemos fazer requisições de dados dentro desse arquivo. Um detalhe é que as tags permitidas nesse arquivo são `title`, `meta`, `link` e `script`.
+`next/head</span> agora é um arquivo que fica dentro de cada pasta de rota. O <span>head.tsx</span> é um server component, então podemos fazer requisições de dados dentro desse arquivo. Um detalhe é que as tags permitidas nesse arquivo são <span>title</span>, <span>meta</span>, <span>link</span> e <span>script</span>.
 
 Antes:
 ```jsx

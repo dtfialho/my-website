@@ -3,9 +3,9 @@ import { NextResponse } from 'next/server'
 import createMiddleware from 'next-intl/middleware'
 
 import { SUPPORTED_LOCALES } from 'lib/constants'
-import { postRedirects, generalRedirects } from 'lib/redirects'
+import { generalRedirects } from 'lib/redirects'
 
-export default async function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   const [, locale, ...segments] = request.nextUrl.pathname.split('/')
 
   if (
@@ -21,20 +21,20 @@ export default async function middleware(request: NextRequest) {
     )
   }
 
-  const isPostRedirect = segments[0] === 'blog' && segments[1]
+  // const isPostRedirect = segments[0] === 'blog' && !!segments[1]
 
-  if (isPostRedirect && postRedirects[locale]?.[segments[1]]) {
-    return NextResponse.redirect(
-      new URL(
-        `/${locale}/blog/${postRedirects[locale][segments[1]]}`,
-        request.nextUrl.origin
-      )
-    )
-  } else if (isPostRedirect && !postRedirects[locale]?.[segments[1]]) {
-    return NextResponse.redirect(
-      new URL(`/${locale}/not-found`, request.nextUrl.origin)
-    )
-  }
+  // if (isPostRedirect && postRedirects[locale]?.[segments[1]]) {
+  //   return NextResponse.redirect(
+  //     new URL(
+  //       `/${locale}/blog/${postRedirects[locale][segments[1]]}`,
+  //       request.nextUrl.origin
+  //     )
+  //   )
+  // } else if (isPostRedirect && !postRedirects[locale]?.[segments[1]]) {
+  //   return NextResponse.redirect(
+  //     new URL(`/${locale}/not-found`, request.nextUrl.origin)
+  //   )
+  // }
 
   const handleI18nRouting = createMiddleware({
     locales: SUPPORTED_LOCALES,
