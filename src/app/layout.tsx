@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from 'react'
 import { getLocale } from 'next-intl/server'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import StyledComponentsRegistry from 'lib/styled-components-registry'
 import GlobalStyles from 'styles/global'
@@ -16,6 +17,7 @@ export default async function RootLayout({ children }: LayoutProps) {
         <body>
           <GlobalStyles />
           <Analytics />
+          <SpeedInsights />
           {children}
         </body>
       </StyledComponentsRegistry>
