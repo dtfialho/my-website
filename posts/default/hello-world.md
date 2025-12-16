@@ -8,7 +8,7 @@ keywords: 'Hello world, My Website, Next, Next.JS, Next Js, Diego T. Fialho, Die
 
 Oi pessoal, bem vindos! Meu nome é Diego T. Fialho, como esse é o primeiro post ele vai ser um pouco mais curtinho, o suficiente só para me apresentar e passar para vocês o conteúdo que pretendo postar de tempos em tempos.
 
-Depois de um tempinho com a ideia na cabeça, resolvi colocar um projeto que já tinha em mente mas sempre ~procrastinei~ demorei bastante para colocar em desenvolvimento, que é o blog desse meu site.
+Depois de um tempinho com a ideia na cabeça, resolvi colocar um projeto que já tinha em mente mas demorei bastante para colocar em desenvolvimento, que é o blog desse meu site.
 
 Bom, atualmente trabalho como desenvolvedor front-end mas já trabalhei também como fullstack anteriormente. Desenvolvimento é uma paixão que levo tanto para o lado profissional como passatempo, adoro desenvolver algoritmos em Javascript e criar páginas com um código bem estruturado e organizado a partir de layouts prototipados no figma, photoshop, etc.
 

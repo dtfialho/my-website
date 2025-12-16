@@ -8,7 +8,7 @@ keywords: 'Hello world, My Website, Next, Next.JS, Next Js, Diego T. Fialho, Die
 
 Hello everyone, welcome! My name is Diego T. Fialho, this is my first post so it is going to be a little faster, only to introduce myself and give you an overview about the content that I'm going to post from time to time.
 
-After a little while with the idea, I decided to put a project I already had in mind but ~I always procratinated~ it always took me a long time to put it into development, wich is the bog of my website.
+After a little while with the idea, I decided to put a project I already had in mind but it always took me a long time to put it into development, wich is the bog of my website.
 
 I currently work as a front-end developer but I've also worked as a fullstack before. Development is a passion that I take both professionaly and as a hobby, I love developing algorithims in Javascript and creating pages with well-structured and organized code from prototyped layouts in figma, photoshop, etc.
 
