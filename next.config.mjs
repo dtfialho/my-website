@@ -14,7 +14,6 @@ export default withNextIntl({
       }
     ]
   },
-  swcMinify: true,
   compiler: {
     styledComponents: true
   },

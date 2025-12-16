@@ -1,3 +1,4 @@
+'use client'
 import Script from 'next/script'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 
