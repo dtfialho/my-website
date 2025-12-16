@@ -1,4 +1,5 @@
 import { setRequestLocale } from 'next-intl/server'
+import { notFound } from 'next/navigation'
 
 import getAllPostPaths from 'lib/get-all-post-paths'
 import getPagePostContent from 'lib/get-page-post-content'
@@ -19,9 +20,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ParamsType) {
   const { slug, locale } = await params
 
+  const post = getPagePostContent(locale, slug)
+
+  if (!post) {
+    return notFound()
+  }
+
   const {
     data: { title: postTitle, description, keywords, hero_image }
-  } = getPagePostContent(locale, slug)
+  } = post
 
   const title = `${postTitle} | Diego T. Fialho`
   const url = `https://www.diegotfialho.dev/blog/${slug}`
@@ -54,10 +61,16 @@ const PostPage = async ({ params }: ParamsType) => {
 
   setRequestLocale(locale)
 
+  const post = getPagePostContent(locale, slug)
+
+  if (!post) {
+    return notFound()
+  }
+
   const {
     content,
     data: { title: postTitle, date, hero_image }
-  } = getPagePostContent(locale, slug)
+  } = post
 
   return (
     <Post
