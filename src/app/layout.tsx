@@ -3,6 +3,7 @@ import { getLocale } from 'next-intl/server'
 
 import StyledComponentsRegistry from 'lib/styled-components-registry'
 import GlobalStyles from 'styles/global'
+import Analytics from 'components/analytics'
 
 type LayoutProps = PropsWithChildren
 
@@ -14,6 +15,7 @@ export default async function RootLayout({ children }: LayoutProps) {
       <StyledComponentsRegistry>
         <body>
           <GlobalStyles />
+          <Analytics />
           {children}
         </body>
       </StyledComponentsRegistry>
