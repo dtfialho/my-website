@@ -12,7 +12,8 @@ const LanguageSelector = () => {
   const { showModal, setShowModal } = useContext(LanguageSelectorContext)
   const { locale: activeLocale } = useParams()
 
-  const handleOpenModal = () => {
+  const handleOpenModal = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
     setShowModal(true)
   }
 
