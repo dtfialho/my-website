@@ -1,5 +1,6 @@
 'use client'
 
+import type { MouseEvent } from 'react'
 import Image from 'next/image'
 import { useContext } from 'react'
 import { useParams } from 'next/navigation'
@@ -12,7 +13,8 @@ const LanguageSelector = () => {
   const { showModal, setShowModal } = useContext(LanguageSelectorContext)
   const { locale: activeLocale } = useParams()
 
-  const handleOpenModal = () => {
+  const handleOpenModal = (e: MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
     setShowModal(true)
   }
 
