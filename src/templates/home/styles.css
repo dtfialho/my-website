@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --header-height: 90px;
+}
+
+@layer components {
+  .home__container {
+    @apply relative 
+      h-screen 
+    text-white;
+
+    @apply after:block
+      after:w-full
+      after:h-[inherit]
+      after:top-[var(--header-height)]
+      after:fixed
+      after:bg-[rgb(0_0_0_/30%)]
+      after:content-['']
+      after:z-[-1];
+  }
+
+  .home__image {
+    @apply z-[-1]
+      object-cover;
+  }
+
+  .home__content {
+    @apply flex
+      flex-col
+      items-center
+      justify-center
+      h-[calc(100vh-var(--header-height))];
+  }
+
+  .home__title {
+    @apply text-4xl
+      leading-[1.4]
+      md:text-6xl
+      lg:text-7xl
+      cursor-default
+      font-bold;
+  }
+
+  .home__role {
+    @apply text-lg
+      cursor-default;
+  }
+}
