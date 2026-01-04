@@ -8,17 +8,21 @@ import { generalRedirects } from 'lib/redirects'
 export default async function proxy(request: NextRequest) {
   const [, locale, ...segments] = request.nextUrl.pathname.split('/')
 
-  if (
-    locale != null &&
-    segments.length &&
-    generalRedirects[locale][segments[0]]
-  ) {
-    return NextResponse.redirect(
-      new URL(
-        `/${locale}/${generalRedirects[locale][segments[0]]}`,
-        request.nextUrl.origin
+  try {
+    if (
+      locale != null &&
+      segments.length &&
+      generalRedirects[locale][segments[0]]
+    ) {
+      return NextResponse.redirect(
+        new URL(
+          `/${locale}/${generalRedirects[locale][segments[0]]}`,
+          request.nextUrl.origin
+        )
       )
-    )
+    }
+  } catch (error) {
+    console.warn(error)
   }
 
   // const isPostRedirect = segments[0] === 'blog' && !!segments[1]
@@ -48,7 +52,7 @@ export default async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!img|_next|api|favicon|sitemap|robots|googlefb3413f416380407).*)',
+    '/((?!img|_next|api|favicon|sitemap|robots|googlefb3413f416380407|globals).*)',
     '/',
     '/(pt-BR|en)'
   ]
