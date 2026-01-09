@@ -4,9 +4,10 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname, useParams } from 'next/navigation'
+import clsx from 'clsx'
 
+import './styles.css'
 import LanguageSelector from 'components/language-selector'
-import * as S from './styles'
 
 const MainNavigation = () => {
   const t = useTranslations()
@@ -16,37 +17,61 @@ const MainNavigation = () => {
   const aboutMePath = `/${activeLocale === 'pt-BR' ? 'sobre-mim' : 'about-me'}`
 
   return (
-    <S.Wrapper open={open}>
-      <S.Hamburger type="button" title="Menu" onClick={() => setOpen(!open)}>
-        <S.Icon open={open}></S.Icon>
-      </S.Hamburger>
+    <nav className={clsx('main-navigation__wrapper', open && 'open')}>
+      <button
+        className="main-navigation__hamburger"
+        type="button"
+        title="Menu"
+        onClick={() => setOpen(!open)}
+      >
+        <span className={clsx('main-navigation__icon', open && 'open')} />
+      </button>
 
-      <S.Container open={open}>
-        <S.Item>
+      <ul className={clsx('main-navigation__container', open && 'open')}>
+        <li className="main-navigation__item">
           <Link href={`/${activeLocale}`}>
-            <S.Link active={path === '/'}>Home</S.Link>
+            <span
+              className={clsx(
+                'main-navigation__link',
+                path === `/${activeLocale}` && 'active'
+              )}
+            >
+              Home
+            </span>
           </Link>
-        </S.Item>
+        </li>
 
-        <S.Item>
+        <li className="main-navigation__item">
           <Link href={`/${activeLocale}/blog`}>
-            <S.Link active={!!path?.match(/\/blog/)}>Blog</S.Link>
+            <span
+              className={clsx(
+                'main-navigation__link',
+                !!path?.match(/\/blog/) && 'active'
+              )}
+            >
+              Blog
+            </span>
           </Link>
-        </S.Item>
+        </li>
 
-        <S.Item>
+        <li className="main-navigation__item">
           <Link href={aboutMePath}>
-            <S.Link active={!!path?.match(new RegExp(aboutMePath))}>
+            <span
+              className={clsx(
+                'main-navigation__link',
+                !!path?.match(new RegExp(aboutMePath)) && 'active'
+              )}
+            >
               {t('Common.aboutMe')}
-            </S.Link>
+            </span>
           </Link>
-        </S.Item>
+        </li>
 
-        <S.Item onClick={() => setOpen(!open)}>
+        <li className="main-navigation__item" onClick={() => setOpen(!open)}>
           <LanguageSelector />
-        </S.Item>
-      </S.Container>
-    </S.Wrapper>
+        </li>
+      </ul>
+    </nav>
   )
 }
 

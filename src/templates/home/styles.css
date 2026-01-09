@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --header-height: 90px;
+  --header-height: 92px;
 }
 
 @layer components {
@@ -43,7 +43,8 @@
   }
 
   .home__role {
-    @apply text-lg
+    @apply text-base
+      md:text-lg
       cursor-default;
   }
 }

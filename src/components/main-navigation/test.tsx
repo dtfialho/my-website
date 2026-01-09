@@ -61,8 +61,6 @@ describe('MainNavigation', () => {
 
     expect(
       (await screen.findByRole('link', { name: /sobre mim/i })).children[0]
-    ).toHaveStyleRule('width', '100%', {
-      modifier: '::after'
-    })
+    ).toHaveClass('active')
   })
 })

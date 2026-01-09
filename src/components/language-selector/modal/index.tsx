@@ -1,15 +1,17 @@
 'use client'
 
+import type { MouseEvent } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useRouter, usePathname, useParams } from 'next/navigation'
 import { useContext, useState } from 'react'
 import { X } from '@styled-icons/feather/X'
 import { CaretDown } from '@styled-icons/fa-solid/CaretDown'
+import clsx from 'clsx'
 
+import './styles.css'
 import { SUPPORTED_LOCALES } from 'lib/constants'
 import { LanguageSelectorContext } from '../provider'
-import * as S from './styles'
 
 function replaceLocaleInPath(
   path: string,
@@ -28,8 +30,15 @@ const LanguageSelectorModal = () => {
   const [showList, setShowList] = useState(false)
   const [selectedLocale, setSelectedLocale] = useState('')
 
-  const handleCloseModal = () => {
+  const handleCloseModal = (
+    e?: MouseEvent<HTMLDivElement | HTMLButtonElement>
+  ) => {
+    e?.stopPropagation()
     setShowModal(false)
+  }
+
+  const handleShowList = () => {
+    setShowList((prev) => !prev)
   }
 
   const handleSelectLocale = (newLocale: string) => {
@@ -54,65 +63,99 @@ const LanguageSelectorModal = () => {
 
   return (
     <>
-      <S.Overlay onClick={handleCloseModal} />
+      <div
+        className="language-selector-modal__overlay"
+        onClick={handleCloseModal}
+      />
 
-      <S.Wrapper>
-        <S.Header>
-          <S.Title>{t('Common.selectLanguage')}:</S.Title>
-          <S.Close type="button" onClick={handleCloseModal}>
-            <X size={25} strokeWidth={2} title="Close" />
-          </S.Close>
-        </S.Header>
+      <div
+        className="language-selector-modal__wrapper"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="language-selector-modal__header">
+          <p className="language-selector-modal__title">
+            {t('Common.selectLanguage')}:
+          </p>
+          <button
+            className="language-selector-modal__close"
+            type="button"
+            onClick={handleCloseModal}
+          >
+            <X size={24} strokeWidth={2} title="Close" />
+          </button>
+        </div>
 
-        <S.Body>
-          <S.Select>
-            <S.ActiveItem type="button" onClick={() => setShowList(true)}>
-              <S.FlagWrapper>
+        <div className="language-selector-modal__body">
+          <div className="language-selector-modal__select">
+            <button
+              className={clsx(
+                'language-selector-modal__active-item',
+                showList && 'list-open'
+              )}
+              type="button"
+              onClick={handleShowList}
+            >
+              <figure className="language-selector-modal__flag-wrapper">
                 <Image
                   src={`/img/${selectedLocale || activeLocale}.jpg`}
-                  width="29"
-                  height="22"
+                  width={29}
+                  height={22}
                   alt="Active locale"
                   title="Active locale"
                 />
-              </S.FlagWrapper>
+              </figure>
 
               {selectedLocale || activeLocale}
 
-              <S.DropdownIcon rotated={showList}>
+              <span
+                className={clsx(
+                  'language-selector-modal__dropdown-icon',
+                  showList && 'rotated'
+                )}
+              >
                 <CaretDown size={15} />
-              </S.DropdownIcon>
-            </S.ActiveItem>
+              </span>
+            </button>
 
-            <S.List open={showList}>
+            <ul
+              className={clsx(
+                'language-selector-modal__list',
+                showList && 'open'
+              )}
+            >
               {SUPPORTED_LOCALES.map((locale) => (
-                <S.ListItem
+                <li
+                  className={clsx(
+                    'language-selector-modal__list-item',
+                    !showList && 'hidden'
+                  )}
                   key={locale}
                   onClick={() => handleSelectLocale(locale)}
                 >
-                  <S.FlagWrapper>
+                  <figure className="language-selector-modal__flag-wrapper">
                     <Image
                       src={`/img/${locale}.jpg`}
                       width="29"
                       height="22"
                       alt={`${locale} locale flag`}
                     />
-                  </S.FlagWrapper>
+                  </figure>
                   {locale}
-                </S.ListItem>
+                </li>
               ))}
-            </S.List>
-          </S.Select>
+            </ul>
+          </div>
 
-          <S.ChangeLocale
+          <button
+            className="language-selector-modal__change-locale"
             type="button"
             onClick={handleChangeLocale}
             disabled={!selectedLocale || selectedLocale === activeLocale}
           >
             {t('Common.changeLanguage')}
-          </S.ChangeLocale>
-        </S.Body>
-      </S.Wrapper>
+          </button>
+        </div>
+      </div>
     </>
   )
 }
