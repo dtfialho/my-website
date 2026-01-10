@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --header-height: 92px;
+}
+
 @layer base {
   header {
     background-color: rgb(153, 46, 36);

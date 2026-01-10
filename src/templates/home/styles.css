@@ -1,8 +1,4 @@
-@import "tailwindcss";
-
-@theme {
-  --header-height: 92px;
-}
+@reference "tailwindcss";
 
 @layer components {
   .home__container {
