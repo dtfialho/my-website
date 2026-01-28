@@ -17,6 +17,7 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
       >
         <img
           alt="Github"
+          class=""
           data-nimg="1"
           decoding="async"
           height="30"
@@ -40,6 +41,7 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
       >
         <img
           alt="Linkedin"
+          class=""
           data-nimg="1"
           decoding="async"
           height="30"
@@ -63,6 +65,7 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
       >
         <img
           alt="Twitter"
+          class=""
           data-nimg="1"
           decoding="async"
           height="30"

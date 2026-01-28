@@ -15,14 +15,14 @@ describe('Components/SocialMedia', () => {
   it('Should apply inverse class correctly if inverseColorToBlack is true', async () => {
     render(<SocialMedia inverseColorToBlack />)
 
-    expect(
-      screen.getByRole('link', { name: /Github/ }).parentElement
-    ).toHaveClass('inverse-color')
-    expect(
-      screen.getByRole('link', { name: /Linkedin/ }).parentElement
-    ).toHaveClass('inverse-color')
-    expect(
-      screen.getByRole('link', { name: /Twitter/ }).parentElement
-    ).toHaveClass('inverse-color')
+    expect(screen.getByRole('img', { name: 'Github' })).toHaveClass(
+      'inverse-color'
+    )
+    expect(screen.getByRole('img', { name: 'Linkedin' })).toHaveClass(
+      'inverse-color'
+    )
+    expect(screen.getByRole('img', { name: 'Twitter' })).toHaveClass(
+      'inverse-color'
+    )
   })
 })

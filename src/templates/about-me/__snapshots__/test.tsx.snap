@@ -1,137 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Templates/AboutMe Should render correctly 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 153px 16px 100px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.c1 > img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.c2 {
-  text-align: center;
-  margin: 20px 0 0;
-}
-
-.c3 {
-  margin: 50px 0 40px;
-  border-bottom: 1px solid rgb(153 46 36);
-}
-
-.c5 {
-  margin-bottom: 40px;
-}
-
-.c6 {
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid rgb(153 46 36);
-}
-
-.c7 {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.c8 {
-  text-align: center;
-}
-
-.c9 {
-  color: #333;
-  text-align: center;
-}
-
-@media (min-width:768px) {
-  .c0 {
-    padding: 193px 16px 100px;
-  }
-}
-
-@media (min-width:992px) {
-  .c0 {
-    padding-left: 160px;
-    padding-right: 160px;
-  }
-}
-
-@media (min-width:768px) {
-  .c1 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width:768px) {
-  .c2 {
-    margin-top: 0;
-    margin-left: 50px;
-  }
-}
-
-@media (min-width:768px) {
-  .c4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width:768px) {
-  .c5 {
-    -webkit-flex-basis: 30%;
-    -ms-flex-preferred-size: 30%;
-    flex-basis: 30%;
-  }
-}
-
 <div>
   <header>
     Header
   </header>
   <main
-    class="c0"
+    class="about-me__container"
   >
     <div
-      class="c1"
+      class="about-me__title-container"
     >
       <img
         alt="Minha foto de perfil"
+        class="about-me__title-image"
         data-nimg="1"
         decoding="async"
         height="150"
@@ -141,133 +23,137 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
         width="150"
       />
       <h1
-        class="c2"
+        class="about-me__title"
       >
         Sobre mim
       </h1>
     </div>
-    <p>
-      Olá! Meu nome é Diego Teixeira Fialho, nasci em Petrópolis/RJ e atualmente trabalho como Frontend Developer na Personare. Já trabalhei como Fullstack Developer na Maxisite e Frontend Developer na Alterdata Software.
-    </p>
-    <p>
-      Apaixonado por tecnologia desde cedo sempre fui curioso para aprender. Aos 20 anos, fiz meu primeiro curso na área de tecnologia no SENAI e aos 23 ingressei na faculdade de Tecnologia da Informação e Comunicação pela FAETERJ - Petrópolis.
-    </p>
-    <p>
-      Amo desenvolver e estudar novas tecnologias que surgem a cada dia para facilitar a nossa vida como desenvolvedores. Com o sangue metade café e metade código, amo criar e idealizar componentes utilizando frameworks Javascript e conceitos para um código limpo e bem estruturado.
-    </p>
-    <div
-      class="c3"
+    <p
+      class="about-me__paragraph"
     >
-      <h2>
-        Um pouco do que eu faço
-        :
-      </h2>
+      Olá! Sou Diego Teixeira Fialho, Senior Frontend Engineer com mais de 11 anos de experiência desenvolvendo aplicações web modernas, escaláveis e de alta performance. Gosto de trabalhar em produtos onde experiência do usuário, performance e qualidade de código realmente fazem a diferença. Meu foco principal é a criação de interfaces responsivas, acessíveis e fáceis de manter, utilizando React, Next.js, TypeScript e CSS.
+    </p>
+    <p
+      class="about-me__paragraph"
+    >
+      No meu dia a dia, gosto de desenhar componentes reutilizáveis, melhorar a performance das aplicações, colaborar de perto com designers e desenvolvedores backend e contribuir para decisões de arquitetura e evolução técnica dos projetos. Escrever código limpo e bem testado e refinar soluções existentes fazem parte da minha forma de trabalhar.
+    </p>
+    <p
+      class="about-me__paragraph"
+    >
+      Fora do trabalho, gosto de estudar novas tecnologias web, jogar videogame, assistir filmes e séries, além de passar tempo ao ar livre com minha esposa e meu filho. Acredito que curiosidade, consistência e equilíbrio são essenciais para crescer como desenvolvedor e entregar produtos melhores.
+    </p>
+    <h2
+      class="about-me__what-i-do"
+    >
+      Um pouco do que eu faço
+      :
+    </h2>
+    <div
+      class="about-me__items"
+    >
       <div
-        class="c4"
+        class="about-me__skills"
       >
-        <div
-          class="c5"
+        <h3
+          class="about-me__skill-item-title"
         >
-          <h3
-            class="c6"
-          >
-            Frontend
-          </h3>
-          <ul
-            class="c7"
-          >
-            <li>
-              Angular
-            </li>
-            <li>
-              AngularJS
-            </li>
-            <li>
-              CSS3
-            </li>
-            <li>
-              HTML5
-            </li>
-            <li>
-              Javascript
-            </li>
-            <li>
-              Pré-processadores
-               (sass, less, stylus)
-            </li>
-            <li>
-              React
-            </li>
-            <li>
-              Styled Components
-            </li>
-            <li>
-              Next JS
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c5"
+          Frontend
+        </h3>
+        <ul
+          class="about-me__skills-list"
         >
-          <h3
-            class="c6"
-          >
-            Backend
-          </h3>
-          <ul
-            class="c7"
-          >
-            <li>
-              Node
-            </li>
-            <li>
-              PHP
-            </li>
-            <li>
-              Programação Orientada a Objetos
-            </li>
-            <li>
-              Python
-            </li>
-            <li>
-              MySql
-            </li>
-            <li>
-              PostgreeSQL
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c5"
+          <li>
+            Angular
+          </li>
+          <li>
+            AngularJS
+          </li>
+          <li>
+            CSS3
+          </li>
+          <li>
+            HTML5
+          </li>
+          <li>
+            Javascript
+          </li>
+          <li>
+            Pré-processadores
+             (sass, less, stylus)
+          </li>
+          <li>
+            React
+          </li>
+          <li>
+            Styled Components
+          </li>
+          <li>
+            Next JS
+          </li>
+        </ul>
+      </div>
+      <div
+        class="about-me__skills"
+      >
+        <h3
+          class="about-me__skill-item-title"
         >
-          <h3
-            class="c6"
-          >
-            Outros
-          </h3>
-          <ul
-            class="c7"
-          >
-            <li>
-              Scrum
-            </li>
-            <li>
-              Git
-            </li>
-            <li>
-              TDD
-            </li>
-          </ul>
-        </div>
+          Backend
+        </h3>
+        <ul
+          class="about-me__skills-list"
+        >
+          <li>
+            Node
+          </li>
+          <li>
+            PHP
+          </li>
+          <li>
+            Programação Orientada a Objetos
+          </li>
+          <li>
+            Python
+          </li>
+          <li>
+            MySql
+          </li>
+          <li>
+            PostgreeSQL
+          </li>
+        </ul>
+      </div>
+      <div
+        class="about-me__skills"
+      >
+        <h3
+          class="about-me__skill-item-title"
+        >
+          Outros
+        </h3>
+        <ul
+          class="about-me__skills-list"
+        >
+          <li>
+            Scrum
+          </li>
+          <li>
+            Git
+          </li>
+          <li>
+            TDD
+          </li>
+        </ul>
       </div>
     </div>
     <h2
-      class="c8"
+      class="about-me__contact"
     >
       Contato
     </h2>
     <div
-      class="c9"
+      class="about-me__social-media-wrapper"
     >
       <section>
         Social media
@@ -278,137 +164,19 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
 `;
 
 exports[`Templates/AboutMe Should render correctly in en 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 153px 16px 100px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.c1 > img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.c2 {
-  text-align: center;
-  margin: 20px 0 0;
-}
-
-.c3 {
-  margin: 50px 0 40px;
-  border-bottom: 1px solid rgb(153 46 36);
-}
-
-.c5 {
-  margin-bottom: 40px;
-}
-
-.c6 {
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid rgb(153 46 36);
-}
-
-.c7 {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.c8 {
-  text-align: center;
-}
-
-.c9 {
-  color: #333;
-  text-align: center;
-}
-
-@media (min-width:768px) {
-  .c0 {
-    padding: 193px 16px 100px;
-  }
-}
-
-@media (min-width:992px) {
-  .c0 {
-    padding-left: 160px;
-    padding-right: 160px;
-  }
-}
-
-@media (min-width:768px) {
-  .c1 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width:768px) {
-  .c2 {
-    margin-top: 0;
-    margin-left: 50px;
-  }
-}
-
-@media (min-width:768px) {
-  .c4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width:768px) {
-  .c5 {
-    -webkit-flex-basis: 30%;
-    -ms-flex-preferred-size: 30%;
-    flex-basis: 30%;
-  }
-}
-
 <div>
   <header>
     Header
   </header>
   <main
-    class="c0"
+    class="about-me__container"
   >
     <div
-      class="c1"
+      class="about-me__title-container"
     >
       <img
         alt="My profile picture"
+        class="about-me__title-image"
         data-nimg="1"
         decoding="async"
         height="150"
@@ -418,133 +186,137 @@ exports[`Templates/AboutMe Should render correctly in en 1`] = `
         width="150"
       />
       <h1
-        class="c2"
+        class="about-me__title"
       >
         About me
       </h1>
     </div>
-    <p>
-      Hello! My name is Diego Teixeira Fialho, born at Petrópolis, RJ - Brazil and currently I work as a Frontend Web Developer at Personare. I also worked as a Fullstack Developer at Maxisite and as Frontend Developer at Alterdata Software.
-    </p>
-    <p>
-      Passionate about technology since soon I was always curious to learn. At 20 years old, I took my first course in technology at SENAI and at 23 years old I entered college at FAETERJ - Petrópolis.
-    </p>
-    <p>
-      I love developing and study new technologies that appear each day to make our life as developers easier. With blood half coffee and half code, I love to create and idealize components using Javascript frameworks and concepts for a clean and well structured code.
-    </p>
-    <div
-      class="c3"
+    <p
+      class="about-me__paragraph"
     >
-      <h2>
-        A little about what I do
-        :
-      </h2>
+      Hello! I’m Diego Teixeira Fialho, a Senior Frontend Engineer with over 11 years of experience building modern, scalable, and high-performance web applications. I enjoy working on products where user experience, performance, and code quality truly matter. My main focus is developing responsive, accessible, and maintainable interfaces using React, Next.js, TypeScript, and CSS.
+    </p>
+    <p
+      class="about-me__paragraph"
+    >
+      In my day-to-day work, I like designing reusable components, improving application performance, collaborating closely with designers and backend engineers, and contributing to architectural decisions. Writing clean, well-tested code and continuously refining existing solutions are core parts of how I approach development.
+    </p>
+    <p
+      class="about-me__paragraph"
+    >
+      Outside of work, I enjoy exploring new web technologies, playing video games, watching movies and TV series, and spending quality time outdoors with my wife and son. I believe curiosity, consistency, and balance are essential for long-term growth as a developer.
+    </p>
+    <h2
+      class="about-me__what-i-do"
+    >
+      A little about what I do
+      :
+    </h2>
+    <div
+      class="about-me__items"
+    >
       <div
-        class="c4"
+        class="about-me__skills"
       >
-        <div
-          class="c5"
+        <h3
+          class="about-me__skill-item-title"
         >
-          <h3
-            class="c6"
-          >
-            Frontend
-          </h3>
-          <ul
-            class="c7"
-          >
-            <li>
-              Angular
-            </li>
-            <li>
-              AngularJS
-            </li>
-            <li>
-              CSS3
-            </li>
-            <li>
-              HTML5
-            </li>
-            <li>
-              Javascript
-            </li>
-            <li>
-              CSS Preprocessors
-               (sass, less, stylus)
-            </li>
-            <li>
-              React
-            </li>
-            <li>
-              Styled Components
-            </li>
-            <li>
-              Next JS
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c5"
+          Frontend
+        </h3>
+        <ul
+          class="about-me__skills-list"
         >
-          <h3
-            class="c6"
-          >
-            Backend
-          </h3>
-          <ul
-            class="c7"
-          >
-            <li>
-              Node
-            </li>
-            <li>
-              PHP
-            </li>
-            <li>
-              Object Oriented programming
-            </li>
-            <li>
-              Python
-            </li>
-            <li>
-              MySql
-            </li>
-            <li>
-              PostgreeSQL
-            </li>
-          </ul>
-        </div>
-        <div
-          class="c5"
+          <li>
+            Angular
+          </li>
+          <li>
+            AngularJS
+          </li>
+          <li>
+            CSS3
+          </li>
+          <li>
+            HTML5
+          </li>
+          <li>
+            Javascript
+          </li>
+          <li>
+            CSS Preprocessors
+             (sass, less, stylus)
+          </li>
+          <li>
+            React
+          </li>
+          <li>
+            Styled Components
+          </li>
+          <li>
+            Next JS
+          </li>
+        </ul>
+      </div>
+      <div
+        class="about-me__skills"
+      >
+        <h3
+          class="about-me__skill-item-title"
         >
-          <h3
-            class="c6"
-          >
-            Others
-          </h3>
-          <ul
-            class="c7"
-          >
-            <li>
-              Scrum
-            </li>
-            <li>
-              Git
-            </li>
-            <li>
-              TDD
-            </li>
-          </ul>
-        </div>
+          Backend
+        </h3>
+        <ul
+          class="about-me__skills-list"
+        >
+          <li>
+            Node
+          </li>
+          <li>
+            PHP
+          </li>
+          <li>
+            Object Oriented programming
+          </li>
+          <li>
+            Python
+          </li>
+          <li>
+            MySql
+          </li>
+          <li>
+            PostgreeSQL
+          </li>
+        </ul>
+      </div>
+      <div
+        class="about-me__skills"
+      >
+        <h3
+          class="about-me__skill-item-title"
+        >
+          Others
+        </h3>
+        <ul
+          class="about-me__skills-list"
+        >
+          <li>
+            Scrum
+          </li>
+          <li>
+            Git
+          </li>
+          <li>
+            TDD
+          </li>
+        </ul>
       </div>
     </div>
     <h2
-      class="c8"
+      class="about-me__contact"
     >
       Contact
     </h2>
     <div
-      class="c9"
+      class="about-me__social-media-wrapper"
     >
       <section>
         Social media
