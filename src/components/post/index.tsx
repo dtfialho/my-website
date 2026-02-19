@@ -4,7 +4,7 @@ import format from 'date-fns/format'
 import { getTranslations } from 'next-intl/server'
 
 import { DEFAULT_LOCALE } from 'lib/constants'
-import * as S from './styles'
+import './styles.css'
 
 type PostProps = PostType & {
   locale?: string
@@ -24,28 +24,29 @@ const Post = async ({
   const postDate = format(new Date(date), dateFormat)
 
   return (
-    <S.Wrapper>
+    <article className="post__wrapper">
       <Link href={`/${locale}/blog/${slug}`}>
-        <S.Link title={title}>
-          <S.ImageWrapper>
+        <div className="post__link" title={title}>
+          <div className="post__image-wrapper">
             <Image
+              className="post__image"
               src={image}
               alt={title}
               priority={imgPriority}
               fill
               sizes="100vw"
             />
-          </S.ImageWrapper>
-          <S.Content>
-            <S.Title>{title}</S.Title>
-            <S.Description>{excerpt}</S.Description>
-            <S.Date>
+          </div>
+          <div className="post__content">
+            <h2 className="post__title">{title}</h2>
+            <p className="post__description">{excerpt}</p>
+            <em className="post__date">
               {t('Common.posted')}: <span>{postDate}</span>
-            </S.Date>
-          </S.Content>
-        </S.Link>
+            </em>
+          </div>
+        </div>
       </Link>
-    </S.Wrapper>
+    </article>
   )
 }
 

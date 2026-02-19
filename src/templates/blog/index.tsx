@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 
 import Header from 'components/header'
 import Post from 'components/post'
-import * as S from './styles'
+import './styles.css'
 
 type BlogProps = {
   posts: Array<PostType>
@@ -14,9 +14,9 @@ const Blog = async ({ posts = [], locale }: BlogProps) => {
 
   return (
     <>
-      <S.Wrapper>
+      <main className="blog__wrapper">
         <Header fixed />
-        <S.Title>{t('Blog.title')}</S.Title>
+        <h1 className="blog__title">{t('Blog.title')}</h1>
 
         {posts.map(
           ({ slug, title, hero_image: image, date, excerpt }, index) => (
@@ -32,7 +32,7 @@ const Blog = async ({ posts = [], locale }: BlogProps) => {
             />
           )
         )}
-      </S.Wrapper>
+      </main>
     </>
   )
 }

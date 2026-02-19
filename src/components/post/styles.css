@@ -1,0 +1,60 @@
+@reference "tailwindcss";
+
+@layer components {
+  .post__wrapper:not(:last-child) {
+    @apply mb-6
+      pb-6
+      border-b-2
+      border-gray-300;
+  }
+
+  .post__link {
+    @apply flex
+      flex-col
+      transition-opacity
+      duration-300
+      hover:opacity-70
+      
+      md:flex-row;
+  }
+
+  .post__image-wrapper {
+    @apply shrink-0
+      relative
+      max-w-full
+      w-full
+      h-38
+      mx-auto
+      
+      max-md:min-[450px]:w-125
+      max-md:min-[450px]:h-75
+      
+      md:w-75
+      md:mx-0;
+  }
+  
+  .post__image {
+    @apply object-cover
+      translate-z-0;
+  }
+
+  .post__content {
+    @apply pt-4
+      md:px-6;
+  }
+
+  .post__title {
+    @apply mb-1
+      text-2xl
+      font-bold;
+  }
+
+  .post__description {
+    @apply mb-1;
+  }
+
+  .post__date {
+    @apply text-sm
+    text-gray-500;
+  }
+}
