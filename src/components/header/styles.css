@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+@layer components {
+  .header__container {
+    @apply bg-red-800
+      shadow-md
+      shadow-neutral-800/40
+      w-screen
+      flex
+      flex-row
+      justify-between
+      items-center
+      py-5
+      px-10;
+  }
+
+  .header__container.fixed {
+    @apply fixed
+      top-0
+      left-0
+      z-2;
+  }
+
+  .header__logo {
+    @apply w-13;
+  }
+}

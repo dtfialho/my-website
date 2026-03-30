@@ -1,0 +1,37 @@
+@reference 'tailwindcss';
+
+@layer components {
+  .social-media__container {
+    @apply p-0
+      mt-8
+      list-none;
+  }
+  
+  .social-media__item {
+    @apply inline-block
+      mx-4;
+  }
+
+  .inverse-color {
+    @apply invert-100;
+  }
+
+  .social-media__link {
+    @apply flex
+      items-center
+      justify-center
+      w-18
+      h-18
+      text-current
+      rounded-full
+      border
+      border-current
+      transition-opacity
+      duration-300
+      ease-in-out
+      will-change-[opacity]
+      
+      hover:opacity-50
+      focus:opacity-50;
+  }
+}

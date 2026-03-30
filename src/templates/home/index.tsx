@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import gsap from 'gsap'
 
+import './styles.css'
 import Header from 'components/header'
 import SocialMedia from 'components/social-media'
-import * as S from './styles'
 
 const Home = () => {
   const content = useRef(null)
@@ -17,21 +17,22 @@ const Home = () => {
   }, [])
 
   return (
-    <S.Wrapper>
+    <main className="home__container">
       <Image
         src="/img/bg.jpg"
         alt="Background image"
         priority
         fill
         sizes="100vw"
+        className="home__image"
       />
       <Header />
-      <S.Content ref={content}>
-        <S.Title>Diego T. Fialho</S.Title>
-        <S.Paragraph>&mdash; {t('Home.subtitle')} &mdash;</S.Paragraph>
+      <section className="home__content" ref={content}>
+        <h1 className="home__title">Diego T. Fialho</h1>
+        <p className="home__role">&mdash; {t('Home.subtitle')} &mdash;</p>
         <SocialMedia />
-      </S.Content>
-    </S.Wrapper>
+      </section>
+    </main>
   )
 }
 

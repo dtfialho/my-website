@@ -1,0 +1,130 @@
+@reference 'tailwindcss';
+
+@layer components {
+  .main-navigation__wrapper.open {
+    @apply max-md:fixed
+      max-md:inset-0
+      max-md:bg-black/80
+      max-md:z-2
+      max-md:flex
+      max-md:transition-all
+      max-md:duration-300;
+  }
+
+  .main-navigation__hamburger {
+    @apply bg-none
+      appearance-none
+      border-none
+      w-13
+      h-13
+      p-1
+      fixed
+      top-5
+      right-10
+      rounded-full
+      cursor-pointer
+      flex
+      items-center
+      justify-center
+
+      md:hidden;
+  }
+
+  .main-navigation__icon {
+    @apply relative
+      block
+      bg-white
+      w-10
+      h-[3px]
+      transition-all
+      duration-500
+      will-change-transform
+
+      after:bg-white
+      after:content-['']
+      after:block
+      after:w-full
+      after:h-full
+      after:absolute
+      after:transition-all
+      after:duration-500
+      after:bottom-[-12px]
+      after:will-change-transform
+      
+      before:bg-white
+      before:content-['']
+      before:block
+      before:w-full
+      before:h-full
+      before:absolute
+      before:transition-all
+      before:duration-500
+      before:top-[-12px]
+      before:will-change-transform;
+  }
+
+  .main-navigation__icon.open {
+    @apply rotate-45
+      after:rotate-90
+      after:bottom-0
+
+      before:rotate-90      
+      before:top-0;
+  }
+
+  .main-navigation__container {
+    @apply invisible
+      opacity-0
+      list-none
+      self-center
+      my-0
+      mx-auto
+      h-0
+
+      md:visible
+      md:opacity-100
+      md:h-auto
+      md:w-auto
+      md:max-w-[var(--container-max-width)]
+      md:block;
+  }
+
+  .main-navigation__container.open {
+    @apply visible
+      opacity-100
+      h-auto;
+  }
+
+  .main-navigation__item {
+    @apply block
+      text-center
+      mb-3
+
+      md:inline-block
+      md:p-0
+      md:px-5
+      md:mb-0;
+  }
+
+  .main-navigation__link {
+    @apply no-underline
+    text-white
+      text-xl
+      font-bold
+      relative
+
+      after:block
+      after:w-0
+      after:h-[2px]
+      after:transition-[width]
+      after:duration-300
+      after:bg-white
+      after:content-['']
+
+      hover:after:w-full;
+  }
+
+  .main-navigation__link.active {
+    @apply after:w-full;
+  }
+}

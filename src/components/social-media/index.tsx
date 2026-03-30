@@ -1,43 +1,53 @@
-'use client'
+import Image from 'next/image'
+import clsx from 'clsx'
 
-import { Github, Linkedin, Twitter } from '@styled-icons/fa-brands'
-import * as S from './styles'
+import './styles.css'
 
-const SocialMedia = () => (
-  <S.Container>
-    <S.Item>
-      <S.Link
-        href="https://github.com/dtfialho"
-        target="_blank"
-        rel="noopener noreferrer me"
-        title="Github"
-      >
-        <Github title="Ícone do Github" size={30} />
-      </S.Link>
-    </S.Item>
+interface SocialMediaProps {
+  inverseColorToBlack?: boolean
+}
 
-    <S.Item>
-      <S.Link
-        href="https://www.linkedin.com/in/diego-teixeira-fialho-35b58ab0/"
-        target="_blank"
-        rel="noopener noreferrer me"
-        title="Linkedin"
-      >
-        <Linkedin title="Ícone do Linkedin" size={30} />
-      </S.Link>
-    </S.Item>
+const links = [
+  {
+    name: 'Github',
+    url: 'https://github.com/dtfialho',
+    icon: '/img/github.png'
+  },
+  {
+    name: 'Linkedin',
+    url: 'https://www.linkedin.com/in/diego-teixeira-fialho-35b58ab0/',
+    icon: '/img/linkedin.png'
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/dtfialho',
+    icon: '/img/twitter.png'
+  }
+]
 
-    <S.Item>
-      <S.Link
-        href="https://twitter.com/dtfialho"
-        target="_blank"
-        rel="noopener noreferrer me"
-        title="Twitter"
-      >
-        <Twitter title="Ícone do Twitter" size={30} />
-      </S.Link>
-    </S.Item>
-  </S.Container>
+const SocialMedia = ({ inverseColorToBlack = false }: SocialMediaProps) => (
+  <ul className="social-media__container">
+    {links.map(({ name, url, icon }) => (
+      <li className="social-media__item" key={name}>
+        <a
+          className="social-media__link"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer me"
+          title={name}
+        >
+          <Image
+            className={clsx(inverseColorToBlack && 'inverse-color')}
+            src={icon}
+            alt={name}
+            width={30}
+            height={30}
+            quality={100}
+          />
+        </a>
+      </li>
+    ))}
+  </ul>
 )
 
 export default SocialMedia

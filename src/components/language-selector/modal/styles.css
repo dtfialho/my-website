@@ -1,0 +1,163 @@
+@reference 'tailwindcss';
+
+@layer components {
+  .language-selector-modal__overlay {
+    @apply fixed
+      bg-black/80
+      inset-0
+      z-2
+      transition-all
+      duration-300;
+  }
+
+  .language-selector-modal__wrapper {
+    @apply text-black
+      fixed
+      top-1/2
+      left-1/2
+      transform
+      -translate-x-1/2
+      -translate-y-1/2
+      flex
+      flex-col
+      w-80
+      bg-white
+      rounded-lg
+      p-6
+      z-3
+      transition-all
+      duration-300;
+  }
+
+  .language-selector-modal__header {
+    @apply w-full
+      relative
+      border-b
+      border-gray-300;
+  }
+
+  .language-selector-modal__title {
+    @apply text-2xl
+      font-bold
+      mb-2;
+  }
+
+  .language-selector-modal__close {
+    @apply absolute
+      top-[-16px]
+      right-[-16px]
+      w-6
+      h-6
+      bg-none
+      border-none
+      appearance-none
+      cursor-pointer
+      leading-0;
+  }
+
+  .language-selector-modal__body {
+    @apply pt-4;
+  }
+
+  .language-selector-modal__select {
+    @apply block
+      relative
+      w-full
+      mb-4;
+  }
+
+  .language-selector-modal__active-item {
+    @apply relative
+      flex
+      w-full
+      items-center
+      appearance-none
+      bg-none
+      border
+      border-gray-300
+      rounded-md
+      p-2;
+  }
+  
+  .language-selector-modal__active-item.list-open {
+    @apply rounded-b-none;
+  }
+
+  .language-selector-modal__flag-wrapper {
+    @apply w-7
+      h-6
+      mr-2;
+  }
+
+  .language-selector-modal__dropdown-icon {
+    @apply flex
+      items-center
+      absolute
+      top-1/2
+      right-2
+      -translate-y-1/2
+      will-change-transform;
+  }
+
+  .language-selector-modal__dropdown-icon.rotated {
+    @apply -translate-y-1/2
+      rotate-x-180;
+  }
+
+  .language-selector-modal__list {
+    @apply absolute
+      top-full
+      left-0
+      w-full
+      list-none
+      p-0
+      max-h-0
+      border-none
+      border
+      bg-white
+      overflow-hidden
+      transition-all
+      duration-300
+      will-change-[border];
+  }
+
+  .language-selector-modal__list.open {
+    @apply max-h-200
+      border-solid
+      border
+      border-t-0
+      border-gray-300;
+  }
+
+  .language-selector-modal__list-item {
+    @apply text-base
+      p-2
+      m-0
+      flex
+      cursor-pointer
+      not-last:border-b
+      not-last:border-gray-300;
+  }
+
+  .language-selector-modal__list-item.hidden {
+    @apply opacity-0;
+  }
+
+  .language-selector-modal__change-locale {
+    @apply font-bold
+      text-base
+      text-center
+      text-white
+      w-full
+      appearance-none
+      bg-[#992e24]
+      border
+      rounded-md
+      p-2
+      cursor-pointer
+      
+      disabled:border-gray-300
+      disabled:bg-white
+      disabled:text-gray-300;
+  }
+}

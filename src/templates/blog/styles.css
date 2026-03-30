@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+@layer components {
+  .blog__wrapper {
+    @apply max-w-[var(--container-max-width)]
+      mx-auto
+      px-4
+      pt-30
+      pb-25
+      
+      md:pt-48;
+  }
+
+  .blog__title {
+    @apply text-center
+      uppercase
+      text-2xl
+      font-bold
+      mb-10
+      pb-6
+      border-b-2
+      border-gray-300
+      
+      md:mb-14
+      md:text-5xl;
+  }
+}

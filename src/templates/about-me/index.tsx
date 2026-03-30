@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 
 import Header from 'components/header'
 import SocialMedia from 'components/social-media'
-import * as S from './styles'
+import './styles.css'
 
 const AboutMe = () => {
   const t = useTranslations()
@@ -11,71 +11,73 @@ const AboutMe = () => {
   return (
     <>
       <Header fixed />
-      <S.Wrapper>
-        <S.TitleContainer>
+      <main className="about-me__container">
+        <div className="about-me__title-container">
           <Image
+            className="about-me__title-image"
             src="/img/me.jpeg"
             alt={t('AboutMe.profilePicture')}
             width={150}
             height={150}
             priority
           />
-          <S.Title>{t('AboutMe.title')}</S.Title>
-        </S.TitleContainer>
+          <h1 className="about-me__title">{t('AboutMe.title')}</h1>
+        </div>
 
-        <p>{t('AboutMe.firstParagraph')}</p>
+        <p className="about-me__paragraph">{t('AboutMe.firstParagraph')}</p>
 
-        <p>{t('AboutMe.secondParagraph')}</p>
+        <p className="about-me__paragraph">{t('AboutMe.secondParagraph')}</p>
 
-        <p>{t('AboutMe.thirdParagraph')}</p>
+        <p className="about-me__paragraph">{t('AboutMe.thirdParagraph')}</p>
 
-        <S.SkillsContainer>
-          <h2>{t('AboutMe.whatIDo')}:</h2>
+        <h2 className="about-me__what-i-do">{t('AboutMe.whatIDo')}:</h2>
 
-          <S.Items>
-            <S.Skills>
-              <S.SkillItemTitle>Frontend</S.SkillItemTitle>
-              <S.SkillsList>
-                <li>Angular</li>
-                <li>AngularJS</li>
-                <li>CSS3</li>
-                <li>HTML5</li>
-                <li>Javascript</li>
-                <li>{t('AboutMe.preProcessors')} (sass, less, stylus)</li>
-                <li>React</li>
-                <li>Styled Components</li>
-                <li>Next JS</li>
-              </S.SkillsList>
-            </S.Skills>
+        <div className="about-me__items">
+          <div className="about-me__skills">
+            <h3 className="about-me__skill-item-title">Frontend</h3>
+            <ul className="about-me__skills-list">
+              <li>Angular</li>
+              <li>AngularJS</li>
+              <li>CSS3</li>
+              <li>HTML5</li>
+              <li>Javascript</li>
+              <li>{t('AboutMe.preProcessors')} (sass, less, stylus)</li>
+              <li>React</li>
+              <li>Styled Components</li>
+              <li>Next JS</li>
+            </ul>
+          </div>
 
-            <S.Skills>
-              <S.SkillItemTitle>Backend</S.SkillItemTitle>
-              <S.SkillsList>
-                <li>Node</li>
-                <li>PHP</li>
-                <li>{t('AboutMe.oop')}</li>
-                <li>Python</li>
-                <li>MySql</li>
-                <li>PostgreeSQL</li>
-              </S.SkillsList>
-            </S.Skills>
+          <div className="about-me__skills">
+            <h3 className="about-me__skill-item-title">Backend</h3>
+            <ul className="about-me__skills-list">
+              <li>Node</li>
+              <li>PHP</li>
+              <li>{t('AboutMe.oop')}</li>
+              <li>Python</li>
+              <li>MySql</li>
+              <li>PostgreeSQL</li>
+            </ul>
+          </div>
 
-            <S.Skills>
-              <S.SkillItemTitle>{t('AboutMe.others')}</S.SkillItemTitle>
-              <S.SkillsList>
-                <li>Scrum</li>
-                <li>Git</li>
-                <li>TDD</li>
-              </S.SkillsList>
-            </S.Skills>
-          </S.Items>
-        </S.SkillsContainer>
+          <div className="about-me__skills">
+            <h3 className="about-me__skill-item-title">
+              {t('AboutMe.others')}
+            </h3>
+            <ul className="about-me__skills-list">
+              <li>Scrum</li>
+              <li>Git</li>
+              <li>TDD</li>
+            </ul>
+          </div>
+        </div>
 
-        <S.Contact>{t('AboutMe.contact')}</S.Contact>
-        <S.SocialMediaWrapper>
-          <SocialMedia />
-        </S.SocialMediaWrapper>
-      </S.Wrapper>
+        <h2 className="about-me__contact">{t('AboutMe.contact')}</h2>
+
+        <div className="about-me__social-media-wrapper">
+          <SocialMedia inverseColorToBlack />
+        </div>
+      </main>
     </>
   )
 }

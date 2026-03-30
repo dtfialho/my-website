@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import Header from 'components/header'
 import MarkdownRenderer from 'components/markdown-renderer'
-import * as S from './styles'
+import './styles.css'
 
 export type PostProps = {
   content: string
@@ -30,25 +30,32 @@ const Post = async ({
   return (
     <>
       <Header fixed />
-      <S.Wrapper>
-        <S.Article>
-          <S.Title>{title}</S.Title>
-          <S.Date>
+      <main className="post-content__wrapper">
+        <article className="post-content__article">
+          <h1 className="post-content__title">{title}</h1>
+          <p className="post-content__date">
             <small>
               {t('Common.posted')}: {postDate}
             </small>
-          </S.Date>
-          <S.ArticleImage>
-            <Image src={hero_image} alt={title} priority fill sizes="100vw" />
-          </S.ArticleImage>
+          </p>
+          <figure className="post-content__article-image-wrapper">
+            <Image
+              className="post-content__article-image"
+              src={hero_image}
+              alt={title}
+              priority
+              fill
+              sizes="100vw"
+            />
+          </figure>
 
           <MarkdownRenderer content={content} />
-        </S.Article>
+        </article>
 
         <Link href="/blog" passHref>
-          <S.Back>{t('Post.back')}</S.Back>
+          <span className="post-content__back">{t('Post.back')}</span>
         </Link>
-      </S.Wrapper>
+      </main>
     </>
   )
 }

@@ -6,6 +6,10 @@ const withNextIntl = createNextIntlPlugin()
  * @type {import('next').NextConfig}
  */
 export default withNextIntl({
+  images: {
+    qualities: [100, 75],
+    imageSizes: [30]
+  },
   rewrites: async () => {
     return [
       {
@@ -13,9 +17,6 @@ export default withNextIntl({
         destination: '/pt-BR/about-me'
       }
     ]
-  },
-  compiler: {
-    styledComponents: true
   },
   webpack: function (config) {
     config.module.rules.push({

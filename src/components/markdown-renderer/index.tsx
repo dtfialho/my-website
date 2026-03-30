@@ -4,7 +4,7 @@ import gfm from 'remark-gfm'
 import Image from 'next/image'
 import rehypeRaw from 'rehype-raw'
 
-import * as S from './styles'
+import './styles.css'
 const CodeHighlight = dynamic(() => import('components/code-highlight'))
 
 type MarkdownRendererProps = {
@@ -27,7 +27,7 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
         const isPriority = metastring?.toLowerCase().match('{priority}')
 
         return (
-          <S.ImageWrapper>
+          <figure className="markdown-renderer__image-wrapper">
             <Image
               src={image.properties.src}
               width={width}
@@ -35,15 +35,19 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
               alt={alt}
               priority={isPriority}
             />
-          </S.ImageWrapper>
+          </figure>
         )
       }
 
-      return <S.Text>{paragraph.children}</S.Text>
+      return <p className="markdown-renderer__text">{paragraph.children}</p>
     },
 
     span: (span: { children?: any }) => {
-      return <S.TextWithHighlight>{span.children}</S.TextWithHighlight>
+      return (
+        <span className="markdown-renderer__text-with-highlight">
+          {span.children}
+        </span>
+      )
     },
 
     pre: (pre: { children?: any }) => pre.children,

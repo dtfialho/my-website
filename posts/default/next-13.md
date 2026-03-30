@@ -29,7 +29,7 @@ export default async function PostPage({ params: { slug } }) {
 }
 ```
 
-## Uma nova forma de organizar a UI
+## Uma nova forma de organizar as rotas
 No Next 13 os diretórios dentro de <span>app</span> são para as rotas e os arquivos são para a interface, além disso podemos criar arquivos específicos para construir partes específicas da interface que funcionam da mesma forma que o <span>page.tsx</span> ficando dentro do diretório de uma rota, por exemplo: <span>app/hello/layout.tsx</span>, <span>app/hello/loading.tsx</span>, <span>app/hello/error.tsx</span> ou <span>app/hello/layout.tsx</span>.
 
 - **layout.tsx**: usamos esse arquivo para definir um componente "wrapper". Dentro dele também podemos fazer um fetch para requisitar dados.

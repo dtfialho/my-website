@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --header-height: 92px;
+  --container-max-width: 1200px;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl
+      font-bold
+      
+      md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl
+      font-bold
+      mb-6;
+  }
+
+  p {
+    @apply mb-6;
+  }
+}

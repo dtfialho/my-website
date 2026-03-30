@@ -1,18 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/LanguageSelector Should match snapshot 1`] = `
-.c0 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
 <div>
   <button
-    class="c0"
+    class="language-selector__button"
     type="button"
   >
     <img

@@ -1,0 +1,82 @@
+@reference "tailwindcss";
+
+@layer components {
+  .post-content__wrapper {
+    @apply max-w-[912px]
+      mx-auto
+      px-4
+      pt-38
+      pb-25
+      
+      md:pt-48;
+  }
+
+  .post-content__article a {
+    @apply underline;
+  }
+
+  .post-content__article pre,
+  .post-content__article ul,
+  .post-content__article iframe {
+    @apply mb-6;
+  }
+
+  .post-content__article p code,
+  .post-content__article li code {
+    @apply inline-block
+      px-1
+      py-0.5
+      bg-gray-100
+      rounded-sm;
+  }
+
+  .post-content__article pre {
+    @apply cursor-default;
+  }
+
+  .post-content__title {
+    @apply text-center
+      text-2xl
+      font-bold
+      
+      md:text-4xl;
+  }
+
+  .post-content__date {
+    @apply block
+      text-center
+      mb-8
+      
+      md:mb-10;
+  }
+
+  .post-content__article-image-wrapper {
+    @apply relative
+      w-full
+      h-62
+      mx-auto
+      mb-8
+      
+      md:h-75
+      md:mb-10;
+  }
+
+  .post-content__article-image {
+    @apply object-contain
+      translate-z-0;
+  }
+
+  .post-content__back {
+    @apply inline-block
+      mb-8
+      px-6
+      py-2
+      rounded-md
+      text-white
+      bg-indigo-700
+      transition-opacity
+      duration-300
+      
+      hover:opacity-80;
+  }
+}

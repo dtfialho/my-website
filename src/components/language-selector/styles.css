@@ -1,0 +1,10 @@
+@reference 'tailwindcss';
+
+@layer components {
+  .language-selector__button {
+    @apply bg-none
+      appearance-none
+      border-none
+      cursor-pointer;
+  }
+}

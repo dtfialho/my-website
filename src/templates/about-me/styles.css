@@ -1,0 +1,92 @@
+@reference 'tailwindcss';
+
+@layer components {
+  .about-me__container {
+    @apply max-w-[var(--container-max-width)]
+      mx-auto
+      px-4
+      pt-38
+      pb-25
+      
+      sm:pt-48
+
+      lg:px-40;
+  }
+
+  .about-me__title-container {
+    @apply flex
+      flex-col
+      items-center
+      justify-center
+      mb-5
+      
+      md:flex-row
+      md:mb-10;
+  }
+
+  .about-me__title-image {
+    @apply w-[150px]
+      h-[150px]
+      rounded-full;
+  }
+
+  .about-me__title {
+    @apply font-bold
+      text-3xl
+      text-center
+      mt-5
+
+      md:text-5xl
+      md:mt-0
+      md:ml-13;
+  }
+
+  .about-me__paragraph {
+    @apply text-base
+      mb-5;
+  }
+
+  .about-me__what-i-do {
+    @apply mt-12
+      md:mb-10;
+  }
+
+  .about-me__items {
+    @apply md:flex
+      md:w-full
+      md:justify-between
+      md:flex-wrap;
+  }
+
+  .about-me__skills {
+    @apply max-md:mb-10
+      md:basis-[30%];
+  }
+
+  .about-me__skill-item-title {
+    @apply mb-2
+      pb-1
+      border-b-2
+      border-red-800;
+  }
+
+  .about-me__skills-list {
+    @apply list-none
+      pl-0;
+  }
+
+  .about-me__contact {
+    @apply text-2xl
+      font-bold
+      text-center
+      pt-6
+      mt-6
+      mb-6
+      border-t
+      border-red-800;
+  }
+
+  .about-me__social-media-wrapper {
+    @apply text-center;
+  }
+}
