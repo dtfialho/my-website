@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components/LanguageSelector/Modal Should render correctly 1`] = `
-.c0 {
-  display: inline-block;
-  vertical-align: middle;
-  overflow: hidden;
-}
-
 <div>
   <div
     class="language-selector-modal__overlay"
@@ -28,7 +22,7 @@ exports[`Components/LanguageSelector/Modal Should render correctly 1`] = `
         type="button"
       >
         <svg
-          class="c0"
+          class="StyledIconBase-sc-ea9ulj-0 beZTyX"
           fill="none"
           focusable="false"
           height="24"
@@ -91,7 +85,7 @@ exports[`Components/LanguageSelector/Modal Should render correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="c0"
+              class="StyledIconBase-sc-ea9ulj-0 beZTyX"
               fill="currentColor"
               focusable="false"
               height="15"
