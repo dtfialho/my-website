@@ -14,7 +14,7 @@
       transition-opacity
       duration-300
       hover:opacity-70
-      
+
       md:flex-row;
   }
 
@@ -25,14 +25,14 @@
       w-full
       h-38
       mx-auto
-      
+
       max-md:min-[450px]:w-125
       max-md:min-[450px]:h-75
-      
+
       md:w-75
       md:mx-0;
   }
-  
+
   .post__image {
     @apply object-cover
       translate-z-0;

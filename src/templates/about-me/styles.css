@@ -48,10 +48,7 @@
 
   .about-me__what-i-do {
     @apply mt-12
-      mb-6
-      md:mb-10
-      text-2xl
-      font-bold;
+      md:mb-10;
   }
 
   .about-me__items {

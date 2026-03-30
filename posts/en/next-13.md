@@ -29,7 +29,7 @@ export default async function PostPage({ params: { slug } }) {
 }
 ```
 
-## A new way of organizing the UI
+## A new way of organizing the routes
 In Next 13 the directories inside <span>app</span> are for the routes and files are for the interface, beside this we can create specific files to build specific parts of the interface that works the same way as the <span>page.tsx</span> inside a route directorie, for instance: <span>app/hello/layout.tsx</span>, <span>app/hello/loading.tsx</span>, <span>app/hello/error.tsx</span> or <span>app/hello/layout.tsx</span>.
 
 - **layout.tsx**: we use this file as a wrapper component. Inside it we can also make a fetch call to request some data.
