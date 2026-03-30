@@ -6,9 +6,6 @@ const withNextIntl = createNextIntlPlugin()
  * @type {import('next').NextConfig}
  */
 export default withNextIntl({
-  compiler: {
-    styledComponents: true
-  },
   images: {
     qualities: [100, 75],
     imageSizes: [30]

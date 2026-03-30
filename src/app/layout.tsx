@@ -3,7 +3,6 @@ import { getLocale } from 'next-intl/server'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import './globals.css'
-import StyledComponentsRegistry from 'lib/styled-components-registry'
 
 import Analytics from 'components/analytics'
 
@@ -14,13 +13,11 @@ export default async function RootLayout({ children }: LayoutProps) {
 
   return (
     <html lang={locale}>
-      <StyledComponentsRegistry>
-        <body>
-          <Analytics />
-          <SpeedInsights />
-          {children}
-        </body>
-      </StyledComponentsRegistry>
+      <body>
+        <Analytics />
+        <SpeedInsights />
+        {children}
+      </body>
     </html>
   )
 }
