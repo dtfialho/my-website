@@ -8,7 +8,7 @@ import { useContext, useState } from 'react'
 import clsx from 'clsx'
 
 import './styles.css'
-import { SUPPORTED_LOCALES } from 'lib/constants'
+import { SUPPORTED_LOCALES } from '@/lib/constants'
 import { LanguageSelectorContext } from '../provider'
 
 function replaceLocaleInPath(

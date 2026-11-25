@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { format } from 'date-fns'
 import { getTranslations } from 'next-intl/server'
 
-import { getFileTranslations } from 'utils/test-utils'
+import { getFileTranslations } from '@/utils/test-utils'
 import Post from './'
 
 const data: PostType = {

@@ -2,7 +2,7 @@ import type { PropsWithChildren } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 
-import { LanguageSelectorProvider } from 'components/language-selector/provider'
+import { LanguageSelectorProvider } from '@/components/language-selector/provider'
 
 type LayoutProps = PropsWithChildren<{
   params: Promise<{ locale: string }>

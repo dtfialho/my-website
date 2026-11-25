@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from 'lib/constants'
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '@/lib/constants'
 
 type PathsType = {
   locale: string

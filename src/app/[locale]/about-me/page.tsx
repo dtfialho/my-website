@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
-import { SUPPORTED_LOCALES } from 'lib/constants'
-import Template from 'templates/about-me'
+import { SUPPORTED_LOCALES } from '@/lib/constants'
+import Template from '@/templates/about-me'
 
 type ParamsType = {
   params: Promise<{

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
-import Header from 'components/header'
-import SocialMedia from 'components/social-media'
+import Header from '@/components/header'
+import SocialMedia from '@/components/social-media'
 import './styles.css'
 
 const AboutMe = () => {

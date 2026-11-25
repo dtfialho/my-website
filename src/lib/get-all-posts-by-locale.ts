@@ -3,7 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { compareDesc } from 'date-fns'
 
-import { DEFAULT_LOCALE } from 'lib/constants'
+import { DEFAULT_LOCALE } from '@/lib/constants'
 
 const getAllPostsByLocale = (locale: string) => {
   const dir = locale === DEFAULT_LOCALE ? 'default' : locale

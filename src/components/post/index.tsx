@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { format } from 'date-fns'
 import { getTranslations } from 'next-intl/server'
 
-import { DEFAULT_LOCALE } from 'lib/constants'
+import { DEFAULT_LOCALE } from '@/lib/constants'
 import './styles.css'
 
 type PostProps = PostType & {

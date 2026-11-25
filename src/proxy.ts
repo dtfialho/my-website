@@ -2,8 +2,8 @@ import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 import createMiddleware from 'next-intl/middleware'
 
-import { SUPPORTED_LOCALES } from 'lib/constants'
-import { generalRedirects, postRedirects } from 'lib/redirects'
+import { SUPPORTED_LOCALES } from '@/lib/constants'
+import { generalRedirects, postRedirects } from '@/lib/redirects'
 
 export default async function proxy(request: NextRequest) {
   const [, locale, ...segments] = request.nextUrl.pathname.split('/')

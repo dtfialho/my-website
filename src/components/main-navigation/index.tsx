@@ -7,7 +7,7 @@ import { usePathname, useParams } from 'next/navigation'
 import clsx from 'clsx'
 
 import './styles.css'
-import LanguageSelector from 'components/language-selector'
+import LanguageSelector from '@/components/language-selector'
 
 const MainNavigation = () => {
   const t = useTranslations()
