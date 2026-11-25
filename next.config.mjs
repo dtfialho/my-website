@@ -17,12 +17,5 @@ export default withNextIntl({
         destination: '/pt-BR/about-me'
       }
     ]
-  },
-  webpack: function (config) {
-    config.module.rules.push({
-      test: /\.md$/,
-      use: 'raw-loader'
-    })
-    return config
   }
 })
