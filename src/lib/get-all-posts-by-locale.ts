@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import compareDesc from 'date-fns/compareDesc'
+import { compareDesc } from 'date-fns'
 
 import { DEFAULT_LOCALE } from 'lib/constants'
 

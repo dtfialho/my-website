@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MainNavigation Should render correctly 1`] = `
 <div>
@@ -69,8 +69,8 @@ exports[`MainNavigation Should render correctly 1`] = `
             decoding="async"
             height="22"
             loading="lazy"
-            src="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75"
-            srcset="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fpt-BR.jpg&w=64&q=75 2x"
+            src="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=640&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fpt-BR.jpg&w=30&q=75 1x, /_next/image?url=%2Fimg%2Fpt-BR.jpg&w=640&q=75 2x"
             style="color: transparent;"
             width="29"
           />
@@ -150,8 +150,8 @@ exports[`MainNavigation Should render correctly in en 1`] = `
             decoding="async"
             height="22"
             loading="lazy"
-            src="/_next/image?url=%2Fimg%2Fen.jpg&w=64&q=75"
-            srcset="/_next/image?url=%2Fimg%2Fen.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fen.jpg&w=64&q=75 2x"
+            src="/_next/image?url=%2Fimg%2Fen.jpg&w=640&q=75"
+            srcset="/_next/image?url=%2Fimg%2Fen.jpg&w=30&q=75 1x, /_next/image?url=%2Fimg%2Fen.jpg&w=640&q=75 2x"
             style="color: transparent;"
             width="29"
           />

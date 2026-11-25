@@ -1,4 +1,4 @@
-import format from 'date-fns/format'
+import { format } from 'date-fns'
 import { render, screen } from '@testing-library/react'
 import { getTranslations } from 'next-intl/server'
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import format from 'date-fns/format'
+import { format } from 'date-fns'
 import { getTranslations } from 'next-intl/server'
 
 import { DEFAULT_LOCALE } from 'lib/constants'
