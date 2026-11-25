@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import clsx from 'clsx'
 
 import './styles.css'
-import Navbar from 'components/main-navigation'
+import Navbar from '@/components/main-navigation'
 
 const Header = ({ fixed = false }) => {
   const t = useTranslations()

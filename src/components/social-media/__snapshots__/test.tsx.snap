@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Components/SocialMedia Should render correctly 1`] = `
 <div>
@@ -22,8 +22,8 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
           decoding="async"
           height="30"
           loading="lazy"
-          src="/_next/image?url=%2Fimg%2Fgithub.png&w=64&q=75"
-          srcset="/_next/image?url=%2Fimg%2Fgithub.png&w=32&q=75 1x, /_next/image?url=%2Fimg%2Fgithub.png&w=64&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Fgithub.png&w=640&q=100"
+          srcset="/_next/image?url=%2Fimg%2Fgithub.png&w=30&q=100 1x, /_next/image?url=%2Fimg%2Fgithub.png&w=640&q=100 2x"
           style="color: transparent;"
           width="30"
         />
@@ -46,8 +46,8 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
           decoding="async"
           height="30"
           loading="lazy"
-          src="/_next/image?url=%2Fimg%2Flinkedin.png&w=64&q=75"
-          srcset="/_next/image?url=%2Fimg%2Flinkedin.png&w=32&q=75 1x, /_next/image?url=%2Fimg%2Flinkedin.png&w=64&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Flinkedin.png&w=640&q=100"
+          srcset="/_next/image?url=%2Fimg%2Flinkedin.png&w=30&q=100 1x, /_next/image?url=%2Fimg%2Flinkedin.png&w=640&q=100 2x"
           style="color: transparent;"
           width="30"
         />
@@ -70,8 +70,8 @@ exports[`Components/SocialMedia Should render correctly 1`] = `
           decoding="async"
           height="30"
           loading="lazy"
-          src="/_next/image?url=%2Fimg%2Ftwitter.png&w=64&q=75"
-          srcset="/_next/image?url=%2Fimg%2Ftwitter.png&w=32&q=75 1x, /_next/image?url=%2Fimg%2Ftwitter.png&w=64&q=75 2x"
+          src="/_next/image?url=%2Fimg%2Ftwitter.png&w=640&q=100"
+          srcset="/_next/image?url=%2Fimg%2Ftwitter.png&w=30&q=100 1x, /_next/image?url=%2Fimg%2Ftwitter.png&w=640&q=100 2x"
           style="color: transparent;"
           width="30"
         />

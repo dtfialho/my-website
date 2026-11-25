@@ -3,11 +3,11 @@ import { render, screen } from '@testing-library/react'
 import gsap from 'gsap'
 import { useTranslations } from 'next-intl'
 
-import { getFileTranslations } from 'utils/test-utils'
-import * as Header from 'components/header'
+import { getFileTranslations } from '@/utils/test-utils'
+import * as Header from '@/components/header'
 import Home from './'
 
-jest.mock('components/header')
+jest.mock('@/components/header')
 const mockedHeader = Header.default as jest.Mock
 
 jest.spyOn(gsap, 'to')

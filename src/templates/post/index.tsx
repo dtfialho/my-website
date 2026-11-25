@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server'
-import format from 'date-fns/format'
+import { format } from 'date-fns'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Header from 'components/header'
-import MarkdownRenderer from 'components/markdown-renderer'
+import Header from '@/components/header'
+import MarkdownRenderer from '@/components/markdown-renderer'
 import './styles.css'
 
 export type PostProps = {

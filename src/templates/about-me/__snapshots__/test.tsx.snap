@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Templates/AboutMe Should render correctly 1`] = `
 <div>
@@ -17,8 +17,8 @@ exports[`Templates/AboutMe Should render correctly 1`] = `
         data-nimg="1"
         decoding="async"
         height="150"
-        src="/_next/image?url=%2Fimg%2Fme.jpeg&w=384&q=75"
-        srcset="/_next/image?url=%2Fimg%2Fme.jpeg&w=256&q=75 1x, /_next/image?url=%2Fimg%2Fme.jpeg&w=384&q=75 2x"
+        src="/_next/image?url=%2Fimg%2Fme.jpeg&w=640&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fme.jpeg&w=640&q=75 1x"
         style="color: transparent;"
         width="150"
       />
@@ -180,8 +180,8 @@ exports[`Templates/AboutMe Should render correctly in en 1`] = `
         data-nimg="1"
         decoding="async"
         height="150"
-        src="/_next/image?url=%2Fimg%2Fme.jpeg&w=384&q=75"
-        srcset="/_next/image?url=%2Fimg%2Fme.jpeg&w=256&q=75 1x, /_next/image?url=%2Fimg%2Fme.jpeg&w=384&q=75 2x"
+        src="/_next/image?url=%2Fimg%2Fme.jpeg&w=640&q=75"
+        srcset="/_next/image?url=%2Fimg%2Fme.jpeg&w=640&q=75 1x"
         style="color: transparent;"
         width="150"
       />

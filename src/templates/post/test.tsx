@@ -1,14 +1,14 @@
-import format from 'date-fns/format'
+import { format } from 'date-fns'
 import { render, screen } from '@testing-library/react'
 import { getTranslations } from 'next-intl/server'
 
-import { getFileTranslations } from 'utils/test-utils'
-import * as Header from 'components/header'
+import { getFileTranslations } from '@/utils/test-utils'
+import * as Header from '@/components/header'
 import Post, { PostProps } from './'
 
-jest.mock('components/header')
+jest.mock('@/components/header')
 
-jest.mock('components/markdown-renderer', () =>
+jest.mock('@/components/markdown-renderer', () =>
   // eslint-disable-next-line react/display-name
   ({ content }: { content: string }) => {
     return <p>{content}</p>

@@ -5,8 +5,8 @@ import Image from 'next/image'
 import gsap from 'gsap'
 
 import './styles.css'
-import Header from 'components/header'
-import SocialMedia from 'components/social-media'
+import Header from '@/components/header'
+import SocialMedia from '@/components/social-media'
 
 const Home = () => {
   const content = useRef(null)

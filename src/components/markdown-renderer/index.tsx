@@ -5,7 +5,7 @@ import Image from 'next/image'
 import rehypeRaw from 'rehype-raw'
 
 import './styles.css'
-const CodeHighlight = dynamic(() => import('components/code-highlight'))
+const CodeHighlight = dynamic(() => import('@/components/code-highlight'))
 
 type MarkdownRendererProps = {
   content: string
