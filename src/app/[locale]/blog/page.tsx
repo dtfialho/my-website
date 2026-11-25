@@ -1,8 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
-import { SUPPORTED_LOCALES } from 'lib/constants'
-import getAllPostsByLocale from 'lib/get-all-posts-by-locale'
-import Template from 'templates/blog'
+import { SUPPORTED_LOCALES } from '@/lib/constants'
+import getAllPostsByLocale from '@/lib/get-all-posts-by-locale'
+import Template from '@/templates/blog'
 
 type ParamsType = {
   params: Promise<{

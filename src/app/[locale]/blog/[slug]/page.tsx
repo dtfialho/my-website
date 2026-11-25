@@ -1,10 +1,10 @@
 import { setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 
-import getAllPostPaths from 'lib/get-all-post-paths'
-import getPagePostContent from 'lib/get-page-post-content'
+import getAllPostPaths from '@/lib/get-all-post-paths'
+import getPagePostContent from '@/lib/get-page-post-content'
 
-import Post from 'templates/post'
+import Post from '@/templates/post'
 
 type ParamsType = {
   params: Promise<{

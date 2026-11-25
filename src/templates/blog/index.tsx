@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 
-import Header from 'components/header'
-import Post from 'components/post'
+import Header from '@/components/header'
+import Post from '@/components/post'
 import './styles.css'
 
 type BlogProps = {

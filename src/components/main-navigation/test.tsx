@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { useTranslations } from 'next-intl'
 import { useParams, usePathname } from 'next/navigation'
 
-import { getFileTranslations } from 'utils/test-utils'
+import { getFileTranslations } from '@/utils/test-utils'
 import Nav from './'
 
 const defaultLocale = 'pt-BR'

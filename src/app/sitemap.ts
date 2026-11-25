@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
-import { SUPPORTED_LOCALES } from 'lib/constants'
-import getAllPostPaths from 'lib/get-all-post-paths'
+import { SUPPORTED_LOCALES } from '@/lib/constants'
+import getAllPostPaths from '@/lib/get-all-post-paths'
 
 const BASE_URL = 'https://www.diegotfialho.dev'
 
